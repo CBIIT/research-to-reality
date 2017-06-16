@@ -1,0 +1,5 @@
+name = R2R Forms
+description = Form Alterations for the Research to Reality site.
+package = Research to Reality
+core = 7.x
+version = 7.x-1.0

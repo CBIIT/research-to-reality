@@ -1,0 +1,93 @@
+<?php
+/**
+ * Implements hook_field_formatter_info().
+ */
+function related_presenter_field_formatter_info() {
+  $entityreference_formatters = entityreference_field_formatter_info();
+  $formatter = $entityreference_formatters['entityreference_entity_view'];
+  $formatter['label'] = t('Special Presenter Formatter');
+  $formatter['description'] = t('Display the referenced presenter entities in a particular way.');
+  $formatter['settings'] = array();
+  return array('related_presenter_formatter' => $formatter);
+  /*return array(
+    'related_presenter_formatter' => array( //Machine name of the formatter
+      'label' => t('Special Presenter Formatter'),
+      'field types' => array('entityreference'), //This will only be available to text fields
+      'settings'  => array(),
+    ),
+  );*/
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function related_presenter_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  print("<pre>related_presenter_field_formatter_settings_form</pre>");
+  //This gets the view_mode where our settings are stored
+  $display = $instance['display'][$view_mode];
+  //This gets the actual settings
+  $settings = $display['settings'];
+  //Initialize the element variable
+  $element = array();
+  //Add your select box
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function related_presenter_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $summary = t('Use a special formatter to display the presenter'); 
+  return $summary;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function related_presenter_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  //print("<pre>");
+  //print_r($entity);
+  //print("<hr>");
+  //print_r($field);
+  //print("<hr>");
+  //print_r($instance);
+  //print("<hr>");
+  //print_r($items);
+  //print("<hr>");
+  //print_r($display);
+  //print("</pre>");
+  $element = array(); // Initialize the var
+  $element[0] = array(
+      '#markup' => t('<span class="views-label views-label-field-cyber-presenters">Presenters</span>')
+    );
+  if(count($items) <= 0) {
+    $element[1] = array(
+        '#markup' => t("No presenters were listed for this cyber seminar.")
+      );
+  } else {
+    foreach ($items as $delta => $item) {
+      $node = node_load($item['target_id']);
+
+      //print("<p>Presenter:</p><pre>");
+      //print_r($node);
+      //print("<pre>");
+      # code...
+      //$node['title']
+      //$node['nid'] //(for link?)
+      //$node['field_presenter_photo']['und'][0]
+      //  -> fid
+      //  -> filename
+      //
+      $file = file_load($node->field_presenter_photo['und'][0]['fid']);
+      $url = file_create_url($file->uri);
+      $title = $node->title;
+      $nid = $node->nid;
+      $element[$delta+1] = array(
+          '#markup' => "<a href=\"node/$nid\">$title</a><br/><img src=\"$url\" width=\"50\" height=\"50\"><br/>"
+        );
+    }  
+  }
+  return $element;
+}

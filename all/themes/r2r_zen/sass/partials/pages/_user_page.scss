@@ -1,0 +1,123 @@
+// ---------------------------------------------------- 
+// User Login, User Profile & Inner Pages 
+// @description Styles for user-related pages
+// ----------------------------------------------------
+
+// Login Page
+.page-user {
+	.tabs-primary.tabs.primary { display: none; }
+
+	#edit-submit { margin: 1em 0; }
+
+	.user-login-links a { font-weight: bold; }
+}
+
+// Registration Page
+.page-user-register {
+	#edit-account {
+		border-bottom: $event-reg-border; 
+		margin-bottom: 10px;
+
+		> div { margin: 1em 0; }
+	}
+
+	#edit-field-first-name, #edit-field-last-name {
+		display: inline-block;
+		width: 48%;
+		margin-right: 1em; 
+
+		@media #{$medium-and-down} {
+			display: block; 
+			width: 100%; 
+		}
+	}
+
+	#edit-field-professional-photo { border-bottom: $event-reg-border; }
+
+	#edit-field-professional-photo {
+		#edit-field-professional-photo-und-0-upload { margin-right: 5px; }
+	}
+}
+
+// User Profile
+#userprofile {
+	
+	.edit-links {
+
+		margin-top: -47px;
+
+		a#profile-edit {
+				  background: #18ad39;
+				  background: -moz-linear-gradient(top, #15C43B 0%, #068328 100%);
+				  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#15C43B), color-stop(100%,#068328));
+				  background: -webkit-linear-gradient(top, #15C43B 0%,#068328 100%);
+				  background: -o-linear-gradient(top, #15C43B 0%,#068328 100%);
+				  background: -ms-linear-gradient(top, #15C43B 0%,#068328 100%);
+				  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15C43B', endColorstr='#068328',GradientType=0 );
+				  background: linear-gradient(top, #15C43B 0%,#068328 100%);
+			    border: 1px solid #068328;
+			    border-bottom-left-radius: 8px;
+			    border-top-left-radius: 8px;
+			    color: #fff;
+			    display: block;
+			    font-size: 0.75em;
+			    margin: 0;
+			    padding: 4px 7px;
+			    text-align: center;
+			    text-decoration: none;
+			    width: 86px;
+			    margin-left: 350px;
+		}
+
+		a#subs-edit {
+				  background: #18ad39;
+				  background: -moz-linear-gradient(top, #15C43B 0%, #068328 100%);
+				  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#15C43B), color-stop(100%,#068328));
+				  background: -webkit-linear-gradient(top, #15C43B 0%,#068328 100%);
+				  background: -o-linear-gradient(top, #15C43B 0%,#068328 100%);
+				  background: -ms-linear-gradient(top, #15C43B 0%,#068328 100%);
+				  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15C43B', endColorstr='#068328',GradientType=0 );
+				  background: linear-gradient(top, #15C43B 0%,#068328 100%);
+			    border: 1px solid #068328;
+			    border-bottom-right-radius: 8px;
+			    border-top-right-radius: 8px;
+			    color: #fff;
+			    display: block;
+			    font-size: 0.75em;
+			    margin: 0;
+			    padding: 4px 7px;
+			    text-align: center;
+			    text-decoration: none;
+			    width: 112px;
+			    margin-left: 452px;
+			    margin-top: -32px;
+		}
+	}
+
+	.views-field-field-professional-photo {
+		img {
+			border: 1px solid #007596;
+			margin: 20px 30px 20px 0;
+			float: left;
+		}
+	}
+	
+	#user-profile-body {
+		float: left;
+		clear: none;
+		width: 75%;
+
+		h2 {
+			border-bottom: 1px solid #b2c8cc;
+    		margin-bottom: -5px;
+    		padding-bottom: 15px;
+    		width: 100%;
+    		font-size: 16px;
+    		margin-top: 20px;
+		}
+	}
+
+
+
+
+}

@@ -1,0 +1,5 @@
+name = youtubeembed
+description = "Add a formatter to textfields that creates a YouTube iFrame player given an ID"
+package = Fields
+core = 7.x
+files[] = youtubeembed.module

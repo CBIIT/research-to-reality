@@ -1,0 +1,49 @@
+/**
+ * @file
+ * Test zen-grid-container()
+ */
+/* line 8, ../../../../../../sass-extensions/zen-grids/templates/unit-tests/sass/zen-grid-container.scss */
+#test-zen-grid-container {
+  /* Test zen-grid-container() */
+}
+/* line 52, ../../../../../../../../../../../../../../Scout.app/Contents/Resources/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+#test-zen-grid-container:before, #test-zen-grid-container:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../../../../../../../../../../../../../Scout.app/Contents/Resources/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+#test-zen-grid-container:after {
+  clear: both;
+}
+
+/* line 13, ../../../../../../sass-extensions/zen-grids/templates/unit-tests/sass/zen-grid-container.scss */
+#test-zen-grid-container-2 {
+  /* Test zen-grid-container() with $legacy-support-for-ie7: true */
+  *position: relative;
+  *zoom: 1;
+}
+/* line 52, ../../../../../../../../../../../../../../Scout.app/Contents/Resources/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+#test-zen-grid-container-2:before, #test-zen-grid-container-2:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../../../../../../../../../../../../../Scout.app/Contents/Resources/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+#test-zen-grid-container-2:after {
+  clear: both;
+}
+
+/* line 20, ../../../../../../sass-extensions/zen-grids/templates/unit-tests/sass/zen-grid-container.scss */
+#test-zen-grid-container-3 {
+  /* Test zen-grid-container() with $legacy-support-for-ie6: true */
+  *position: relative;
+  *zoom: 1;
+}
+/* line 52, ../../../../../../../../../../../../../../Scout.app/Contents/Resources/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+#test-zen-grid-container-3:before, #test-zen-grid-container-3:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../../../../../../../../../../../../../Scout.app/Contents/Resources/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+#test-zen-grid-container-3:after {
+  clear: both;
+}

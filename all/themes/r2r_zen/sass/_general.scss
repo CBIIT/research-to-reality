@@ -1,0 +1,199 @@
+// ------------------------------- 
+// General 
+// @description Base Styles 
+// -------------------------------
+
+body { 
+	background: url("../images/global/bground-content.png") repeat-x $dark-grey; 
+	margin: 0; 
+	padding: 0; 
+	font-family: $primary-font; 
+	font-size: $primary-font-size;
+	line-height: $primary-line-height;
+}
+
+h1 {
+	font-family: $h1-font-family; 
+	font-size: $h1-size;
+	font-weight: $h1-font-weight;
+	letter-spacing: $h1-letter-spacing;
+	line-height: 1;
+}
+
+h2 { 
+	font-size: $h2-size; 
+}
+
+h3 { 
+	font-size: $h3-size; 
+	line-height: $h3-line-height;
+}
+
+ul { 
+	list-style: square; 
+	li { padding-bottom: 9px; }
+}
+
+a { 
+	text-decoration: $link-decoration; 
+	color: $link-color;
+
+	&:hover {
+		color: $black;
+		text-decoration: $link-hover-decoration; 
+	}
+}
+
+a, img {
+	border: none; 
+	outline: none; 
+}
+
+hr {
+	border: $hr-border; 
+}
+
+#content {
+	margin-right: 0 !important; 
+	background-color: $content-bg; 
+	padding: 30px;
+	@include radius-top-rt(8px); 
+
+	@media #{$medium-and-down} { 
+		// margin-top: -28px; 
+		@include radius-top-rt(0); 
+	}
+}
+
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+
+.small-font { font-size: $small-font-size; }
+
+.breadcrumb { 
+	font-size: $bread-crumb-font-size; 
+
+	ol { 
+		margin: 0;
+		padding: 0;  
+
+		li {
+			display: inline-block;
+			list-style-type: none;
+			padding-right: 4px;
+		}
+	}
+}
+
+// Hello User Profile
+.hello-user-profile {
+	@extend .small-font; 	
+
+	.user-photo {
+		vertical-align: -3px;
+
+		img {
+			width: 17px; 
+			height: 17px; 
+			margin-right: 5px; 
+			@extend .border-blue;
+		}
+		
+	}
+
+
+}
+
+// User Login Menu
+#block-system-user-menu {
+	@extend .right, .clear, .small-font; 
+	margin-top: -4%; 
+
+	@media #{$medium-only} {
+		margin-top: -5%; 
+	}
+
+	@media #{$small-and-down} {
+		float: none; 
+		margin-top: 0; 
+	}
+
+	.menu {
+		list-style: none; 
+		padding: 0; 
+
+		li { 
+			display: inline-block;
+			padding: 0 5px; 
+
+			&.first {
+				border-right: $user-menu-border; 
+			} 
+		}
+	}
+
+}
+
+.region-highlighted {
+	@media #{$small-and-down} {
+		margin-bottom: 1em; 
+	}
+}
+
+// Skip Link
+#skip-link {
+	margin: 0;
+}
+
+// Development Menu
+.tabs-primary {
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+	margin-bottom: 1em; 
+
+	li {
+		display: inline-block; 
+		@extend .btn.tertiary; 
+		margin-right: 5px; 
+
+		a {
+			text-decoration: none; 
+		}
+	}
+}
+
+// Pager 
+.pager {
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+	text-align: center; 
+	margin-top: 1em; 
+
+	li { 
+		display: inline-block; 
+
+		&.pager-current {
+			font-weight: bold; 
+		}
+	}
+}
+
+// Logged out only
+.not-logged-in {
+	#block-system-user-menu { margin-top: -2%; }
+}
+
+// Logged in only
+.logged-in {
+	.breadcrumb { margin-top: 1em; }
+}
+
+// Subscriptions
+
+#block-r2r-subscription-r2r-subscribe {
+	clear:both;
+	float:right;
+}

@@ -1,0 +1,6 @@
+; $Id:$
+name = Special Submissions
+description = Submission actions for special case notifications & subscriptions
+package = Research to Reality
+core = 7.x
+version = 7.x-1.0

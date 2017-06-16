@@ -1,0 +1,312 @@
+// ------------------------------- 
+// Variables 
+// -------------------------------
+
+/** Global Values **/
+$white:					#ffffff; 				
+$black: 				#002323; 
+
+$red: 					#c00;
+
+$light-blue:			#0386AA;
+$lighter-blue:			#019cc6;
+$blue: 					#007596;
+$dark-blue:				#007596;  
+$darker-blue: 			#015577; 
+$navy: 					#00556c;
+
+$darker-green: 			#15C43B;  
+$dark-green:			#068328; 
+$green:					#00CC33;
+$lighter-green:			#17AC38; 
+$light-green: 			#19e646;  
+
+$green-blue: 			#e5f1f4;
+$grey-blue: 			#6988a3; 
+
+$yellow: 				#fef4bd;
+
+$darkest-grey:			#444444; 
+$dark-grey:				#A2BBC0;
+$mid-grey: 				#b2c8cc; 
+$grey:					#99ABAF;  
+$light-grey: 			#e6eef0;  
+$lighter-grey: 			#9a9a9a; 
+$lightest-grey:			#C9D9DC;  
+
+/** Typography **/
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+
+$helvetica: 			"Helvetica Neue",Helvetica,Arial,sans-serif; 
+$quicks: 				"Quicksand", sans-serif;
+$courier: 				"Courier New",Courier,monospace; 
+
+$primary-font: 			$helvetica; 
+$secondary-font: 		$quicks; 
+$tertiary-font:			$courier; 
+
+$primary-font-size: 	1em * 0.875; // ~14px
+$large-font-size: 		$primary-font-size * 1.15; // ~16px  
+$larger-font-size:		$primary-font-size * 1.28; // ~18px
+$largest-font-size: 	$primary-font-size * 2; // ~20px
+$x-largest-font-size:	$primary-font-size * 2.5;  // ~35px
+$small-font-size:		$primary-font-size * 0.98; // ~12px
+$smaller-font-size:		$primary-font-size * 0.95; // ~10px
+$smallest-font-size:	$primary-font-size * 0.75; // ~8px
+
+$primary-line-height: 	22px; 
+$small-line-height:		$primary-line-height * 0.8; 
+
+$h1-size: 				$x-largest-font-size; 
+$h2-size: 				$larger-font-size; 
+$h3-size: 				$large-font-size; 
+$h1-font-family: 		$secondary-font;
+$h1-font-weight: 		700;
+$h1-letter-spacing:		-2px; 	 
+$h3-line-height:		$small-line-height; 
+
+// Links
+$link-color: 			$navy; 
+$link-hover-color: 		$black; 
+$link-decoration: 		underline; 
+$link-hover-decoration:	none;  				 
+
+// Borders
+$dark-green-border:		1px solid $dark-green; 
+
+$blue-border:			1px solid $blue; 
+$dark-blue-border:		1px solid $dark-blue;
+$darker-blue-border:	1px solid $darker-blue; 
+
+$black-border:			1px solid $black;
+$dark-grey-border:		1px solid $dark-grey;
+$mid-grey-border:		1px solid $mid-grey; 
+$light-grey-border:		1px solid $light-grey; 
+
+/** Sitewide **/		
+$content-bg: 			$white; 
+$bread-crumb-font-size: $smaller-font-size; 
+
+$hr-border:				$mid-grey-border;
+
+$user-menu-border:		$blue-border; 
+
+/** Elements **/
+// Buttons
+$btn-color: 			$white; 
+$btn-bg-color-1:		$blue; 
+$btn-bg-color-2:		$darker-blue;
+$btn-font-size: 		$primary-font-size;   
+$btn-font: 				$primary-font; 
+$btn-border: 			$darker-blue-border; 
+
+$btn-hover-color-1: 	$lighter-blue; 
+$btn-hover-color-2:		$darker-blue; 
+
+$btn-sec-bg-1: 			$darker-green;  
+$btn-sec-bg-2:			$dark-green; 
+$btn-sec-border: 		$dark-green-border;
+
+$btn-sec-hover-color-1:	$light-green;  
+$btn-sec-hover-color-2: $dark-green; 	
+
+$btn-ter-bg-1:			$grey; 
+$btn-ter-bg-2:			$lightest-grey; 
+$btn-font-color:		$black; 
+$btn-ter-border:		$dark-grey-border; 
+
+$btn-ter-hover-color-1:	$light-grey;  
+$btn-ter-hover-color-2:	$dark-grey; 
+
+// Boxes
+$yellow-box-color:		$yellow; 
+$yellow-box-border: 	$blue-border; 
+
+$blue-box-color: 		$blue; 
+$blue-box-border:		$blue-border;
+$blue-box-font-color:	$white; 
+
+$grey-box-color: 		$light-grey; 
+$grey-box-border:		$mid-grey-border;
+
+// Forms
+$form-border: 			$dark-blue-border; 
+$form-font-size: 		$smaller-font-size; 
+$form-font-family: 		$tertiary-font; 
+$form-color:			$black; 
+
+$input-border-bg: 		$blue; 
+$input-font-color:		$black; 
+
+$input-font: 			$tertiary-font; 
+$submit-btn-font: 		$primary-font; 
+$input-font-size: 		$smaller-font-size; 
+
+$required-color: 		$red; 
+
+$comment-form-border:	$mid-grey-border; 
+$comment-box-border:	$blue-border; 
+
+// Tables
+$blue-header-border:	3px solid $mid-grey; 
+
+/** Page Partials **/
+// Header
+$header-top-bg:			$white; 
+
+// Navigation
+$nav-font-size: 		$large-font-size; 
+$nav-font-color-1:		$white;
+$nav-font-color-2:		$black;  
+$nav-decoration:		none; 
+$nav-hover-decoration:	underline; 
+
+$nav-color-1: 			$light-blue; 
+$nav-color-2:			$darker-blue; 
+$nav-hover-color-1:		$lighter-blue; 
+$nav-hover-color-2:		$dark-blue; 
+
+$nav-active-weight: 	900; 
+
+$mobile-nav-size: 		$x-largest-font-size; 
+$mobile-nav-color: 		$blue; 
+$mobile-span-hover:		$light-blue;
+$mobile-font-size:		$larger-font-size; 
+
+// Menu Navigation
+$user-menu-border: 		$black-border; 
+
+// Search Bar 
+$search-font-size: 		$smallest-font-size; 
+$search-border: 		$dark-grey-border;
+
+// Footer 
+$footer-font-size: 		$primary-font-size; 
+$footer-line-height: 	$small-line-height; 
+
+$footer-bx-shadow: 		0 2px 1px $grey-blue; 
+$footer-bg-color: 		$blue; 
+
+$footer-menu-color: 	$white; 
+
+/** Pages **/
+// Homepage
+$hp-small-font: 		$small-font-size; 
+
+$hp-blurb-font: 		$secondary-font; 
+$hp-blurb-font-size:	$largest-font-size; 
+$hp-signup-font-size:	$larger-font-size; 
+
+$new-post-date: 		$smaller-font-size; 
+$new-post-title-font:	$secondary-font; 
+$new-post-title-size:	$largest-font-size - 0.2em; 
+
+$recent-bx-shadow-color:$dark-grey;
+$recent-bx-title-color:	$white; 
+$recent-bx-border:		$blue-border; 
+
+$featured-part-border:	$blue-border;
+
+$sub-disc-border:		$light-grey-border; 
+
+$events-border: 		$light-grey-border; 
+
+$tab-menu-border:		$blue-border; 
+
+// Discussion Page
+$disc-border: 			$blue-border; 
+
+$disc-menu-bg: 			$blue; 
+$disc-menu-bg-active: 	$white; 
+
+$disc-menu-link-color: 	$white;
+$disc-menu-link-active: $black; 
+
+$disc-info-font: 		$smaller-font-size; 
+$disc-row-even-bg:		$green-blue; 
+$disc-cat-link: 		$lighter-grey; 
+$disc-cat-link-size: 	$smallest-font-size; 
+
+$cat-menu-font-size:	$smaller-font-size;
+
+$disc-login-btn-font:	$smaller-font-size;
+$disc-login-font: 		$smallest-font-size; 
+
+$author-img-border: 	$blue-border; 
+$disc-chat-arrow: 		$blue; 
+$disc-chat-arrow-two:	$white; 
+
+// Featured R2R Partner
+$feat-part-border:		$mid-grey-border; 
+
+// Cyber-Seminar Page
+$cyber-seminar-border: 	$mid-grey-border;
+
+$cyber-seminar-date:	$larger-font-size; 
+
+// About Page 
+$header-border-color: 	$mid-grey; 
+$contact-font-size:		$larger-font-size; 
+$img-border-color: 		$blue; 
+
+// Event Page 
+$event-header-bg: 		$blue;
+$event-font-color:		$white; 
+$event-font-size:		$smaller-font-size; 
+$event-header-size:		$larger-font-size; 
+
+$event-title-color: 	$darkest-grey; 
+
+$event-cell-border:		$blue-border; 
+
+$event-cal-title:		$black; 
+$event-title-bg: 		$green-blue; 
+
+$event-day-color: 		$white; 
+$event-day-bg: 			$blue; 
+$event-today-bg: 		$lighter-green; 
+
+$event-bg: 				$green-blue; 
+
+$inner-event-border:	$mid-grey-border; 
+
+// User Register Page
+$event-reg-border: 		$mid-grey-border; 
+
+// Learning Communities Page
+$lc-menu-border:		$mid-grey-border; 
+
+$recent-story-border:	$blue-border; 
+
+/** Media Queries Breakpoints **/
+$screen-xxs:            320px; 	// Extra small screen / mobile
+$screen-xs:             500px; 	// Small screen / tablet
+$screen-sm:				650px; 	
+$screen-md:             800px; 	// Medium screen / desktop
+$screen-lg:    			1020px; // Large screen / desktop
+$screen-xlg:            1220px; // X-Large screen / wide desktop
+
+// Media query variables.
+$xx-small-only:			"only screen and (max-width: 320px)";
+
+$x-small-and-down:  	"only screen and (max-width: 500px)";
+$x-small-only:  		"only screen and (min-width: 321px) and (max-width: 500px)";
+$x-small-and-up: 		"only screen and (min-width: 321px)";
+
+$small-and-down:  		"only screen and (max-width: 650px)";
+$small-only:  			"only screen and (min-width: 501px) and (max-width: 650px)";
+$small-and-up: 			"only screen and (min-width: 501px)";
+
+$medium-and-down: 		"only screen and (max-width: 800px)";
+$medium-only: 			"only screen and (min-width: 651px) and (max-width: 800px)";
+$medium-and-up: 		"only screen and (min-width: 651px)";
+
+$large-and-down:  		"only screen and (max-width: 1020px)";
+$large-only:  			"only screen and (min-width: 801px) and (max-width: 1020px)";
+$large-and-up: 			"only screen and (min-width: 801px)";
+
+$x-large-and-down:  	"only screen and (max-width: 1220px)";
+$x-large-only:  		"only screen and (min-width: 1021px) and (max-width: 1220px)";
+$x-large-and-up: 		"only screen and (min-width: 1021px)";
+
+$xx-large-only:    		"only screen and (min-width: 1221px)";

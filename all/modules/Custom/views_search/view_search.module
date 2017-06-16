@@ -1,0 +1,22 @@
+<?php
+
+/* *
+ * @file
+ * Custom Function
+ */
+
+function view_search_form_alter(&$form, &$form_state, $form_id){
+   if( $form_id == 'views_exposed_form'){
+//
+//       print '<pre>';
+//       print_r($form);
+//       print'</pre>';
+       $form['submit']['#value'] = 'SEARCH';
+    $form['submit']['#id'] = 'view-search-submit';
+     $form['keys'] = array(
+      '#type' => 'textfield',
+      '#attributes' => array('class' => array('dmx')),
+    );
+
+   }
+}

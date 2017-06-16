@@ -1,0 +1,172 @@
+// ---------------------------------------------------------------- 
+// Cyber-Seminar Page
+// @description Styles for Cyber-Seminar Page and its subpages 
+// ----------------------------------------------------------------
+
+
+.page-cyber-seminars, .node-type-cyber-seminar {
+	.left-side {
+		margin-bottom: 1em; 
+	}
+	
+	// Archive 
+	.pane-cyber-seminar-upcoming {
+		.views-field-title { font-weight: bold; }
+		.views-field-field-event-date { font-style: italic; }
+		.views-field-view-node {
+			  height: 40px;
+			  margin-bottom: 20px;
+			  border-bottom: $cyber-seminar-border;
+
+			> .right { clear: both; } 
+		}	
+
+		.item-list {
+			ul {
+				list-style: none; 
+				margin: 0; 
+				padding: 0; 
+			}
+		}
+	}
+	
+	// Cyber Seminar Search 
+	#mini-panel-cyber_seminar_search {
+ 	 	p { 
+ 	 		@extend .small-font; 
+ 	 		margin: 0; 
+ 	 	}
+	}
+
+	#cyber-seminar-search {
+		#edit-custom-search-blocks-form-2--2 { width: 90%; } 
+	}
+	
+	// Technical Requirements Block
+	#technical-requirements {
+		margin-top: 1em; 
+
+		.pane-title {
+			@extend .fill-grey, .box, .round-edge-top; 
+			margin: 0;
+			border-top: 0;
+			border-right: 0; 
+			border-left: 0;  
+		}
+
+		> div {
+			@extend .box; 
+
+			h3 { margin-bottom: 5px; }
+			
+			ul {
+				padding: 0; 
+				list-style: none;
+				margin: 0;  
+
+				li { 
+					padding: 0; 
+					@extend .small-font; 
+				}
+			}
+
+			p { @extend .small-font; } 
+		}
+	}
+	
+	// Featured Cyber Seminar 
+	#cyber-seminar-featured {
+		@extend .box, .yellow, .round-edge-all; 
+ 		margin: 0;
+ 		background-image: url('../images/global/bground-cyberseminar-feature.gif');
+		background-repeat: no-repeat;
+		background-position: 98% 8%;
+
+		.item-list {
+			ul { 
+				list-style: none; 
+				margin: 0;
+				padding: 0; 
+			}
+		}
+
+		.views-field-title { 
+			@extend h2; 
+			margin: 0; 
+		}
+
+		.featured-left {
+			float: left; 
+			width: 20%;
+			margin: 10px 2% 50px 0;
+
+			.btn.secondary { padding: 1em; }
+		}
+
+		.featured-right {
+			p { margin-top: 10px; }
+		}
+	}	
+
+	// Inner Page Content 
+	.view-cyber-seminar-inner-page {
+		.views-field-field-event-date { 
+			font-style: italic; 
+			font-size: $cyber-seminar-date; 
+			margin-bottom: 1em; 
+		}
+
+		#cyber-seminar-related-content {
+			.item-list ul {
+				list-style: none; 
+				padding: 0; 
+				margin: 0; 
+
+				li { 
+					padding: 0; 
+				}
+			}
+		}
+	}
+
+	.view-cyber-seminar-presenters {
+		.views-row {
+			clear: both;
+			margin-top: 20px;
+
+			img {
+				float: left;
+				width: 70px;
+				border: 1px solid #007596;
+				margin-right: 10px;
+				margin-bottom: 20px;
+			}
+
+			.pres-creds {
+				display: block;
+				float: left;
+				width: 80%;
+
+				p {
+					font-size: 12px;
+					line-height: 1;
+					margin-top: 6px;
+				}
+
+				a {
+					font-size: 12px;
+					font-weight: 900;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.pane-2 {
+		clear: left;
+	}
+
+	.join-btn {
+		margin-top: 10px;
+	}
+}

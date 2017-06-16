@@ -1,0 +1,274 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+function r2r_forms_wysiwyg_editor_settings_alter(&$settings, $context) {
+	if ($context['profile']->editor == 'ckeditor') {
+		$settings['height'] = isset($config['height']) ? $config['height'] : 400;
+	}
+}
+
+function r2r_forms_form_custom_search_blocks_form_1_alter(&$form, &$form_state) {
+	$form['submit']['#attributes']['onclick'] = "NCIAnalytics.SiteSearch(this.form)";
+}
+
+function r2r_forms_form_custom_search_blocks_form_2_alter(&$form, &$form_state) {
+	$form['submit']['#attributes']['onclick'] = "NCIAnalytics.SiteSearch(this.form)";
+}
+
+function r2r_forms_form_alter(&$form, &$form_state, &$form_id) {
+	global $user;
+	if ($form_id == 'group_discussion_form' || $form_id == 'story_form') {
+		//print dpm($form);
+		$form['og_public'] = "TRUE";
+		//field_cohort_discussion
+	} else if ($form_id == 'contact_mail_page') {
+		$form['phone'] = array(
+			'#type' => 'textfield',
+			'#title' => t('Work Related Phone Number'),
+			'#maxlength' => 255,
+			'#default_value' => !empty($edit['phone']) ? $edit['phone'] : '',
+			'#required' => true,
+		);
+
+		$form['contact_information']['#value'] = t('Thank you for visiting the Research to ' .
+				'Reality Community of Practice.  Your comments, questions and suggestions are ' .
+				'appreciated and will be addressed by a member of the Research to Reality team. ' .
+				'If your feedback or question would benefit other members, please consider posting ' .
+				'it to Discussions (link to Discussions Index) instead of using this form.');
+		$form['mail']['#title'] = t('Work Related E-Mail Address');
+		$form['name']['#title'] = t('Your Name');
+		$form['name']['#weight'] = 2;
+		$form['mail']['#weight'] = 3;
+		$form['phone']['#weight'] = 4;
+		$form['subject']['#weight'] = 6;
+		$form['message']['#weight'] = 8;
+		$form['copy']['#weight'] = 10;
+		$form['submit']['#weight'] = 12;
+		//Add the phone number to the email.
+	} else if ($form_id == 'user_register') {
+		$form['account']['#title'] = 'User Registration Form';
+		$form['Registration Information']['#title'] = '';
+		$form['account']['name']['#description'] = t('Please create a username for log-in. ' .
+				'Your username must be 6-20 characters long and cannot include spaces. ' .
+				'It can be a mix of letters, numbers, and the following: periods, hyphens, and underscores. ');
+		$form['account']['mail']['#title'] = t('Work Related E-Mail Address');
+		$form['account']['mail']['#description'] = t('Please enter a valid, work related e-mail ' .
+				'address.  All emails from the system will be sent to this address. ' .
+				'Your e-mail address is not made public, and will only be used if you wish to ' .
+				'receive a new password or certain site-related notifications.');
+		$form['account']['pass']['#description'] .= t(' A strong password consists of a combination ' .
+				'of at least 6 letters, numbers, and special characters. We strongly encourage the use of strong ' .
+				'passwords.');
+		//$form['submit']['#value'] = t('Create Account');
+
+		$form['#validate'][] = 'r2r_forms_user_register_validate';
+	} else if ($form_id == 'group_document_node_form') {
+		$form['field_revision_count']['#access'] = FALSE;
+	} else if ($form_id == 'event_node_form' && $form['#action'] == '/node/add/event') {
+
+		global $user;
+		$thisUser = user_load(array('uid' => $user->uid));
+		$form['#title'] = t('Suggest an Event');
+		$form['field_event_additional'][0]['#value']['value'] .= t('Name: ' . $thisUser->profile_first_name . ' ' .
+						$thisUser->profile_last_name) . '<br />';
+		$form['field_event_additional'][0]['#value']['value'] .= t('E-Mail: ' . $thisUser->mail);
+		//print dpm($form);
+		//drupal_set_message(t('Your Event has been submitted to the Research To Reality Team for review. Thank You.'));
+	}
+
+	/* else if ($form_id == 'user_profile_form'){
+	  unset($form[contact]);
+	  }
+	 *
+	 */ else if ($form_id == 'comment_form') {
+		//print dpm($form);
+		$form['#validate'][] = 'r2r_forms_youtube_callback';
+		//str_replace($form['#default_value'], "http://", "https://");
+		//$form['comment_filter']['comment']['#default_value']= str_replace("http://", "https://", $form['comment_filter']['comment']['#default_value']);
+	} else if ($form_id == 'seminar_node_form') {
+		//print dpm($form, '$form');
+		//print dpm($form_state, '$form_state');
+		// hide the field
+		$form['field_archive_date']['#access'] = FALSE;
+
+		// and add a callback to tweak the data
+		$form['#submit'][] = 'r2r_forms_seminar_node_callback';
+		//print dpm($form['#validate'], '#validate');
+		//print dpm($form['#submit'], '#submit');
+		//print dpm($form_state['args']['0']->field_archive_date['0']['value'], "Archive Date");
+	}
+
+	// keep the referrer for the user_login and user_register forms
+	if ($form_id == 'user_login'
+			|| $form_id == 'user_register') {
+
+		$referer = parse_url($_SERVER['HTTP_REFERER']);
+		//dsm($_SERVER, "_SERVER for $form_id");
+		//dsm($referer, "current referer for $form_id");
+		//dsm(parse_url($_SESSION['login_referer']), "saved referer for $form_id");
+
+		if (strpos($referer['path'], '/user') !== 0) {
+			$_SESSION['login_referer'] = $_SERVER['HTTP_REFERER'];
+			//dsm("Set referer to ${_SESSION['login_referer']}");
+		} else {
+			//dsm("Preserving referer of ${_SESSION['login_referer']}");
+		}
+	}
+}
+
+function r2r_forms_user_register_validate($form, &$form_state) {
+
+	//print dpm($form, '$form');
+	//print dpm($form_state, '$form_state');
+
+	if ($form_state['values']['profile_org_type'] == '--') {
+		form_set_error('profile_org_type', t('You must specify an organization type.'));
+	}
+
+	if ($form_state['values']['profile_role'] == '--') {
+		form_set_error('profile_role', t('You must specify a role.'));
+	}
+}
+
+function r2r_forms_youtube_callback($form, &$form_state) {
+	//print dpm($form_state);
+	$form['comment_filter']['comment']['#default_value'] = str_replace("http://", "https://", $form['comment_filter']['comment']['#default_value']);
+	$form_state['values']['comment'] = str_replace("http://www.youtube", "https://www.youtube", $form_state['values']['comment']);
+	$form_state['clicked_button']['#post']['comment'] = str_replace("http://", "https://", $form_state['clicked_button']['#post']['comment']);
+}
+
+/**
+ * written by Dan Young on 5/11/2012
+ * Checks the form state in order to set the archive date if the
+ * seminar has just been switched to the archived state.
+ * @param <type> $form a form representing a seminar
+ * @param <type> $form_state the state of the seminar's form
+ */
+function r2r_forms_seminar_node_callback($form, &$form_state) {
+	//print dpm($form_state, 'Form State');
+	// grab the previous state of the form
+	$old_node = $form_state['args']['0'];
+
+	//print dpm($old_node, 'Original Node');
+	// pull the old and new seminar state from the forms
+	$old_state = $form_state['args']['0']->field_seminar_state['0']['value'];
+	$new_state = $form_state['values']['field_seminar_state']['0']['value'];
+
+	//print dpm($old_state, 'Old Seminar State');
+	//print dpm($new_state, 'New Seminar State');
+	// if the state has changed and the current state is archived...
+	if ($new_state != $old_state && $new_state == 'Archived Seminar') {
+		// update the archive timestamp to now
+		$form_state['values']['field_archive_date']['0']['value'] = time();
+	}
+
+	//print dpm($form_state, 'Updated Form State');
+	//print dpm($old_node->field_archive_date['0']['value'], 'Original Archive Date');
+	//print dpm($form_state['values']['field_archive_date']['0']['value'], 'New Archive Date');
+}
+
+function r2r_forms_mail_alter(&$message) {
+	switch ($message['id']) {
+		case 'contact_page_mail':
+			$phone = $message['params']['phone'];
+			$name = $message['params']['name'];
+			global $user;
+			$thisUser = user_load(array('uid' => $user->uid));
+			if (!empty($phone)) {
+				$message['body'][2] = 'Phone number: ' . $phone;
+				$message['body'][3] = 'Message: ' . $message['body'][1];
+				if ($thisUser->profile_first_name != '') {
+					$message['body'][1] = 'Name: ' . $thisUser->profile_first_name . ' ' .
+							$thisUser->profile_last_name;
+				} else {
+					$message['body'][1] = 'Name: ' . $name;
+				}
+			}
+			break;
+	}
+}
+
+function r2r_forms_user($op, &$edit, &$user, $category = NULL) {
+
+	if ($category == 'account') {
+		switch ($op) {
+			case 'load':
+				return profile_load_profile($user);
+			//case 'register':
+			//return profile_form_profile($edit, $user, 'Registration Information', TRUE);
+			case 'update':
+				return profile_save_profile($edit, $user, 'Registration Information');
+			//case 'insert':
+			//return profile_save_profile($edit, $user, 'Registration Information', TRUE);
+			case 'view':
+				return profile_view_profile($user);
+			case 'form':
+				return profile_form_profile($edit, $user, 'Registration Information');
+			case 'validate':
+				return profile_validate_profile($edit, 'Registration Information');
+			case 'categories':
+				return profile_categories();
+			case 'delete':
+				db_query('DELETE FROM {profile_values} WHERE uid = %d', $user->uid);
+			//case 'form':
+			// We are at edit screen. Load form data for "Registration Info" category.
+			// return profile_form_profile($edit, $user, 'Registration Information');
+			//break;
+		}
+	}
+
+	if ($op == 'login') {
+		$redirect = '';
+
+		// get the referer's url, if any
+		if (isset($_SESSION['login_referer'])) {
+			$url = parse_url($_SESSION['login_referer']);
+
+			// only redirect if the referer was our own site
+			if (isset($url['host'])
+					&& $url['host'] == $_SERVER['HTTP_HOST']
+					&& isset($url['path'])) {
+				// get / trim the path
+				$path = $url['path'];
+
+				// trim slashes from the ends of the path
+				// (else the valid_path call behaves poorly)
+				$path = trim($path, '/');
+
+				$path_arr = array('link_path' => $path);
+
+				// check for validity
+				if (menu_valid_path($path_arr)) {
+					// build a full path
+					$redirect = url($path, array('absolute' => true));
+					//dsm("redirecting to $redirect!");
+				}
+			}
+
+			// clear the redirect value
+			unset($_SESSION['login_referer']);
+		}
+
+		// redirect to the determined path
+		$edit['redirect'] = $redirect;
+		$_REQUEST['destination'] = $redirect;
+		drupal_goto($redirect);
+	}
+}
+
+/*
+  function r2r_forms_mail_alter(&$message) {
+  if($messsage['id'] == 'contact_page_mail') {
+  $phone = $message['params']['phone'];
+  $name = $message['params']['name'];
+  if (!empty($phone) ){
+  $message['body'][2] = $message['body'][1];
+  $message['body'][1] = 'Phone number of '.$name.' : '.$phone;
+  }
+  }
+  } */
+?>

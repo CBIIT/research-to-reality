@@ -1,0 +1,850 @@
+/* ------------------------------ Research to Reality (R2R) Custom Styles ------------------------------ */
+/* ------------------------------ Homepage ------------------------------ */
+.homepage-boxes-bg h2 {
+	color: #003E4D;
+	font-size:24px;
+	font-weight:700;
+	margin:0px 0px 15px;	
+}
+.homepage-boxes-bg h2.pane-title {
+	color: #003E4D;
+	font-size:24px;
+	font-weight:700;
+	margin:0px 0px 15px;
+	background-color:#FFFFFF;
+	padding:0px;	
+}
+/* ------------------------------ Homepage - Hero Image ------------------------------ */
+.homepage-intro {
+	position:absolute;
+	top:60px;
+	width:100%;	
+}
+.welcome-container {
+	position:absolute;
+	top:50px;	
+}
+.welcome {
+	padding-top:20px;
+	padding-bottom:20px;	
+	width:420px;
+}
+.welcome a{
+	margin-top:15px;
+}
+h1.intro {
+	color:#FFFFFF;
+	font-size:38px;
+	line-height:52px;
+	font-weight:400;	
+	display: inline;
+	background-repeat: no-repeat;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-image: -webkit-linear-gradient(top, transparent 0, rgba(0,0,0,0.80) 0);
+    background-image: linear-gradient(to bottom, transparent 0, rgba(0,0,0,0.80) 0);
+	background-size: 100% 1.2em;
+    background-position: 0 center;
+}
+h1.intro::after {
+	content: '';
+	display: inline;
+	white-space: pre-wrap;	
+}
+/* .whats-new-container {
+	position:absolute;
+	top:0px;
+	right:15px;
+	width:360px;
+}
+.whats-new-box {
+	padding:30px;
+	height:635px;
+	background-color:rgba(0,10,15,0.85);
+}
+.whats-new-box h2.block-title {
+	color:#FFFFFF;
+	font-size:24px;
+	font-weight:700;
+	margin-bottom:15px;
+}
+.whats-new-box .views-field-field-find-out-more {
+	margin-top: 10px;
+}
+p.whats-new-content {
+	color:#FFFFFF;
+	font-size:20px;
+	line-height:32px;
+	font-weight:400;
+} */
+@media (max-width: 1200px) {
+	.welcome {
+		padding-top:20px;
+		padding-bottom:20px;	
+		width:320px;
+	}
+	h1.intro {
+		color:#FFFFFF;
+		font-size:36px;
+		line-height:50px;
+		font-weight:400;	
+	}
+}
+@media (max-width: 992px) {
+	.welcome-container {
+		top:10px;	
+	}
+	.welcome {
+		padding-top:20px;
+		padding-bottom:20px;	
+		width:280px;
+	}
+	.welcome .btn-lg {
+		font-size:20px;
+		padding: 14px 24px;	
+	}
+	h1.intro {
+		color:#FFFFFF;
+		font-size:26px;
+		line-height:38px;
+		font-weight:400;	
+	}
+}
+@media (max-width: 768px) {
+/* .homepage-intro {
+		position:relative;	
+	} */
+	.welcome-container {
+		top:30px;	
+	}
+	.welcome {	
+		width:80%;
+		padding-left:30px;
+		padding-right:30px;	
+	}
+	h1.intro {
+		font-size:32px;
+		line-height:44px;
+		font-weight:400;
+	}
+	/* .whats-new-container {
+		background-color:#1B1E24;
+		position:relative;
+		top:-60px;	
+		right:0px;	
+		width:auto;
+		margin:0px -15px;
+		height:auto;
+	}
+	.whats-new-box {
+		background-color:#1B1E24;
+		height:auto;
+	} */
+}
+@media (max-width: 690px) {
+	.welcome-container {
+		top:30px;	
+	}
+	.welcome {	
+		width:100%;	
+	}
+}
+@media (max-width: 580px) {
+	.welcome-container {
+		top:20px;	
+	}
+	.welcome {	
+		width:100%;	
+	}
+	h1.intro {
+		font-size:24px;
+		line-height:36px;
+	}
+}
+
+/* ------------------------------ Homepage - Stats ------------------------------ */
+.stats {
+	background-color: #2A2A2A;
+	min-height:200px;		
+}
+.stats .btn-sm {
+	background-color: #E2FAFF;	
+}
+.stats .btn-sm:hover,
+.stats .btn-sm:focus {
+	background-color: #003E4D;
+	color:#E2FAFF;	
+}
+.stat-category {
+	font-size:22px;
+	font-weight:600;
+	color:#FFFFFF;	
+	padding-bottom: 10px;
+	text-shadow: 0px 0px 8px #000000;
+}
+#member-count, #discussion-count, #event-count {
+	font-size:100px;
+	line-height:75px;
+	font-weight:700;
+	color:#82C442;
+	padding-top:20px;
+	letter-spacing: -0.03em;	
+}
+@media (max-width: 992px) {
+	.stat-category {
+		font-size:18px;
+	}
+	#member-count, #discussion-count, #event-count {
+		font-size:80px;
+		line-height:75px;
+	}
+}
+
+/* ------------------------------ Homepage - Boxes ------------------------------ */
+.homepage-boxes-bg {
+	background-color: #F7F7F7;
+	padding-top:20px;		
+}
+.homepage-box {
+	background-color: #FFFFFF;
+	padding: 20px;
+	margin:20px 0px;
+	border-left: 1px solid #E9E9E9;
+	border-right: 1px solid #E9E9E9;
+	border-bottom: 2px solid #D5D5D5;
+	border-top: 1px solid #E9E9E9;
+}
+.homepage-box:before,
+.homepage-box:after {
+    display: table;
+    content: " ";
+}
+.homepage-box:after {
+	clear: both;
+}
+
+/* ------------------------------ Homepage - What is R2R ------------------------------ */
+.homepage-box.what-is-new-container {
+	height:450px;	
+}
+@media (max-width: 1200px) {
+	.homepage-box.what-is-new-container {
+		height:inherit;	
+	}
+}
+.what-is-new-join {
+	text-align:right;
+	margin:20px 0px;	
+}
+.thumbnail-group {
+	display:block;	
+	margin-bottom:15px;
+}
+.thumbnail-group:before,
+.thumbnail-group:after {
+    display: table;
+    content: " ";
+}
+.thumbnail-group:after {
+	clear: both;
+}
+.thumbnail1, .thumbnail2, .thumbnail3 {
+	float:left;
+	padding-right:4px;
+}
+.thumbnail3 {
+	padding-right:0px;
+}
+.thumbnail-lg {
+	float:left;
+	margin-right:20px;	
+}
+@media (max-width: 992px) {
+	.thumbnail-lg {
+		margin-bottom:20px;	
+	}
+}
+
+/* ------------------------------ Homepage - Recent Activities ------------------------------ */
+.hp-recent-activities a {
+	display: inline;
+	width:100%;
+	text-decoration:none;
+	margin-bottom:12px;	
+}
+.hp-recent-activities a .recent-activity-box {
+	display:table-cell;
+	vertical-align:middle;
+	padding:12px;
+	font-size:15px;
+	line-height:18px;
+	font-weight:700;
+	text-decoration:none;
+	background-color:#e2faff;
+	width:100%;
+	height:115px;
+                  overflow-y: auto;
+	margin-bottom: 12px;
+	color:#003E4D;
+}
+.hp-recent-activities a:hover .recent-activity-box,
+.hp-recent-activities a:focus .recent-activity-box {
+	color:#FFFFFF;
+	background-color:#003E4D;
+}
+
+/* ------------------------------ Homepage - Recent Discussions ------------------------------ */
+.homepage-box.rd-container {
+	height:450px;	
+}
+@media (max-width: 768px) {
+	.homepage-box.rd-container {
+		height:inherit;	
+	}
+}
+.homepage-box.rd-container .panel-separator {
+	height:7px;
+}
+.pane-homepage-discussions table.views-view-grid,
+.pane-homepage-discussions-mobile table.views-view-grid {
+	border-collapse: separate;
+    border-spacing: 15px 0px;
+	margin:0px -15px;
+}
+.pane-homepage-discussions table.views-view-grid td,
+.pane-homepage-discussions-mobile table.views-view-grid td {
+	height: 300px;
+	background-color: #FFFFFFF;
+	border: 5px solid #E2E2E2;
+	width: 33% !important;
+    overflow-y: auto;           
+}
+.pane-homepage-discussions table.views-view-grid td.col-1, 
+.pane-homepage-discussions table.views-view-grid td.col-2,
+.pane-homepage-discussions table.views-view-grid td.col-3,
+.pane-homepage-discussions-mobile table.views-view-grid td.col-1, 
+.pane-homepage-discussions-mobile table.views-view-grid td.col-2,
+.pane-homepage-discussions-mobile table.views-view-grid td.col-3 {
+	vertical-align:top;
+            
+}
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-title,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-title {
+	display:table;
+	border-collapse:collapse;
+	height:50%;
+	width:100%;
+	background-color:#e2faff;
+}
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-title span.field-content,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-title span.field-content {
+	display: table-row;
+}
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-title a,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-title a {
+	display:table-cell;
+	vertical-align:top;
+	padding:12px;
+	font-size:15px;
+	line-height:18px;
+	font-weight:700;
+	width:100%;
+	height:150px;
+	text-decoration:none;
+	background-color:#e2faff;
+}
+.pane-homepage-discussions table.views-view-grid .views-field-title a:hover,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field-title a:hover {
+	color:#FFFFFF;
+	background-color:#003E4D;
+}
+.pane-homepage-discussions table.views-view-grid span.views-label.views-label-last-comment-name,
+.pane-homepage-discussions table.views-view-grid span.views-label.views-label-field-last-name,
+.pane-homepage-discussions table.views-view-grid span.views-label.views-label-field-last-name-1,
+.pane-homepage-discussions table.views-view-grid span.views-label.views-label-name,
+.pane-homepage-discussions-mobile table.views-view-grid span.views-label.views-label-last-comment-name,
+.pane-homepage-discussions-mobile table.views-view-grid span.views-label.views-label-name {
+	display:block;
+	font-size: 14px;
+	text-transform: uppercase;	
+}
+.pane-homepage-discussions table.views-view-grid span.views-label.views-label-last-comment-name,
+.pane-homepage-discussions table.views-view-grid span.views-label.views-label-field-last-name,
+.pane-homepage-discussions-mobile table.views-view-grid span.views-label.views-label-last-comment-name {
+	padding-top:12px;	
+}
+.pane-homepage-discussions table.views-view-grid .views-field,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field {
+	font-size:13px;
+	line-height:16px;	
+}
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-last-comment-name,
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-last-comment-timestamp,
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-name,
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-field-last-name,
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-field-last-name-1,
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-created,
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-nothing,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-last-comment-name,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-last-comment-timestamp,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-name,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-field-last-name,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-field-last-name-1,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-created,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-nothing {
+	padding:0px 12px;
+}
+.pane-homepage-discussions table.views-view-grid .views-field.views-field-nothing hr,
+.pane-homepage-discussions-mobile table.views-view-grid .views-field.views-field-nothing hr {
+	margin-top: 10px;
+	margin-bottom: 10px;	
+}
+.pane-homepage-discussions table.views-view-grid .views-field a, 
+.pane-homepage-discussions-mobile table.views-view-grid .views-field a {
+	font-weight:700;	
+}
+.homepage-box.rd-container ul.pager {
+	margin:14px 0px;
+	font-size:14px;
+	line-height:16px;
+	height:16px;	
+}
+.homepage-box.rd-container ul.pager li>a {
+	padding: 0;
+	background-color: #fff;
+	border: none;
+	border-radius: 0px;
+}
+.homepage-box.rd-container ul.pager li {
+	vertical-align:top;	
+}
+.homepage-box.rd-container ul.pager li.pager-previous,
+.homepage-box.rd-container ul.pager li.pager-next {
+	width:16px;
+	height:16px;
+	display:inline-block;
+	margin:0px;
+	padding:0px;
+}
+.homepage-box.rd-container ul.pager li.pager-current {
+	margin:0px 5px;
+	height:16px;
+}
+.homepage-box.rd-container ul.pager li.pager-previous {
+	background:url(../../images/rd-prev-none.png);	
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.homepage-box.rd-container ul.pager li.pager-previous a {
+	margin-top:0px;
+	content:url(../../images/rd-prev.png);	
+}
+.homepage-box.rd-container ul.pager li.pager-previous a:hover {
+	content:url(../../images/rd-prev-over.png);
+}
+.homepage-box.rd-container ul.pager li.pager-next {
+	background-image: url(../../images/rd-next-none.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.homepage-box.rd-container ul.pager li.pager-next a {
+	margin-top:0px;
+	content:url(../../images/rd-next.png);	
+}
+.homepage-box.rd-container ul.pager li.pager-next a:hover {
+	content:url(../../images/rd-next-over.png);	
+}
+.pane-homepage-discussions-mobile {
+	display: none;
+}
+@media (max-width: 768px) {
+	.pane-homepage-discussions {
+		display: none;
+	}
+	.pane-homepage-discussions-mobile {
+		display: block;
+	}
+}
+
+
+/* ------------------------------ Homepage - Cyber Seminars and Events ------------------------------ */
+.cs-events.row,
+.cs-events.row .row {
+	margin-right: -9px;
+  	margin-left: -9px;	
+}
+.cs-events.row .col-md-4,
+.cs-events.row .col-md-6, 
+.cs-events.row .col-lg-4,
+.cs-events.row .col-lg-6,
+.cs-events.row .col-lg-8,
+.cs-events.row .col-lg-12,
+.cs-events.row .row .col-md-4,
+.cs-events.row .row .col-md-6, 
+.cs-events.row .row .col-lg-4,
+.cs-events.row .row .col-lg-6,
+.cs-events.row .row .col-lg-8,
+.cs-events.row .row .col-lg-12 {
+	padding-right: 9px;
+    padding-left: 9px;
+}
+.events-box,
+.cyberseminars-box {
+	background-color:#F7F7F7;
+	min-height:319px;
+	padding:20px 20px 72px;
+	position:relative;	
+}
+.homepage-boxes-bg .events-box h2.pane-title,
+.homepage-boxes-bg .cyberseminars-box h2.pane-title {
+	color: #003E4D;
+	font-size:20px;
+	font-weight:700;
+	background-color:#F7F7F7;
+	padding:0px 0px 10px 0px;
+	margin:0px 0px 10px;	
+	line-height:30px;
+}
+.events-box p.next,
+.cyberseminars-box p.next {
+	line-height:1.2;
+	margin-bottom:0px;
+}
+.events-box p.title,
+.cyberseminars-box p.title {
+	line-height:20px;
+}
+.events-box .views-field-title,
+.cyberseminars-box .views-field-title {
+	margin-bottom:15px;
+}
+.events-box .views-field-title a,
+.cyberseminars-box .views-field-title a {
+	font-weight:700;
+}
+.cyberseminars-box span.cal-key-diamond,
+.events-box span.cal-key-circle {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	float:left;
+	margin-right: 15px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+}
+.events-box span.cal-key-circle {
+	background-image: url(../../images/purple-circle-lg.png);
+}
+.cyberseminars-box span.cal-key-diamond {
+	background-image: url(../../images/green-diamond-lg.png);
+}
+.cal-key {
+	font-weight:700;	
+	padding-top:20px;
+}
+.cal-key span.cal-key-diamond,
+.cal-key span.cal-key-circle {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	margin-right: 3px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+}
+.cal-key span.cal-key-circle {
+	background-image: url(../../images/purple-circle-sm.png);
+}
+.cal-key span.cal-key-diamond {
+	background-image: url(../../images/green-diamond-sm.png);
+}
+.cal-key .cal-key-text {
+	line-height:18px;	
+}
+.events-box .view-all,
+.cyberseminars-box .view-all{
+	position:absolute;
+	bottom:20px;
+	right:20px;	
+}
+@media (max-width: 1200px) {
+	.events-box,
+	.cyberseminars-box {
+		min-height: initial;
+		margin-bottom:20px;	
+	}	
+}
+
+/* ------------------------------ Homepage - Calendar ------------------------------ */
+.pane-rwb-event-seminar-calendar .date-nav-wrapper {
+	margin-top:0px;
+	line-height: 22px;	
+}
+.pane-rwb-event-seminar-calendar .date-nav-wrapper .date-nav {
+	margin-bottom:0px;
+	padding-bottom: 0px;
+}
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper .date-nav {
+	background-color:#2a2a2a;	
+}
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper .date-nav .date-heading h3 {
+	font-size:24px;
+	font-weight:600;
+	line-height:55px;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper ul.pager {
+	margin:0px;
+}
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper ul.pager li.date-prev {
+	right:auto;
+	left:0px;	
+}
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper ul.pager li.date-prev, 
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper ul.pager li.date-next{
+	border-radius: 0px;
+	background-color: transparent;
+	height: 55px;
+	padding:0px;
+}
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper ul.pager li>a {
+	border: none;
+	background-color: transparent;
+	color:#ffffff;
+	padding:0px 10px;
+	line-height: 55px;
+}
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper ul.pager li.date-prev a {
+	margin-left:0px;	
+	content:url(../../images/cal-prev.png);
+}
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper ul.pager li.date-prev a:hover {
+	content:url(../../images/cal-prev-over.png);
+}
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper ul.pager li.date-next a {
+	margin-right:0px;	
+	content:url(../../images/cal-next.png);	
+}
+.pane-rwb-event-seminar-calendar .view .date-nav-wrapper ul.pager li.date-next a:hover {
+	content:url(../../images/cal-next-over.png);
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar td {
+	border:none;	
+}
+th#Saturday.days.sat {
+	border-right: 1px solid #e8e8e8;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view,
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view.empty {
+	border-left: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view tr.date-box td, 
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view tr.date-box td.today {
+	border-top: 1px solid #e8e8e8;
+	border-right: 1px solid #e8e8e8;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view tr.single-day td, 
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view tr.single-day td.today {
+	border-right: 1px solid #e8e8e8;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view th.days {
+	font-size: 13px;
+	line-height:30px;
+	color:#2a2a2a;
+	font-weight:400;
+	text-transform:uppercase;
+	border:none;
+	background-color:#f7f7f7;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view td {
+	text-align: center;
+	color: #2a2a2a;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar tr.date-box div.month.day {
+	width:100%;	
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar tr.date-box td.empty div.month.day {
+	color:#afafaf;	
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full tr .today {
+	background-color: #c8f5ff;
+	border:none;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full tr td.single-day.today {
+	border-bottom: none;
+}
+
+.calendar-calendar .inner .item {
+	position: absolute;
+}
+
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td.single-day div.monthview .cyber-icon img, 
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td.multi-day div.monthview .cyber-icon img {
+	width: 12px;
+	height: 12px;
+	margin-bottom:2px;
+	vertical-align:top;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td.single-day div.monthview .event-icon img, 
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td.multi-day div.monthview .event-icon img {
+	width: 12px;
+	height: 12px;
+	margin-bottom:2px;
+	vertical-align:top;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td .inner div.day a {
+	text-decoration:underline;
+	color:#003E4D;
+	font-weight:400;
+	text-align: center;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td .inner div.day a:hover,
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td .inner div.day a:focus {
+  	color: #2d004d;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td.single-day div.monthview, 
+.pane-rwb-event-seminar-calendar .calendar-calendar .week-view .full td.single-day div.weekview, 
+.pane-rwb-event-seminar-calendar .calendar-calendar .day-view .full td.single-day div.dayview {
+	background-color:transparent;
+	padding:0;
+	margin:0;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full tr.single-day .no-entry, 
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full tr.single-day .no-entry .inner {
+	height: 18px !important;
+	padding:0;
+}
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td.single-day .calendar-empty, 
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td.single-day.empty, 
+.pane-rwb-event-seminar-calendar .calendar-calendar .month-view .full td.date-box.empty {
+	background-color:#f7f7f7;
+}
+.calendar-calendar .month-view .full td.single-day div.monthview img, .calendar-calendar .month-view .full td.multi-day div.monthview img {
+	width: 16px;
+	float: left;
+}
+.calendar-calendar .month-view .full td.single-day div.monthview .event-icon img {
+	margin-left: 25px;
+}
+.calendar-calendar .month-view .full td.single-day div.monthview .cyber-icon img {
+	margin-left: 7px;
+}
+@media (max-width: 1200px) {
+	.calendar-calendar .month-view .full td.single-day div.monthview .event-icon img {
+		margin-left: 32px;
+	}
+	.calendar-calendar .month-view .full td.single-day div.monthview .cyber-icon img {
+		margin-left: 15px;
+	}
+}
+@media (max-width: 992px) {
+	.calendar-calendar .month-view .full td.single-day div.monthview .event-icon img {
+		margin-left: 48px;
+	}
+	.calendar-calendar .month-view .full td.single-day div.monthview .cyber-icon img {
+		margin-left: 30px;
+	}
+}
+@media (max-width: 768px) {
+	.calendar-calendar .month-view .full td.single-day div.monthview .event-icon img {
+		margin-left: 35px;
+	}
+	.calendar-calendar .month-view .full td.single-day div.monthview .cyber-icon img {
+		margin-left: 18px;
+	}
+}
+@media (max-width: 500px) {
+	.calendar-calendar .month-view .full td.single-day div.monthview .event-icon img {
+		margin-left: 25px;
+	}
+	.calendar-calendar .month-view .full td.single-day div.monthview .cyber-icon img {
+		margin-left: 10px;
+	}
+}
+.calendar-calendar .month-view .full td .inner div.day, .calendar-calendar .month-view .full td .inner div.day a {
+	float: none;
+	margin-right: auto;
+	margin-left: auto;
+}
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff, .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
+	display: none;
+}
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues, .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff, .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues, .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
+	display: none;
+}
+.calendar-calendar .inner .item {
+	position: absolute;
+}
+
+
+/* ------------------------------ Homepage - Featured Partner ------------------------------ */
+.feature-partner .views-field-title h3 {
+	margin-top:30px;	
+}
+.feature-partner .views-field-field-feat-memb-org {
+	margin-bottom:15px;	
+}
+.bio-box .views-field-body {
+	margin-bottom:15px;	
+}
+.prev-fp {
+	background-color:#F7F7F7;
+	padding:20px;
+}
+.prev-fp hr {
+	border-top: 1px solid #B2B2B2;
+}
+.prev-fp .field-content {
+	font-size:15px;
+	line-height:19px;
+}
+.prev-fp .views-field-title a {
+	font-weight:700;	
+}
+.prev-fp .headshot {
+	float:left;
+	margin-right:10px;
+	margin-bottom:20px;	
+}
+.prev-fp .archive-btn {
+	text-align:right;
+	padding-top:20px;	
+}
+@media (max-width: 992px) {
+	.feature-partner .headshot-lg {
+		float:left;
+		margin:0px 15px 15px 0px;	
+	}
+	.feature-partner .bio-box .two-btn-group {
+		margin-bottom:20px;	
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) {
+	.feature-partner .bio-box {
+		margin-left:139px;	
+	}
+}
+@media (max-width: 768px) {
+	.feature-partner .headshot-lg .headshot,
+	.feature-partner .headshot-lg .headshot img  {
+		width: 70px;
+		height: 70px;
+	}
+	.feature-partner .headshot-lg .headshot-default-male {
+		background-image: url(../../images/headshot-lg-male.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 70px 70px;
+	}
+	.feature-partner .headshot-lg .headshot-default-female {
+		background-image: url(../../images/headshot-lg-female.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 70px 70px;
+	}
+}

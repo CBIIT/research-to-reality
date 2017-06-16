@@ -1,0 +1,255 @@
+<?php
+
+//Added by Walls.  Changes the validation message on the comment field.  Comments cannot be blank,
+//this leaves a more user friendly and understandable message.
+function mentorship_forms_comment(&$a1, $op) {
+	switch ($op) {
+		case 'validate':
+			if($a1['comment'] == NULL){
+				if(sizeof($_SESSION['messages']['error']) >= 1){
+					array_pop($_SESSION['messages']['error']);
+				}
+				form_set_error('comment','Post a Comment Field cannot be left blank.', TRUE);
+			}
+		break;
+	}
+}
+
+function mentorship_forms_form_alter(&$form, $form_state, $form_id) {
+
+  //Find the current users group
+  global $user;
+  if ( $user->uid ) {
+    $userGroups = array_keys($user->og_groups);
+    if(sizeof($userGroups) == 1){	//Normal User
+        $groupId = $userGroups[0];
+        $in_a_group = true;
+        $admin = false;
+    }
+    else if(sizeof($userGroups) > 1){	//Admin
+        $in_a_group = true;
+        $admin = true;
+    }
+    else{ // sizeof($userGroups) == 0 Non group user so do nothing.
+        $in_a_group = false;   
+        $admin = false;
+    }
+  }
+  else{
+    $in_a_group = false;   
+    $admin = false;
+  }
+  
+  //Logic for form redirects for admin mentorship page items.
+  if($admin && $in_a_group){
+    switch ($form_id) {
+      case 'group_discussion_node_form':
+          $form_state['redirect']='mentorship/workspace/admin';
+        $form['buttons']['submit']['#submit'][0] = 'alter_submit_message_group_form_submit';
+      break;
+      case 'group_event_node_form':
+          $form_state['redirect']='mentorship/workspace/admin';
+      break;
+      case 'group_events_task_node_form':
+          $form_state['redirect']='mentorship/workspace/admin';
+
+      break;
+      case 'story_node_form':
+          $form_state['redirect']= 'mentorship/workspace/admin';
+
+        $form['buttons']['submit']['#submit'][0] = 'alter_submit_message_group_form_submit';
+      break;
+      case 'group_document_node_form':
+          $form_state['redirect']='mentorship/workspace/admin';
+        $form['buttons']['submit']['#submit'][0] = 'alter_submit_message_group_form_submit';
+      break;
+    }
+  }
+  else if($in_a_group && !$admin){  //Logic for form redirects for mentor/mentee mentorship page items.
+    switch ($form_id) {
+      case 'group_discussion_node_form':
+          $form_state['redirect']='mentorship/workspace/'.$groupId.'/discussions';
+        $form['buttons']['submit']['#submit'][0] = 'alter_submit_message_group_form_submit';
+      break;
+      case 'group_event_node_form':
+          $form_state['redirect']='mentorship/workspace/'.$groupId.'/events';
+      break;
+      case 'group_events_task_node_form':
+          $form_state['redirect']='mentorship/workspace/'.$groupId.'/tasks';
+      break;
+      case 'story_node_form':
+          $form_state['redirect']='mentorship/workspace/'.$groupId.'/stories';
+        $form['buttons']['submit']['#submit'][0] = 'alter_submit_message_group_form_submit';
+      break;
+      case 'group_document_node_form':
+          $form_state['redirect']= 'mentorship/workspace/'.$groupId.'/documents';
+        $form['buttons']['submit']['#submit'][0] = 'alter_submit_message_group_form_submit';
+      break;
+    }
+  }
+ 
+}
+
+/*
+ * Author: Doyle
+ * This function adds a submit method to a group form. (In this case, it is being
+ * called by group_discussion and story content types. The reason for this function
+ * is to eliminate the need for the "Public" check box in the Audience groups. This checkbox
+ * was causing alot of issues
+ */
+function alter_submit_message_group_form_submit($form, &$form_state) {
+
+//Find the current users group
+  global $user;
+  if ( $user->uid ) {
+    $userGroups = array_keys($user->og_groups);
+    if(sizeof($userGroups) == 1){	//Normal User
+        $groupId = $userGroups[0];
+        $in_a_group = true;
+        $admin = false;
+    }
+    else if(sizeof($userGroups) > 1){	//Admin
+        $in_a_group = true;
+        $admin = true;
+    }
+    else{ // sizeof($userGroups) == 0 Non group user so do nothing.
+        $in_a_group = false;   
+        $admin = false;
+    }
+  }
+  else{
+    $in_a_group = false;   
+    $admin = false;
+  }
+
+
+  $node = node_form_submit_build_node($form, $form_state);
+ 
+  switch ($node->type){
+      
+     case 'group_discussion':
+      if($node->field_cohort_discussion[0]['value'] == '1' ){
+        $node->og_public = 1;
+        
+        // Following added by Lauren for R2R 2.2
+        // Cohort Discussion notification issue
+        
+        // First, determine every workspace (because it needs to be in all of them)
+        $og_groups = array();
+        $og_groups_query = db_query("SELECT og.nid FROM {og} og");
+        while($result = db_fetch_object($og_groups_query)) {
+            $og_groups[] = $result->nid;
+        }
+        // Set the node's groups to be these groups
+        // This is necessary... something with how the node gets saved.
+        // Just go with it. I test it. Trust me.
+        $node->og_groups = $og_groups;
+        // Gather the info needed for the drupal_write_record
+        // Originally when this was copied from og.module, it had
+        // the drupal_write_record INSIDE?? the foreach loop
+        // No idea fine. This is better & probably has less db pinging
+        foreach ($og_groups as $gid) {
+           $ancestry = array(
+             'nid' => $node->nid,
+             'group_nid' => $gid,
+           );
+        }
+        // drupal_write_record inserts/updates/deletes/etc basically overrides with new array
+        drupal_write_record('og_ancestry', $ancestry);
+      }
+      else {
+        // This is sloppily done and not very clever at all. Considering the time
+        // to benefit ratio (I doubt many will "undo" a cohort discussion), it is
+        // not being considered.
+        $node->og_public = 0;
+        if ($user->uid) {
+          if (!$admin) {
+            // Known problem/error/loophole here: Non-admin can still have other groups selected
+            drupal_write_record('og_ancestry', $userGroups);
+          } else {
+            // Set it back to whatever audiences the admin is changing it too, which is most likely all of them
+            // But if this overwrites as no groups every time they can never actually fix it
+            // Could be done in a smarter fashion, but I don't believe it to be cost-effective
+            drupal_write_record('og_ancestry', array_keys($node->og_groups));
+          }
+        }
+      }
+      
+      // From this point on in this case, code pre-existed to 2.2 Release
+      node_save($node);
+      unset($form_state['rebuild']);
+      if($in_a_group && !$admin){
+        $form_state['redirect']= 'mentorship/workspace/'.$groupId.'/discussions';
+      }
+      elseif($admin){
+          $form_state['redirect']='mentorship/workspace/admin';
+      }
+    break;
+    case 'story': //If this is a story:
+      if($node->field_public_story[0]){
+        if($node->field_public_story[0]['value'] == '1' ){
+            $node->og_public = 1;
+        }
+        else {
+            $node->og_public = 0;
+        }
+        node_save($node);
+        unset($form_state['rebuild']);
+        if($in_a_group && !$admin){
+            $form_state['redirect']= 'mentorship/workspace/'.$groupId.'/stories';
+        }
+        elseif($admin){
+          $form_state['redirect']='mentorship/workspace/admin';
+        }
+      }
+      break;
+    case 'group_document':
+      if ($node->field_cohort_document[0]['value'] == '1') {
+        $node->og_public = 1;
+        // Following added by Lauren for R2R 2.2
+        // Cohort Discussion notification issue
+        // Copied from above group_discussion
+        // Please see that for comments on how this works
+        $og_groups = array();
+        $og_groups_query = db_query("SELECT og.nid FROM {og} og");
+        while($result = db_fetch_object($og_groups_query)) {
+            $og_groups[] = $result->nid;
+        }
+        $node->og_groups = $og_groups;
+        foreach ($og_groups as $gid) {
+           $ancestry = array(
+             'nid' => $node->nid,
+             'group_nid' => $gid,
+           );
+        }
+        drupal_write_record('og_ancestry', $ancestry);
+      }
+      else {
+        $node->og_public = 0;
+        if ($user->uid) {
+          if (!$admin) {
+            drupal_write_record('og_ancestry', $userGroups);
+          } else {
+            drupal_write_record('og_ancestry', array_keys($node->og_groups));
+          }
+        }
+      }
+      node_save($node);
+      unset($form_state['rebuild']);
+      if($in_a_group && !$admin){
+        $form_state['redirect']= 'mentorship/workspace/'.$groupId.'/documents';
+      }
+      elseif($admin){
+          $form_state['redirect']='mentorship/workspace/admin';
+      }
+      break;
+    default:
+      break;
+
+  }
+}
+
+
+
+
+?>

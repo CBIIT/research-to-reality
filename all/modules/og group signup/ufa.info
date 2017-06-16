@@ -1,0 +1,4 @@
+
+name = Sign Up Alter
+description = Allow users to sign up for their groups newsletter
+core = 7.x

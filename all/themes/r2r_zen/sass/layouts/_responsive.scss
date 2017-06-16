@@ -1,0 +1,202 @@
+@import "zen"; 
+
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+// We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
+// between columns (applied as 10px of left/right padding on each column).
+$zen-column-count:  9;
+$zen-gutter-width:  20;
+
+// If you need IE6/7 support for box-sizing: border-box (default), see _base.scss
+//$zen-box-sizing: content-box;
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+// Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
+@if $zen-reverse-all-floats == false {
+  /**
+   * Center the page.
+   *
+   * For screen sizes larger than 1200px, prevent excessively long lines of text
+   * by setting a max-width.
+   */
+  #main,
+  .region-bottom, 
+  #footer {
+    @include center(960px); 
+  }
+
+  /* Apply the shared properties of grid items in a single, efficient ruleset. */
+  #header,
+  #navigation,
+  .header__logo, 
+  // #block-search-form, 
+  #content,
+  .page-about .left-side, 
+  .page-about .right-side,
+  .two-col-70-30 .left-col, 
+  .two-col-70-30 .right-col,  
+  .home-page .top-row, .home-page .left-side, .home-page .right-side, 
+  .home-page .right-row, .home-page .middle-column, .home-page .right-column, 
+  .cyberseminar-node .top-row, .cyberseminar-node .left-side, .cyberseminar-node .right-side, 
+  #footer {
+    // See the note about $zen-auto-include-item-base above.
+    @include zen-grid-item-base();
+  }
+
+  /* Containers for grid items and flow items. */
+  #header_top, 
+  #header,
+  #main,
+  .home-page .right-side, 
+  #navigation, 
+  #content, 
+  #footer {
+    @include zen-grid-container();
+  }
+}
+
+/**
+* Positioning items on the grid
+*/
+
+// Header Layout
+.header__logo { @include zen-grid-item(6, 1); }
+// #block-search-form { @include zen-grid-item(3, 7); }
+
+// Homepage Layout
+.home-page .top-row {
+  @include zen-grid-item(9, 1); 
+}
+
+.home-page .left-side {
+  @include zen-clear(); 
+  @include zen-grid-item(3, 1); 
+  padding-right: 15px; 
+}
+
+.home-page .middle {
+  @include zen-grid-item(3, 4); 
+  padding-right: 15px; 
+}
+
+.home-page .right-side {
+  @include zen-grid-item(3, 7); 
+  padding-right: 15px; 
+}
+
+// About Page Layout
+.page-about .left-side { 
+  @include zen-grid-item(7, 1); 
+  padding-right: 15px; 
+}
+
+.page-about .right-side { 
+  @include zen-grid-item(2, 8); 
+}
+
+// Cyber-Seminar Layout
+.cyberseminar-node .top-row {
+  @include zen-grid-item(9, 1);
+  padding-right: 15px;  
+} 
+
+.cyberseminar-node .left-side {
+  @include zen-clear(); 
+  @include zen-grid-item(7, 1); 
+  padding-right: 15px; 
+}
+
+.cyberseminar-node .right-side {
+  @include zen-grid-item(2, 8); 
+}
+
+// Two Column Layout
+.two-col-70-30 .left-col { 
+  @include zen-grid-item(7, 1); 
+  padding-right: 15px; 
+}
+
+.two-col-70-30  .right-col { 
+  @include zen-grid-item(2, 8); 
+}
+
+/** Tablet and Down View **/ 
+@media #{$medium-and-down} {
+  $zen-column-count:  3;
+
+  .page-about .left-side, .two-col-70-30 .left-col { 
+    @include zen-grid-item(3, 1); 
+    padding-right: 0; 
+  }
+  .page-about .right-side, .two-col-70-30 .right-col {
+    @include zen-clear(); 
+    @include zen-grid-item(3, 1);
+  }
+  
+  .home-page .top-row {
+  @include zen-grid-item(3, 1); 
+  }
+
+  .home-page .left-side {
+    @include zen-grid-item(3, 1); 
+    padding-right: 0; 
+    margin-bottom: 1em;
+  }
+
+  .home-page .middle {
+    @include zen-clear();
+    @include zen-grid-item(3, 1); 
+    padding-right: 0; 
+  }
+
+  .home-page .right-side {
+    @include zen-clear();
+    @include zen-grid-item(3, 1); 
+    padding-right: 0; 
+  }
+    
+  
+  .cyberseminar-node .top-row {
+    @include zen-grid-item(3, 1); 
+  }
+
+  .cyberseminar-node .left-side {
+    @include zen-grid-item(3, 1); 
+    padding-right: 0;   
+  }
+
+  .cyberseminar-node .right-side {
+    @include zen-clear(); 
+    @include zen-grid-item(3, 1);  
+    padding-right: 0;  
+  }
+}
+
+/** Mobile and down View **/ 
+@media #{$small-and-down} {
+
+  .home-page .middle-column {
+    padding-right: 0; 
+    @include zen-clear(); 
+    @include zen-grid-item(3,1);
+  }
+
+  .home-page .right-column {
+    padding-right: 0; 
+    @include zen-clear(); 
+    @include zen-grid-item(3,1);
+  }
+
+}

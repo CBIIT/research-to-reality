@@ -1,0 +1,23 @@
+// ------------------------------- 
+// Tables
+// @description Table Styles
+// -------------------------------
+
+table {
+	border-collapse: collapse; 
+
+	tr {
+		td {
+			padding: 7px 10px 7px 0;  
+		}
+	}
+}
+
+.blue-header {
+	thead {
+		tr {
+			border-bottom: $blue-header-border; 
+			text-align: left;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTR Views feature.
+ */
+
+include_once 'rtr_views.features.inc';

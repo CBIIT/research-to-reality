@@ -1,0 +1,228 @@
+/* ------------------------------ Cyber Seminars ------------------------------ */
+.view-cyber-seminars .form-group .form-control {
+	height: 40px;
+}
+.upcoming-cyberseminars {
+	background-color:#ebfbff;
+	margin:0px 0px 20px 0px;	
+}
+.upcoming-cyberseminars .pane-content {
+	padding: 12px;
+	border-left: 1px solid #c3dfe5;
+	border-right: 1px solid #c3dfe5;
+	border-bottom: 2px solid #c3dfe5;
+	border-top: none;
+}
+.cyber-seminars-into {
+	margin-bottom:40px;	
+}
+.cyber-seminars-into img {
+	width:100%;
+	height:auto;	
+}
+.archive-cyberseminars .view-cyber-seminars .view-filters,
+.archive-cyberseminars .views-row-odd,
+.archive-cyberseminars .views-row-even {
+	margin:0px 0px 20px 0px;
+	padding: 12px;
+}
+.archive-cyberseminars .view-cyber-seminars .view-filters,
+.archive-cyberseminars .views-row-even {
+	background-color:#f7f7f7;
+	border: 1px solid #E9E9E9;
+}
+.upcoming-cyberseminars .views-field-title a,
+.archive-cyberseminars .views-field-title a{
+	font-size:18px;
+	font-weight:600;
+}
+.upcoming-cyberseminars .views-field-field-event-date,
+.archive-cyberseminars .views-field-field-event-date {
+	font-size:14px;
+	text-transform: uppercase;
+	margin-bottom:10px;
+	letter-spacing:0.02em;
+}
+.upcoming-cyberseminars .date-display-range,
+.archive-cyberseminars .date-display-range {
+	display:inline-block;
+}
+.upcoming-cyberseminars .views-field-body,
+.archive-cyberseminars .views-field-body{
+	float:left;
+	width:60%;
+	padding-right: 15px;
+}
+.archive-cyberseminars .views-field-field-cyber-presenters {
+	float:right;
+	width:30%;
+	padding-left: 15px;
+	margin-left: 15px;
+	border-left:1px solid #ddd; 
+}
+.upcoming-cyberseminars .views-field-field-cyber-presenters {
+	float:right;
+	width:30%;
+	padding-left: 15px;
+	margin-left: 15px;
+	border-left:1px solid #c3dfe5; 
+}
+@media (max-width: 768px) {
+	.upcoming-cyberseminars .views-field-body,
+	.archive-cyberseminars .views-field-body{
+		float:none;
+		width:100%;
+		padding-right: 0px;
+	}
+	.archive-cyberseminars .views-field-field-cyber-presenters {
+		float:none;
+		width:100%;
+		padding-left: 0px;
+		margin-left: 0px;
+		padding-top: 15px;
+		margin-top: 15px;
+		border-top:1px solid #ddd;
+		border-left: none; 
+	}
+	.upcoming-cyberseminars .views-field-field-cyber-presenters {
+		float:none;
+		width:100%;
+		padding-left: 0px;
+		margin-left: 0px;
+		padding-top: 15px;
+		margin-top: 15px;
+		border-top:1px solid #c3dfe5;
+		border-left: none; 
+	}
+}
+.views-exposed-form label {
+	font-size: 18px;
+	font-weight: 600;
+}
+.views-exposed-form #edit-keys-wrapper label {
+	margin-top:20px;
+}
+.container-inline-date .date-padding {
+	float:none;
+	width:100%;	
+}
+.form-item-field-event-date-value-min label,
+.form-item-field-event-date-value-max label {
+	font-size:14px;
+	font-weight:400;
+	margin-right:10px;	
+}
+.upcoming-cyberseminars span.views-label-field-cyber-presenters,
+.archive-cyberseminars span.views-label-field-cyber-presenters {
+	font-size: 18px;
+	font-weight: 600;
+}
+form#views-exposed-form-cyber-seminars-block-1 .views-exposed-form .views-exposed-widget {
+	float:left;	
+}
+#edit-field-event-date-value-wrapper .views-widget:before,
+#edit-field-event-date-value-wrapper .views-widget:after {
+	display: table;
+  	content: " ";
+}
+#edit-field-event-date-value-wrapper .views-widget:after {
+	clear: both;
+}
+.form-type-date-popup.form-item-field-event-date-value-min.form-item.form-group,
+.form-type-date-popup.form-item-field-event-date-value-max.form-item.form-group,
+.container-inline-date .form-item, 
+.container-inline-date .form-item input {
+	width:100%;
+}
+form#views-exposed-form-cyber-seminars-block-1 #edit-field-event-date-value-min-wrapper {
+	width:50%;
+	float:left;
+	padding-right:15px;
+}
+form#views-exposed-form-cyber-seminars-block-1 #edit-field-event-date-value-max-wrapper {
+	width:50%;
+	float:left;
+	padding-left:15px;
+}
+@media (max-width: 768px) {
+	form#views-exposed-form-cyber-seminars-block-1 #edit-field-event-date-value-min-wrapper {
+		width:100%;
+		float:none;
+		padding-right:0px;
+	}
+	form#views-exposed-form-cyber-seminars-block-1 #edit-field-event-date-value-max-wrapper {
+		width:100%;
+		float:none;
+		padding-left:0px;
+	}
+}
+#edit-keys-wrapper {
+	display:block;
+	width:100%;	
+}
+form#views-exposed-form-cyber-seminars-block-1 .views-exposed-form .views-exposed-widget .form-submit {
+	margin-top:5px;
+}
+div.date-display-range {
+	display:inline-block;
+	margin-bottom:10px;	
+}
+.views-field .date-display-single .date-display-range {
+	margin-bottom:0px;	
+}
+.view-cyber-seminar-inner-page .views-field-field-event-date {
+	padding: 11px;
+  	margin-bottom: 20px;
+	background-color: #dff0d8;
+  	border: 1px solid #d6e9c6;
+	font-weight:600;
+}
+.cs-tech-requirements,
+.cyber-seminar-search-box #mini-panel-cyber_seminar_search {
+	background-color: #F7F7F7;
+	padding: 20px;
+	margin:0px 0px 20px 0px;
+	border-left: 1px solid #E9E9E9;
+	border-right: 1px solid #E9E9E9;
+	border-bottom: 2px solid #D5D5D5;
+	border-top: none;	
+}
+.cs-tech-requirements h3 {
+	color: #003E4D;
+	font-size:18px;
+	font-weight:600;
+	margin:0px 0px 0px;	
+}
+.view-cyber-seminar-inner-page .views-field h2{
+	margin:20px 0px 0px 0px;
+}
+.views-field-nothing #cyber-seminar-related-content h2 {
+	margin-top:0px;
+}
+.views-field-nothing #cyber-seminar-related-content {
+	background-color: #F7F7F7;
+	padding: 20px;
+	margin:40px 0px 20px 0px;
+	border-left: 1px solid #E9E9E9;
+	border-right: 1px solid #E9E9E9;
+	border-bottom: 2px solid #D5D5D5;
+	border-top: 1px solid #E9E9E9;
+}
+.views-field-field-cyber-presenters ul,
+#cyber-seminar-related-content ul {
+	padding:0px;
+	list-style-type:none;
+}
+#cyber-seminar-related-content ul li {
+	font-size:15px;
+	font-weight:300;
+	margin:4px 0px;	
+}
+#mini-panel-cyber_seminar_search {
+	position:relative;
+}
+#mini-panel-cyber_seminar_search div.panel-pane.pane-custom.pane-1 {
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}

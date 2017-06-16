@@ -1,0 +1,43 @@
+// ------------------------------- 
+// Boxes
+// @description Box Styles
+// -------------------------------
+
+.box {
+	padding: 1em 1.5em; 
+}
+
+.yellow {
+	background-color: $yellow-box-color;
+	border: $yellow-box-border;
+}
+
+.fill-blue {
+	background-color: $blue-box-color;
+	color: $blue-box-font-color; 
+}
+
+.border-blue {
+	border: $blue-box-border; 
+}
+
+.fill-grey {
+	background-color: $grey-box-color; 
+	border: $grey-box-border; 
+}
+
+.border-grey {
+	border: $grey-box-border; 
+}
+
+.round-edge-all {
+	@include radius-all(8px); 
+}
+
+.round-edge-top {
+	@include radius-top(8px);
+}
+
+.round-edge-bottom {
+	@include radius-bottom(8px); 
+}

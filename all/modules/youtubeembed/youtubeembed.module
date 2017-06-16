@@ -1,0 +1,57 @@
+<?php
+/**
+ * Implements hook_field_formatter_info().
+ */
+function youtubeembed_field_formatter_info() {
+  return array(
+    'youtubeembed_formatter' => array( //Machine name of the formatter
+      'label' => t('YouTube Embed From ID'),
+      'field types' => array('text'), //This will only be available to text fields
+      'settings'  => array(),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function youtubeembed_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  //This gets the view_mode where our settings are stored
+  $display = $instance['display'][$view_mode];
+  //This gets the actual settings
+  $settings = $display['settings'];
+  //Initialize the element variable
+  $element = array();
+  //Add your select box
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function youtubeembed_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $summary = t('Create a YouTube iFrame player from a given ID'); 
+  return $summary;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function youtubeembed_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array(); // Initialize the var
+  foreach ($items as $delta => $item) {
+    $vidID = strval($item['value']); // Getting the actual value
+    $vidID2 = strval($item['safe_value']);
+  }
+  if(isset($vidID)) {
+    $iframe = '<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/'.$vidID.'" frameborder="0" allowfullscreen></iframe></div>';
+  } else if(isset($vidID2)) {
+    $iframe = '<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/'.$vidID2.'" frameborder="0" allowfullscreen></iframe></div>';
+  } else {
+    $iframe = '';
+  }
+  $element[0]['#markup'] = $iframe; // Assign it to the #markup of the element
+  return $element;
+}

@@ -1,0 +1,51 @@
+/// ------------------------------- 
+// Footer 
+// @description Footer Styles
+// --------------------------------
+
+#footer {
+	@include radius-bottom(8px); 
+	background: url(../images/global/bground-footer.gif) no-repeat center center; 
+	background-color: $footer-bg-color; 
+	box-shadow: $footer-bx-shadow;
+
+	@media #{$large-and-down} {	background-image: none; }
+
+	.footer-logo  { 	
+		@include center(23%); 	
+		// margin-top: -1%; 
+		
+		@media #{$medium-only} { max-width: 29%; }
+		@media #{$small-only} { max-width: 40%; }
+		@media #{$x-small-only} { max-width: 50%; }
+		
+		li {
+			display: inline-block;
+		}
+	}
+
+	.menu {
+		@include center(70%); 
+		margin-top: 16px;
+		text-align: center; 
+		line-height: $footer-line-height;
+		font-size: $footer-font-size;
+
+		@media #{$medium-only} { max-width: 85%; }
+		@media #{$small-and-down} { max-width: 100%; }
+		@media #{$x-small-only} { padding: 0; }
+		
+		li {
+			display: inline-block;
+			border-right: 1px solid $footer-menu-color;
+			padding: 0 5px;
+			
+			@media #{$small-and-down} { margin-bottom: 5px; }
+
+			&.last { border: none; }
+		}
+	}
+
+	a { color: $footer-menu-color; }
+}
+

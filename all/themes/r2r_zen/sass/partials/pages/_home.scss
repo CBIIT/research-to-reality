@@ -1,0 +1,259 @@
+// ---------------------------------------------------- 
+// Homepage
+// @description Styles for Homepage
+// ----------------------------------------------------
+
+.home-page {
+	.pane-title {
+		font-weight: 900; 
+	}
+	
+	// Tabbed Menu 
+	.quicktabs-tabs {
+		padding: 0; 
+		margin: 15px 0 4px 0;
+		
+		@media #{$small-and-down} { margin-bottom: 0; }
+
+		li {
+			background-color: $disc-menu-bg;
+			padding: 8px 20px;
+			@include radius-top(9px); 
+			border-bottom: none !important;
+			
+			@media #{$small-and-down} {
+				display: block; 
+				border-bottom: 1px solid white !important;
+				@include radius-top(0); 
+			}
+
+			&:nth-child(1) { @include radius-top(8px); }
+
+			a {
+				color: $disc-menu-link-color;
+				text-decoration: none;
+				
+				&:hover { text-decoration: underline; }
+			}
+		}
+
+		li.active {
+			background-color: $disc-menu-bg-active;
+			border: $disc-border;
+			font-weight: 900;
+
+			a { color: $disc-menu-link-active; }
+		}
+	}
+
+	#quicktabs-container-homepage_tab_menu {
+		@extend .border-blue, .round-edge-bottom; 
+		@include radius-top-rt(9px);
+		padding: 1em 1.5em;
+
+		@media #{$small-and-down} {
+			@include radius-top-rt(0);
+		}
+		
+		.views-row {
+		    display: inline-block;
+			width: 28%;
+			vertical-align: top;
+			padding: 0px 20px;
+
+			@media #{$medium-and-down} {
+				display: block; 
+				width: auto; 
+				padding-top: 20px; 
+				padding-bottom: 20px; 
+			}
+		}
+
+		.views-row-even {
+			border-right: $tab-menu-border;
+			border-left: $tab-menu-border;
+
+			@media #{$medium-and-down} { 
+				border-right: none; 
+				border-left: none; 
+				border-bottom: $tab-menu-border; 
+				border-top: $tab-menu-border; 
+			}
+		}
+
+		.views-field-title { font-weight: bold; }
+		.views-field-last-updated-1 { font-style: italic; } 
+	}
+
+	// Top Row 
+	.top-row {
+		margin: 0.5em 0 1em 0; 
+
+		// Homepage blurb block
+		#homepage-blurb {
+			.home-login {
+				display: inline-block; 
+				width: 25%; 
+				padding-right: 15px; 
+
+				@media #{$small-only} { 
+					width: 45%;
+					vertical-align: top; 
+					margin-top: 2em;  
+				}
+
+				@media #{$x-small-and-down} { 
+					width: 100%; 
+					padding: 0; 
+				}
+			}
+
+			.home-blerb {
+				display: inline-block; 
+				width: 72%; 
+
+				@media  #{$medium-only} { 
+					width: 70%; 
+				}
+				
+				@media #{$small-only} { 
+					width: 50%; 
+				}
+
+				@media #{$x-small-and-down} { width: 100%; }
+			}
+
+			> p:first-child { margin: 0; }
+
+			strong {
+				font-family: $hp-blurb-font; 
+				font-size: $hp-blurb-font-size; 
+				letter-spacing: -1px; 
+			}
+			
+			.btn.secondary {
+				font-size: $hp-signup-font-size;
+				@include center(45%); 
+				padding: 0.5em; 
+				max-width: 80%;
+			}
+
+			.small-font { text-align: center; }
+		}
+
+		// New Post
+		#homepage-featured {
+			background-image: url('../images/global/bground-index-callout.gif');
+			background-repeat: no-repeat; 
+	  		line-height: 20px;
+	  		padding-left: 8em;
+	  		margin-bottom: 1em; 
+
+	  		.views-field-created {
+	  			font-weight: 900; 
+	  			font-size: $new-post-date; 
+	  		}
+
+	  		.views-field-title {
+	  			font-family: $new-post-title-font; 
+	  			font-size: $new-post-title-size; 
+	  			letter-spacing: -1px;
+	  			font-weight: 900;  
+				line-height: 22px;
+				margin-bottom: 5px;
+	  		}
+
+	  		.views-field-field-featured-more-link {
+	  			font-size: $hp-small-font; 
+	  		}
+		} 
+	}
+	
+	.left-side {
+		// Learn About R2R
+		#learn-about-r2r {
+			.pane-title {
+				@extend .box, .fill-grey, .round-edge-top;
+				margin: 0; 
+				border-bottom: 0; 
+			}
+			
+			p { margin-top: 0; }
+
+			iframe { width: 100%; }
+		}
+	}
+
+	.right-side {
+		// Events
+		#homepage-events {
+			> .pane-title {
+				@extend .fill-grey, .box, .round-edge-top;
+				margin: 0; 
+				border-top: 0; 
+				border-left: 0; 
+				border-right: 0; 
+			}
+
+			#mini-panel-homepage_events {
+				@extend .box; 
+
+				.pane-title {
+					@extend h3; 
+					margin: 5px 0; 
+				}
+
+				.views-row { padding: 10px 0; }
+
+				.views-row-1 { border-bottom: $events-border; }
+
+				.views-field-title, .views-field-field-event-date { 
+					@extend .small-font; 
+				}
+			}
+		}
+
+		.btn.secondary { margin-top: 1em; }
+	}
+
+	.middle {
+		// Featured R2R Partner
+		#featured-r2r-partner {
+			background-image: url("../images/index/bground-featuredpartner.gif");
+			background-repeat: no-repeat;
+			background-position: 2em 0;
+			margin-bottom: 1em; 			
+
+			.views-field-title {
+				font-weight: bold; 
+				margin-bottom: 5px;
+			}
+
+			.views-field-field-feat-memb-photo {
+				font-size: $hp-small-font; 
+				
+				p { margin: 0; }
+			}
+
+			.homepage-teaser {
+				> img {
+					float: right; 
+					margin: 0 0 4px 5px;
+					width: 70px;
+					border: $featured-part-border; 
+				}
+				
+			}
+		}
+	}
+}
+
+.not-logged-in {
+	.home-page {
+		.quicktabs-tabs li {
+			&:nth-child(1) { display: none; }
+			&:nth-child(2) { @include radius-top(8px); }
+		}
+
+	}
+} 

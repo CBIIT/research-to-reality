@@ -1,0 +1,25 @@
+/*
+    Document   : two_col_70_30.css
+    Created on : Dec 3, 2010, 1:44:55 PM
+    Author     : doylejd
+    Description: Purpose of the stylesheet follows.
+*/
+
+.two-col-70-30  .left-col {
+  float: left;
+  margin: 0px 3% 0px 0px;
+  overflow: hidden;
+  width: 75%;
+  word-wrap: break-word;  
+}
+.two-col-70-30 .right-col {
+	float: left;
+	margin: 0px 0px 0px 0;
+	overflow: hidden;
+	width: 22%;
+	word-wrap: break-word;
+
+
+}
+
+

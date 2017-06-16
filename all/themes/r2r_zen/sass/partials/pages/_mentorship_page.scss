@@ -1,0 +1,170 @@
+// ------------------------------------------------------------------- 
+// Mentorship Page
+// @description Styles for Learning Communities Page and its subpages 
+// -------------------------------------------------------------------
+
+.page-mentorship {
+	.right-col {
+		.btn.secondary { margin-bottom: 1em; }
+
+	}
+	
+	// Mentorship Menu 
+	#mentorship-menu {
+		margin-bottom: 1em; 
+
+		h2 {
+			@extend .box, .fill-grey, .round-edge-top; 
+			border-top: 0; 
+			border-left: 0; 
+			border-right: 0; 
+			margin-top: 0; 
+		}
+
+		ul {
+			list-style: none; 
+			padding: 0 1.5em;
+
+			li { 
+				border-bottom: $lc-menu-border; 
+				padding-top: 9px; 
+
+				&.last { border-bottom: 0; }
+			}
+		}
+	}
+
+	.pane-custom {
+		p {
+			font-size: 12px;
+		}
+	}
+
+	.pane-mentorship {
+			margin-top: 10px;
+		.view-display-id-page_2 {
+			background-color: #FEF4BD;
+			padding: 20px;
+			border: 1px solid #007596;
+			border-radius: 8px;
+		.views-view-grid {
+			h2 {
+				font-size: 24px;
+				margin-bottom: 5px;
+				margin-top: 0;
+			}
+
+			.views-field-picture {
+				float: left;
+				margin-right: 3%;
+				margin-top: 5px;
+			}
+		}
+	}
+	}
+
+	.view-display-id-page_1 {
+		.views-view-grid {
+
+			td {
+				border: 1px solid #b2c8cc;
+    			border-radius: 8px;
+			    box-shadow: 0 2px 3px #a7bbbf;
+			    float: left;
+			    width: 44%;
+			    margin-right: 2%;
+			    padding: 10px;
+			    margin-bottom: 5px;
+
+				.views-field-title {
+					font-weight: bold;
+				}
+
+				.views-field-name {
+					font-size: 12px;
+				}
+
+				.views-field-picture {
+					float: left;
+					margin-right: 3%;
+					margin-top: 5px;
+				}
+
+				.views-field-body {
+					font-size: 12px;
+				}
+
+			}
+
+			.row-3 {
+				.col-last {
+					display: none;
+				}
+			}
+
+		}
+	}
+
+	.right-col {
+
+
+		.pane-mentorship, .pane-custom {
+		border: 1px solid #b2c8cc;
+		border-radius: 8px;
+		margin-top: 0;
+
+		.pane-title {
+			background-color: #e6eef0;
+		    border-bottom: 1px solid #b2c8cc;
+		    border-top-left-radius: 6px;
+		    border-top-right-radius: 6px;
+		    padding: 10px;
+		    margin-top: 0;
+		}
+
+		.views-field-title {
+			padding: 10px;
+		}
+
+
+	}
+
+		.pane-custom {
+			margin-top: 10px;
+			border: 1px solid #b2c8cc;
+			border-radius: 8px;
+
+			p {
+				padding: 10px;
+			}
+		}
+	}
+
+	.node-about-the-pair {
+		.submitted, .field-name-field-field-mentorpair-bio, .field-name-og-group-ref {
+			display: none;
+		}
+
+		.about-pair-bios-container {
+			.about-pair-bio {
+				width: 50%;
+				clear: none;
+				display: inline-block;
+
+				img {
+					float: left;
+					margin-right: 10px;
+				}
+
+				p {
+					font-size: 12px;
+					line-height: 1;
+				}
+
+				h3 {
+					font-weight: 900;
+				}
+			}
+		}
+	}
+}

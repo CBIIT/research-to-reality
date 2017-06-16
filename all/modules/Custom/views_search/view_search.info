@@ -1,0 +1,5 @@
+name = view search
+description = Formats Views search feature
+package = Research to Reality
+core = 7.x
+version = 7.x-1.0

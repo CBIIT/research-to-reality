@@ -1,0 +1,170 @@
+<?php
+
+/** *
+* r2r_subscription works on top of the message stack, message_digest, and message_subscribe_email_frequency to create a block with a button that will
+* allow users to subscribe to weely digests (default) or change their subscription settings in user profile to daily or instant notifications. A message is created
+* by message stack and saved in the database each time new content (of the types below) is saved. The message subject and body can be customized at http://www.r2r.dev/admin/structure/messages
+*
+* IMPORTANT NOTE: THIS MODULE RELIES ON YOU SETTING UP A MESSAGE TYPE THROUGH THE UI, CALLED r2r_message_type
+*
+* These are the following types of content that r2r_subscription controls:
+*      - Stories
+*      - Discussions
+*      - Workspaces
+*      - Seminars
+*      - Events
+*      - Featured Partners
+*
+* * */
+define('SUBSCRIBE_TEXT', 'Subscribe Now!');
+define('UNSUBSCRIBE_TEXT', 'Unsubscribe');
+define('LOG_IN_TO_SUBSCRIBE_TEXT', 'Log In To Subscribe');
+// This module assumes you will create in the UI a message type called r2r_message_type with an entity reference field called field_node_ref.
+define('R2R_MESSAGE_TYPE_NAME', 'r2r_message_type');
+define('R2R_MESSAGE_TYPE_FIELD_REFERENCE', 'field_node_ref');
+
+/*
+ * Implements hook_node_insert().
+ *
+ * This will create a message in the database each time content of the specified types is saved. You must have a message type defined through the UI for the messages
+ * to be created.
+ */
+function r2r_subscription_node_insert($node) {
+    //discussions removed because current site configuration uses notification module for discussion updates.
+    $subscription_node_types = array("story", "workspace", "cyber_seminar", "event", "featured_r2r_partner");
+    if(in_array($node->type, $subscription_node_types)) {
+        //When new content of the specified types is created, create a message entity and save
+        $message = message_create(R2R_MESSAGE_TYPE_NAME, array('uid' => $node->uid));
+        $wrapper = entity_metadata_wrapper('message', $message);
+        $wrapper->field_node_ref->set($node);
+        $wrapper->save();
+
+        if (module_exists('message_subscribe')) {
+            // Send the message through the message_subscribe mechanism.
+            message_subscribe_send_message('node', $node, $message);
+        }
+    }
+
+}
+
+/*
+ * Implements hook_message_subscribe_get_subscribers
+ *
+ * This function gathers the list of subscribers. (see lines 218-219 of message_subscribe.module).
+ * In this case it will take all users in the database whose message_subscribe_email_frequency setting is set to something other than never.
+ */
+
+function r2r_subscription_message_subscribe_get_subscribers(Message $message, $subscribe_options = array(), &$context = array()) {
+    $query = "
+    SELECT
+      entity_id, message_subscribe_email_freq_value
+    FROM
+      {field_data_message_subscribe_email_freq}
+    WHERE
+      deleted != 1
+    AND message_subscribe_email_freq_value != 'never'
+  ";
+    $results = db_query($query);
+    $uids = array();
+    foreach($results as $result) {
+        $uids[$result->entity_id] = array('notifiers' => array($result->message_subscribe_email_freq_value));
+    }
+    return $uids;
+}
+
+/*
+ * Implements hook_block_info
+ *
+ * Creates block to display easy subscribe button
+ */
+function r2r_subscription_block_info() {
+    $blocks['r2r_subscribe'] = array(
+        'info' => t('Button to subscribe to site activity updates'),
+        'cache' => DRUPAL_NO_CACHE,
+    );
+    return $blocks;
+}
+
+/*
+ * Implements hook_block view
+ *
+ * Block just displays callback form (see activity_updates_signup_form())
+ */
+function r2r_subscription_block_view($delta = '') {
+    $block = array();
+    if($delta == 'r2r_subscribe') {
+        $block['subject'] = t('Button to subscribe to site activity updates');
+        $block['content'] = drupal_get_form('activity_updates_signup_form');
+    }
+    return $block;
+}
+
+/*
+ * Displays subscribe button
+ *
+ * The display will vary based on three scenerios:
+ * 1.) User is logged out- the button will contain a log in to subscribe message and link to the user login page
+ * 2.) User is logged in and not already subscribed- button will subscribe user to weekly digest and display success message
+ * 3.) User is logged in and already subscribed- button will contain unsubscribe message and set email frequency to never. The page will reload as scenerio 2.
+ */
+function activity_updates_signup_form() {
+    global $user;
+
+    // Determine button text based on whether user is logged in and whether user already subscribes
+    $buttonText = SUBSCRIBE_TEXT;
+    if(!$user->uid) {
+        $buttonText = LOG_IN_TO_SUBSCRIBE_TEXT;
+    }
+    else {
+        $user_account= user_load($user->uid);
+        $item = field_get_items('user', $user_account, 'message_subscribe_email_freq');
+        $message_subscribe_email_freq = $item[0]['value'];
+        if(!empty($message_subscribe_email_freq) && $message_subscribe_email_freq != MESSAGE_SUBSCRIBE_EMAIL_FREQUENCY_NEVER) {
+            $buttonText = UNSUBSCRIBE_TEXT;
+        }
+    }
+
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => $buttonText,
+    );
+    $form['#submit'][] = 'activity_updates_signup_form_submit';
+
+    return $form;
+}
+
+/*
+ * Implements hook_form_submit
+ *
+ * Submit handler redirects anonymous users or toggles subscription for authenticated users.
+ */
+function activity_updates_signup_form_submit($form, &$form_state) {
+    global $user;
+    if(!$user->uid) {
+        drupal_set_message("Please Log In To Subscribe To Site Updates.");
+        $dest = drupal_get_destination();
+        drupal_goto('user/login', array('query' => $dest));
+    }
+    else {
+        $user_account= user_load($user->uid);
+        $item = field_get_items('user', $user_account, 'message_subscribe_email_freq');
+        $message_subscribe_email_freq = $item[0]['value'];
+        $subscribed = !empty($message_subscribe_email_freq) && $message_subscribe_email_freq != MESSAGE_SUBSCRIBE_EMAIL_FREQUENCY_NEVER;
+        $message = $subscribed ? 'You have unsubscribed from site activity updates' : 'You have subscribed to site activity updates. By default, you will receive updates weekly.
+        You may change your email frequency settings on your user profile page.';
+        drupal_set_message($message);
+    }
+
+    //toggle user subscription by changing the message_subscribe_email_freq field to never (to unsubscribe, if currently subscribed) or weekly (to subscribe if currently unsubscribed)
+    $obj = entity_metadata_wrapper('user', $user);
+    //if currently subscribed, unsubscribe
+    if($subscribed) {
+        $obj->message_subscribe_email_freq = MESSAGE_SUBSCRIBE_EMAIL_FREQUENCY_NEVER;
+    }
+    //If currently unsubscribed, subscribe
+    else {
+        $obj->message_subscribe_email_freq = 'digest_week';
+    }
+    $obj->save();
+}
+

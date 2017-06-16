@@ -1,0 +1,50 @@
+/* 
+ * Document   		: discussion_node.css
+ * Created on 		: Dec 3, 2010, 1:44:55 PM
+ * Author     		: doylejd
+ * Lasted Edited on : Jan 14, 2010 by jonesmp
+ * Description		: The layout of the Discussions Area of Research to Reality
+*/
+
+.discussion-node .top-row {
+  width: 860px;
+}
+.discussion-node .left-side {
+  float: left;
+  margin: 0px 32px 0px 0px;
+  width: 197px;
+}
+.discussion-node .right-side{
+  float: left;
+  width: 650px;
+}
+.discussion-node .right-side-comment {
+	padding: 20px 20px 0 20px;
+}
+.discussion-node .right-side-main-post {
+	margin: 0 0 0 0;
+	overflow: hidden;
+}
+.discussion-node .right-row-top {
+	margin: 0 0 0 0;
+}
+.discussion-node .right-row-bottom {
+	margin: 0 0 0 0;
+}
+
+/* Discussion View */
+.discussion-node .right-column-left {
+  float: left;
+  margin: 0 20px 0 0;
+  width: 40px;
+}
+.discussion-node .right-column-middle {
+  float: left;
+  margin: 0 20px 0 0;
+  width: 463px;
+}
+.discussion-node .right-column-right {
+  float: left;
+  width: 65px;
+}
+

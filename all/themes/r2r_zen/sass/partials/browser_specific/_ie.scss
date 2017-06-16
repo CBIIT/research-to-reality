@@ -1,0 +1,19 @@
+// ---------------------------------------------------  
+// Internet Explorer 9 or less
+// @description IE9 or less Specific Style Fixes
+// --------------------------------------------------- 
+
+// IE 9 or less
+@media screen\0 {
+	.btn {
+		filter: none!important; 
+	}
+}
+
+// IE 8 only
+@media \0screen { 
+	#block-search-form {
+		float: right !important; 
+		margin-top: -7%; 
+	}
+}

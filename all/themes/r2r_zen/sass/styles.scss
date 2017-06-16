@@ -1,0 +1,41 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* Variables and Mixins */
+@import "mixins";
+@import "variables"; 
+
+/* HTML element (SMACSS base) rules */
+@import "general"; 
+
+/* Layout rules */
+@import "layouts/responsive";
+
+/* Elements */
+@import "partials/elements/boxes"; 
+@import "partials/elements/buttons";
+@import "partials/elements/forms";
+@import "partials/elements/tables";
+
+/* Page Partials */
+@import "partials/page_partials/header";
+@import "partials/page_partials/footer";
+
+/* Page */
+@import "partials/pages/home";
+@import "partials/pages/about_page"; 
+@import "partials/pages/discussion_page"; 
+@import "partials/pages/events_page"; 
+@import "partials/pages/cyberseminar_page";
+@import "partials/pages/featpartner_page";  
+@import "partials/pages/user_page";  
+@import "partials/pages/learning_communities"; 
+@import "partials/pages/mentorship_page"; 
+
+/* Browser Specific */
+@import "partials/browser_specific/ie";

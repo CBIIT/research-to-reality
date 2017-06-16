@@ -1,0 +1,82 @@
+name = R2R Bootstrap
+description = A Bootstrap Sub-theme for the R2R redesign.
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[NCIBanner]		       = 'NCI Banner'
+regions[R2RBanner]		       = 'R2R Banner'
+regions[navigation]            = 'Navigation'
+regions[HeroImage]		       = 'Hero Image'
+regions[search]			       = 'Search'
+regions[R2RMemberAccess]       = 'R2R Member Access'
+regions[R2R_Intro]             = 'R2R Intro'
+regions[R2R_Stats_Members]     = 'R2R Stats Members'
+regions[R2R_Stats_Discussions] = 'R2R Stats Discussions'
+regions[R2R_Stats_Events]      = 'R2R Stats Events'
+regions[content]               = 'Content'
+regions[footer_logo]           = 'Footer Logo'
+regions[footer_socialmedia]    = 'Footer Social Media'
+regions[footer_moreinfo]       = 'Footer More Info'
+regions[footer_policies]       = 'Footer Policies'
+regions[footer_sitemap]        = 'Footer Sitemap'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/datepicker.css
+stylesheets[all][] = css/discussions.css
+stylesheets[all][] = css/cyber-seminars.css
+stylesheets[all][] = css/events-calendar.css
+stylesheets[all][] = css/featured-partners.css
+stylesheets[all][] = css/learning-communities.css
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Panels Layouts
+;;;;;;;;;;;;;;;;;;;;;
+
+plugins[panels][layouts] = layouts
+
+; For information on choosing the desired method, please read the Drupal
+; Bootstrap sub-theme "how-to" documentation:
+; https://drupal.org/node/1978010
+
+; ;----------------------------------
+; ; METHOD 1: Bootstrap Source Files
+; ;----------------------------------
+; 
+; ;;;;;;;;;;;;;;;;;;;;;
+; ;; Scripts
+; ;;;;;;;;;;;;;;;;;;;;;
+; 
+;scripts[] = 'bootstrap/js/affix.js'
+;scripts[] = 'bootstrap/js/alert.js'
+;scripts[] = 'bootstrap/js/button.js'
+;scripts[] = 'bootstrap/js/carousel.js'
+scripts[] = 'bootstrap/js/collapse.js'
+;scripts[] = 'bootstrap/js/dropdown.js'
+;scripts[] = 'bootstrap/js/modal.js'
+scripts[] = 'bootstrap/js/tooltip.js'
+;scripts[] = 'bootstrap/js/popover.js'
+;scripts[] = 'bootstrap/js/scrollspy.js'
+;scripts[] = 'bootstrap/js/tab.js'
+;scripts[] = 'bootstrap/js/transition.js'
+;
+; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
+; settings[bootstrap_cdn] = ''
+
+
+; ;-------------------------
+; ; METHOD 2: Bootstrap CDN
+; ;-------------------------
+;
+; Method 2 uses BootstrapCDN, the only thing you might need to provide here
+; is overrides to Bootstrap theme settings. Copy them here from the base theme
+; to override.

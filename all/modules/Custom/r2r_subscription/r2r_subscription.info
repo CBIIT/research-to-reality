@@ -1,0 +1,13 @@
+name = R2R Subscription
+description = Handles subscriptions and emailing of site activity updates
+core = 7.x
+package = message
+version = 7.x-1.0
+dependencies[] = message
+dependencies[] = message_notify
+dependencies[] = message_subscribe
+dependencies[] = flag
+dependencies[] = message_digest
+dependencies[] = message_subscribe_email_frequency
+
+

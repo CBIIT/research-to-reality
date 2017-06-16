@@ -1,0 +1,5 @@
+name = related_presenter
+description = "Add a formatter to entity_reference that builds a special display for presenters"
+package = Fields
+core = 7.x
+files[] = related_presenter.module

@@ -1,0 +1,3069 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+/* Variables and Mixins */
+/** Custom Mixins **/
+/** Global Values **/
+/** Typography **/
+/** Sitewide **/
+/** Elements **/
+/** Page Partials **/
+/** Pages **/
+/** Media Queries Breakpoints **/
+/* HTML element (SMACSS base) rules */
+/* line 6, ../sass/_general.scss */
+body {
+  background: url("../images/global/bground-content.png") repeat-x #a2bbc0;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875em;
+  line-height: 22px;
+}
+
+/* line 15, ../sass/_general.scss */
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.1875em;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+/* line 23, ../sass/_general.scss */
+h2, .page-cyber-seminars #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .views-field-title {
+  font-size: 1.12em;
+}
+
+/* line 27, ../sass/_general.scss */
+h3, .home-page .right-side #homepage-events #mini-panel-homepage_events .pane-title {
+  font-size: 1.00625em;
+  line-height: 17.6px;
+}
+
+/* line 32, ../sass/_general.scss */
+ul {
+  list-style: square;
+}
+/* line 34, ../sass/_general.scss */
+ul li {
+  padding-bottom: 9px;
+}
+
+/* line 37, ../sass/_general.scss */
+a {
+  text-decoration: underline;
+  color: #00556c;
+}
+/* line 41, ../sass/_general.scss */
+a:hover {
+  color: #002323;
+  text-decoration: none;
+}
+
+/* line 47, ../sass/_general.scss */
+a, img {
+  border: none;
+  outline: none;
+}
+
+/* line 52, ../sass/_general.scss */
+hr {
+  border: 1px solid #b2c8cc;
+}
+
+/* line 56, ../sass/_general.scss */
+#content {
+  margin-right: 0 !important;
+  background-color: white;
+  padding: 30px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+}
+@media only screen and (max-width: 800px) {
+  /* line 56, ../sass/_general.scss */
+  #content {
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+/* line 68, ../sass/_general.scss */
+.left {
+  float: left;
+}
+
+/* line 69, ../sass/_general.scss */
+.right, #block-system-user-menu {
+  float: right;
+}
+
+/* line 70, ../sass/_general.scss */
+.clear, #block-system-user-menu {
+  clear: both;
+}
+
+/* line 72, ../sass/_general.scss */
+.small-font, .hello-user-profile, #block-system-user-menu, .description, .home-page .right-side #homepage-events #mini-panel-homepage_events .views-field-title, .home-page .right-side #homepage-events #mini-panel-homepage_events .views-field-field-event-date, .page-node.node-type-event .right-column .upcoming-events .views-field-field-event-date,
+.page-node.node-type-lc-event .right-column .upcoming-events .views-field-field-event-date, .page-node.node-type-event .right-column .upcoming-events .view-footer,
+.page-node.node-type-lc-event .right-column .upcoming-events .view-footer, .page-cyber-seminars #mini-panel-cyber_seminar_search p, .node-type-cyber-seminar #mini-panel-cyber_seminar_search p, .page-cyber-seminars #technical-requirements > div ul li, .node-type-cyber-seminar #technical-requirements > div ul li, .page-cyber-seminars #technical-requirements > div p, .node-type-cyber-seminar #technical-requirements > div p, .page-featured-partners #featured-r2r-partners .view-content, .node-type-featured-r2r-partner #featured-r2r-partners .view-content, .page-featured-partners #featured-r2r-partners .view-footer, .node-type-featured-r2r-partner #featured-r2r-partners .view-footer {
+  font-size: 0.8575em;
+}
+
+/* line 74, ../sass/_general.scss */
+.breadcrumb {
+  font-size: 0.83125em;
+}
+/* line 77, ../sass/_general.scss */
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+/* line 81, ../sass/_general.scss */
+.breadcrumb ol li {
+  display: inline-block;
+  list-style-type: none;
+  padding-right: 4px;
+}
+
+/* line 93, ../sass/_general.scss */
+.hello-user-profile .user-photo {
+  vertical-align: -3px;
+}
+/* line 96, ../sass/_general.scss */
+.hello-user-profile .user-photo img {
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+}
+
+/* line 109, ../sass/_general.scss */
+#block-system-user-menu {
+  margin-top: -4%;
+}
+@media only screen and (min-width: 651px) and (max-width: 800px) {
+  /* line 109, ../sass/_general.scss */
+  #block-system-user-menu {
+    margin-top: -5%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  /* line 109, ../sass/_general.scss */
+  #block-system-user-menu {
+    float: none;
+    margin-top: 0;
+  }
+}
+/* line 122, ../sass/_general.scss */
+#block-system-user-menu .menu {
+  list-style: none;
+  padding: 0;
+}
+/* line 126, ../sass/_general.scss */
+#block-system-user-menu .menu li {
+  display: inline-block;
+  padding: 0 5px;
+}
+/* line 130, ../sass/_general.scss */
+#block-system-user-menu .menu li.first {
+  border-right: 1px solid #002323;
+}
+
+@media only screen and (max-width: 650px) {
+  /* line 138, ../sass/_general.scss */
+  .region-highlighted {
+    margin-bottom: 1em;
+  }
+}
+
+/* line 145, ../sass/_general.scss */
+#skip-link {
+  margin: 0;
+}
+
+/* line 150, ../sass/_general.scss */
+.tabs-primary {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1em;
+}
+/* line 156, ../sass/_general.scss */
+.tabs-primary li {
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 161, ../sass/_general.scss */
+.tabs-primary li a {
+  text-decoration: none;
+}
+
+/* line 168, ../sass/_general.scss */
+.pager {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-top: 1em;
+}
+/* line 175, ../sass/_general.scss */
+.pager li {
+  display: inline-block;
+}
+/* line 178, ../sass/_general.scss */
+.pager li.pager-current {
+  font-weight: bold;
+}
+
+/* line 186, ../sass/_general.scss */
+.not-logged-in #block-system-user-menu {
+  margin-top: -2%;
+}
+
+/* line 191, ../sass/_general.scss */
+.logged-in .breadcrumb {
+  margin-top: 1em;
+}
+
+/* line 196, ../sass/_general.scss */
+#block-r2r-subscription-r2r-subscribe {
+  clear: both;
+  float: right;
+}
+
+/* Layout rules */
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/**
+ * Center the page.
+ *
+ * For screen sizes larger than 1200px, prevent excessively long lines of text
+ * by setting a max-width.
+ */
+/* line 36, ../sass/layouts/_responsive.scss */
+#main,
+.region-bottom,
+#footer {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Apply the shared properties of grid items in a single, efficient ruleset. */
+/* line 53, ../sass/layouts/_responsive.scss */
+#header,
+#navigation,
+.header__logo,
+#content,
+.page-about .left-side,
+.page-about .right-side,
+.two-col-70-30 .left-col,
+.two-col-70-30 .right-col,
+.home-page .top-row, .home-page .left-side, .home-page .right-side,
+.home-page .right-row, .home-page .middle-column, .home-page .right-column,
+.cyberseminar-node .top-row, .cyberseminar-node .left-side, .cyberseminar-node .right-side,
+#footer {
+  padding-left: 10;
+  padding-right: 10;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* Containers for grid items and flow items. */
+/* line 52, ../../../../../../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+#header_top:before, #header_top:after,
+#header:before,
+#header:after,
+#main:before,
+#main:after,
+.home-page .right-side:before,
+.home-page .right-side:after,
+#navigation:before,
+#navigation:after,
+#content:before,
+#content:after,
+#footer:before,
+#footer:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../../../../../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+#header_top:after,
+#header:after,
+#main:after,
+.home-page .right-side:after,
+#navigation:after,
+#content:after,
+#footer:after {
+  clear: both;
+}
+
+/**
+* Positioning items on the grid
+*/
+/* line 75, ../sass/layouts/_responsive.scss */
+.header__logo {
+  float: left;
+  width: 66.66667%;
+  margin-left: 0%;
+  margin-right: -66.66667%;
+}
+
+/* line 79, ../sass/layouts/_responsive.scss */
+.home-page .top-row {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+}
+
+/* line 83, ../sass/layouts/_responsive.scss */
+.home-page .left-side {
+  clear: left;
+  float: left;
+  width: 33.33333%;
+  margin-left: 0%;
+  margin-right: -33.33333%;
+  padding-right: 15px;
+}
+
+/* line 89, ../sass/layouts/_responsive.scss */
+.home-page .middle {
+  float: left;
+  width: 33.33333%;
+  margin-left: 33.33333%;
+  margin-right: -66.66667%;
+  padding-right: 15px;
+}
+
+/* line 94, ../sass/layouts/_responsive.scss */
+.home-page .right-side {
+  float: left;
+  width: 33.33333%;
+  margin-left: 66.66667%;
+  margin-right: -100%;
+  padding-right: 15px;
+}
+
+/* line 100, ../sass/layouts/_responsive.scss */
+.page-about .left-side {
+  float: left;
+  width: 77.77778%;
+  margin-left: 0%;
+  margin-right: -77.77778%;
+  padding-right: 15px;
+}
+
+/* line 105, ../sass/layouts/_responsive.scss */
+.page-about .right-side {
+  float: left;
+  width: 22.22222%;
+  margin-left: 77.77778%;
+  margin-right: -100%;
+}
+
+/* line 110, ../sass/layouts/_responsive.scss */
+.cyberseminar-node .top-row {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-right: 15px;
+}
+
+/* line 115, ../sass/layouts/_responsive.scss */
+.cyberseminar-node .left-side {
+  clear: left;
+  float: left;
+  width: 77.77778%;
+  margin-left: 0%;
+  margin-right: -77.77778%;
+  padding-right: 15px;
+}
+
+/* line 121, ../sass/layouts/_responsive.scss */
+.cyberseminar-node .right-side {
+  float: left;
+  width: 22.22222%;
+  margin-left: 77.77778%;
+  margin-right: -100%;
+}
+
+/* line 126, ../sass/layouts/_responsive.scss */
+.two-col-70-30 .left-col {
+  float: left;
+  width: 77.77778%;
+  margin-left: 0%;
+  margin-right: -77.77778%;
+  padding-right: 15px;
+}
+
+/* line 131, ../sass/layouts/_responsive.scss */
+.two-col-70-30 .right-col {
+  float: left;
+  width: 22.22222%;
+  margin-left: 77.77778%;
+  margin-right: -100%;
+}
+
+/** Tablet and Down View **/
+@media only screen and (max-width: 800px) {
+  /* line 139, ../sass/layouts/_responsive.scss */
+  .page-about .left-side, .two-col-70-30 .left-col {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-right: 0;
+  }
+
+  /* line 143, ../sass/layouts/_responsive.scss */
+  .page-about .right-side, .two-col-70-30 .right-col {
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+
+  /* line 148, ../sass/layouts/_responsive.scss */
+  .home-page .top-row {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+
+  /* line 152, ../sass/layouts/_responsive.scss */
+  .home-page .left-side {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-right: 0;
+    margin-bottom: 1em;
+  }
+
+  /* line 158, ../sass/layouts/_responsive.scss */
+  .home-page .middle {
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-right: 0;
+  }
+
+  /* line 164, ../sass/layouts/_responsive.scss */
+  .home-page .right-side {
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-right: 0;
+  }
+
+  /* line 171, ../sass/layouts/_responsive.scss */
+  .cyberseminar-node .top-row {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+
+  /* line 175, ../sass/layouts/_responsive.scss */
+  .cyberseminar-node .left-side {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-right: 0;
+  }
+
+  /* line 180, ../sass/layouts/_responsive.scss */
+  .cyberseminar-node .right-side {
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-right: 0;
+  }
+}
+/** Mobile and down View **/
+@media only screen and (max-width: 650px) {
+  /* line 190, ../sass/layouts/_responsive.scss */
+  .home-page .middle-column {
+    padding-right: 0;
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+
+  /* line 196, ../sass/layouts/_responsive.scss */
+  .home-page .right-column {
+    padding-right: 0;
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+}
+/* Elements */
+/* line 6, ../sass/partials/elements/_boxes.scss */
+.box, .pane-node-comments .comment, .home-page .left-side #learn-about-r2r .pane-title, .home-page .right-side #homepage-events > .pane-title, .home-page .right-side #homepage-events #mini-panel-homepage_events, .page-node.node-type-event .right-column .pane-title,
+.page-node.node-type-lc-event .right-column .pane-title, .page-node.node-type-event .right-column .upcoming-events,
+.page-node.node-type-lc-event .right-column .upcoming-events, .page-cyber-seminars #technical-requirements .pane-title, .node-type-cyber-seminar #technical-requirements .pane-title, .page-cyber-seminars #technical-requirements > div, .node-type-cyber-seminar #technical-requirements > div, .page-cyber-seminars #cyber-seminar-featured, .node-type-cyber-seminar #cyber-seminar-featured, .page-featured-partners #featured-r2r-partners .view-header, .node-type-featured-r2r-partner #featured-r2r-partners .view-header, .page-featured-partners #featured-r2r-partners .view-content, .node-type-featured-r2r-partner #featured-r2r-partners .view-content, .page-featured-partners #featured-r2r-partners .view-footer, .node-type-featured-r2r-partner #featured-r2r-partners .view-footer, .page-featured-partners .view-featured-r2r-partners .feat-partner-answer .partner-answer, .node-type-featured-r2r-partner .view-featured-r2r-partners .feat-partner-answer .partner-answer, .page-learning-communities #lc-menu h2, .page-learning-communities #lc-menu .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #lc-menu .views-field-title, .page-learning-communities #lc-menu .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #lc-menu .views-field-title, .page-learning-communities #about-r2r-lc h2, .page-learning-communities #about-r2r-lc .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #about-r2r-lc .views-field-title, .page-learning-communities #about-r2r-lc .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #about-r2r-lc .views-field-title, .page-learning-communities #recent-stories h2, .page-learning-communities #recent-stories .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #recent-stories .views-field-title, .page-learning-communities #recent-stories .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #recent-stories .views-field-title, .page-learning-communities #recent-stories .view-content, .page-mentorship #mentorship-menu h2, .page-mentorship #mentorship-menu .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-mentorship #mentorship-menu .views-field-title, .page-mentorship #mentorship-menu .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-mentorship #mentorship-menu .views-field-title {
+  padding: 1em 1.5em;
+}
+
+/* line 10, ../sass/partials/elements/_boxes.scss */
+.yellow, .page-cyber-seminars #cyber-seminar-featured, .node-type-cyber-seminar #cyber-seminar-featured {
+  background-color: #fef4bd;
+  border: 1px solid #007596;
+}
+
+/* line 15, ../sass/partials/elements/_boxes.scss */
+.fill-blue, .page-learning-communities #recent-stories h2, .page-learning-communities #recent-stories .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #recent-stories .views-field-title, .page-learning-communities #recent-stories .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #recent-stories .views-field-title {
+  background-color: #007596;
+  color: white;
+}
+
+/* line 20, ../sass/partials/elements/_boxes.scss */
+.border-blue, .hello-user-profile .user-photo img, .pane-node-comments .comment, .home-page #quicktabs-container-homepage_tab_menu, .page-featured-partners .view-featured-r2r-partners .feat-partner-answer .partner-answer, .node-type-featured-r2r-partner .view-featured-r2r-partners .feat-partner-answer .partner-answer {
+  border: 1px solid #007596;
+}
+
+/* line 24, ../sass/partials/elements/_boxes.scss */
+.fill-grey, .home-page .left-side #learn-about-r2r .pane-title, .home-page .right-side #homepage-events > .pane-title, .page-node.node-type-event .right-column .pane-title,
+.page-node.node-type-lc-event .right-column .pane-title, .page-cyber-seminars #technical-requirements .pane-title, .node-type-cyber-seminar #technical-requirements .pane-title, .page-featured-partners #featured-r2r-partners .view-header, .node-type-featured-r2r-partner #featured-r2r-partners .view-header, .page-learning-communities #lc-menu h2, .page-learning-communities #lc-menu .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #lc-menu .views-field-title, .page-learning-communities #lc-menu .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #lc-menu .views-field-title, .page-learning-communities #about-r2r-lc h2, .page-learning-communities #about-r2r-lc .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #about-r2r-lc .views-field-title, .page-learning-communities #about-r2r-lc .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #about-r2r-lc .views-field-title, .page-mentorship #mentorship-menu h2, .page-mentorship #mentorship-menu .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-mentorship #mentorship-menu .views-field-title, .page-mentorship #mentorship-menu .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-mentorship #mentorship-menu .views-field-title {
+  background-color: #e6eef0;
+  border: 1px solid #b2c8cc;
+}
+
+/* line 29, ../sass/partials/elements/_boxes.scss */
+.border-grey {
+  border: 1px solid #b2c8cc;
+}
+
+/* line 33, ../sass/partials/elements/_boxes.scss */
+.round-edge-all, .pane-node-comments .comment, .page-cyber-seminars #cyber-seminar-featured, .node-type-cyber-seminar #cyber-seminar-featured, .page-featured-partners .view-featured-r2r-partners .feat-partner-answer .partner-answer, .node-type-featured-r2r-partner .view-featured-r2r-partners .feat-partner-answer .partner-answer {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+/* line 37, ../sass/partials/elements/_boxes.scss */
+.round-edge-top, .home-page .left-side #learn-about-r2r .pane-title, .home-page .right-side #homepage-events > .pane-title, .page-node.node-type-event .right-column .pane-title,
+.page-node.node-type-lc-event .right-column .pane-title, .page-cyber-seminars #technical-requirements .pane-title, .node-type-cyber-seminar #technical-requirements .pane-title, .page-featured-partners #featured-r2r-partners .view-header, .node-type-featured-r2r-partner #featured-r2r-partners .view-header, .page-learning-communities #lc-menu h2, .page-learning-communities #lc-menu .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #lc-menu .views-field-title, .page-learning-communities #lc-menu .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #lc-menu .views-field-title, .page-learning-communities #about-r2r-lc h2, .page-learning-communities #about-r2r-lc .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #about-r2r-lc .views-field-title, .page-learning-communities #about-r2r-lc .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #about-r2r-lc .views-field-title, .page-learning-communities #recent-stories h2, .page-learning-communities #recent-stories .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #recent-stories .views-field-title, .page-learning-communities #recent-stories .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #recent-stories .views-field-title, .page-mentorship #mentorship-menu h2, .page-mentorship #mentorship-menu .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-mentorship #mentorship-menu .views-field-title, .page-mentorship #mentorship-menu .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-mentorship #mentorship-menu .views-field-title {
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* line 41, ../sass/partials/elements/_boxes.scss */
+.round-edge-bottom, .home-page #quicktabs-container-homepage_tab_menu, .page-learning-communities #quicktabs-container-learning_community_recent {
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* line 6, ../sass/partials/elements/_buttons.scss */
+.btn, input[type="submit"], .node-type-webform .webform-submit, .node-type-discussion .edit-post,
+.node-type-lc-discussion .edit-post,
+.node-type-cyber-seminar .edit-post {
+  background: #007596;
+  background: -moz-linear-gradient(top, #007596 0%, #015577 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #007596), color-stop(100%, #015577));
+  background: -webkit-linear-gradient(top, #007596 0%, #015577 100%);
+  background: -o-linear-gradient(top, #007596 0%, #015577 100%);
+  background: -ms-linear-gradient(top, #007596 0%, #015577 100%);
+  background: linear-gradient(top, #007596 0%, #015577 100%);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  color: white;
+  border: 1px solid #015577;
+  font-size: 0.875em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  padding: 0.5em 1em;
+}
+/* line 16, ../sass/partials/elements/_buttons.scss */
+.btn *, input[type="submit"] *, .node-type-webform .webform-submit *, .node-type-discussion .edit-post *,
+.node-type-lc-discussion .edit-post *,
+.node-type-cyber-seminar .edit-post * {
+  color: white;
+  text-decoration: none;
+}
+/* line 21, ../sass/partials/elements/_buttons.scss */
+.btn:hover, input[type="submit"]:hover, .node-type-webform .webform-submit:hover, .node-type-discussion .edit-post:hover,
+.node-type-lc-discussion .edit-post:hover,
+.node-type-cyber-seminar .edit-post:hover {
+  background: #019cc6;
+  background: -moz-linear-gradient(top, #019cc6 0%, #015577 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #019cc6), color-stop(100%, #015577));
+  background: -webkit-linear-gradient(top, #019cc6 0%, #015577 100%);
+  background: -o-linear-gradient(top, #019cc6 0%, #015577 100%);
+  background: -ms-linear-gradient(top, #019cc6 0%, #015577 100%);
+  background: linear-gradient(top, #019cc6 0%, #015577 100%);
+}
+/* line 24, ../sass/partials/elements/_buttons.scss */
+.btn:hover *, input[type="submit"]:hover *, .node-type-webform .webform-submit:hover *, .node-type-discussion .edit-post:hover *,
+.node-type-lc-discussion .edit-post:hover *,
+.node-type-cyber-seminar .edit-post:hover * {
+  color: white;
+}
+
+/* line 30, ../sass/partials/elements/_buttons.scss */
+.btn.secondary, input.secondary[type="submit"], .node-type-webform .secondary.webform-submit, .user-login #edit-submit, .node-type-discussion .secondary.edit-post,
+.node-type-lc-discussion .secondary.edit-post,
+.node-type-cyber-seminar .secondary.edit-post {
+  background: #15c43b;
+  background: -moz-linear-gradient(top, #15c43b 0%, #068328 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #15c43b), color-stop(100%, #068328));
+  background: -webkit-linear-gradient(top, #15c43b 0%, #068328 100%);
+  background: -o-linear-gradient(top, #15c43b 0%, #068328 100%);
+  background: -ms-linear-gradient(top, #15c43b 0%, #068328 100%);
+  background: linear-gradient(top, #15c43b 0%, #068328 100%);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  font-size: 0.875em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  border: 1px solid #068328;
+}
+/* line 38, ../sass/partials/elements/_buttons.scss */
+.btn.secondary:hover, input.secondary[type="submit"]:hover, .node-type-webform .secondary.webform-submit:hover, .user-login #edit-submit:hover, .node-type-discussion .secondary.edit-post:hover,
+.node-type-lc-discussion .secondary.edit-post:hover,
+.node-type-cyber-seminar .secondary.edit-post:hover {
+  background: #19e646;
+  background: -moz-linear-gradient(top, #19e646 0%, #068328 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #19e646), color-stop(100%, #068328));
+  background: -webkit-linear-gradient(top, #19e646 0%, #068328 100%);
+  background: -o-linear-gradient(top, #19e646 0%, #068328 100%);
+  background: -ms-linear-gradient(top, #19e646 0%, #068328 100%);
+  background: linear-gradient(top, #19e646 0%, #068328 100%);
+}
+
+/* line 47, ../sass/partials/elements/_buttons.scss */
+.btn.tertiary, .tabs-primary li, input.tertiary[type="submit"], .node-type-webform .tertiary.webform-submit, .pane-node-comments .links.inline li, .node-type-discussion .tertiary.edit-post,
+.node-type-lc-discussion .tertiary.edit-post,
+.node-type-cyber-seminar .tertiary.edit-post {
+  background: #c9d9dc;
+  background: -moz-linear-gradient(top, #c9d9dc 0%, #99abaf 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c9d9dc), color-stop(100%, #99abaf));
+  background: -webkit-linear-gradient(top, #c9d9dc 0%, #99abaf 100%);
+  background: -o-linear-gradient(top, #c9d9dc 0%, #99abaf 100%);
+  background: -ms-linear-gradient(top, #c9d9dc 0%, #99abaf 100%);
+  background: linear-gradient(top, #c9d9dc 0%, #99abaf 100%);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  font-size: 0.875em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #002323;
+  border: 1px solid #a2bbc0;
+  padding: 3px 10px;
+}
+/* line 56, ../sass/partials/elements/_buttons.scss */
+.btn.tertiary *, .tabs-primary li *, input.tertiary[type="submit"] *, .node-type-webform .tertiary.webform-submit *, .pane-node-comments .links.inline li *, .node-type-discussion .tertiary.edit-post *,
+.node-type-lc-discussion .tertiary.edit-post *,
+.node-type-cyber-seminar .tertiary.edit-post * {
+  color: #002323;
+  text-decoration: none;
+}
+/* line 61, ../sass/partials/elements/_buttons.scss */
+.btn.tertiary:hover, .tabs-primary li:hover, input.tertiary[type="submit"]:hover, .node-type-webform .tertiary.webform-submit:hover, .pane-node-comments .links.inline li:hover, .node-type-discussion .tertiary.edit-post:hover,
+.node-type-lc-discussion .tertiary.edit-post:hover,
+.node-type-cyber-seminar .tertiary.edit-post:hover {
+  background: #e6eef0;
+  background: -moz-linear-gradient(top, #e6eef0 0%, #a2bbc0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6eef0), color-stop(100%, #a2bbc0));
+  background: -webkit-linear-gradient(top, #e6eef0 0%, #a2bbc0 100%);
+  background: -o-linear-gradient(top, #e6eef0 0%, #a2bbc0 100%);
+  background: -ms-linear-gradient(top, #e6eef0 0%, #a2bbc0 100%);
+  background: linear-gradient(top, #e6eef0 0%, #a2bbc0 100%);
+}
+
+/* line 6, ../sass/partials/elements/_forms.scss */
+input {
+  border: 1px solid #007596;
+  color: #002323;
+  font-size: 0.83125em;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 7px;
+  max-width: 100%;
+}
+
+/* line 16, ../sass/partials/elements/_forms.scss */
+input[type="submit"] {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 23, ../sass/partials/elements/_forms.scss */
+textarea {
+  font-size: 0.83125em;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid #007596;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  color: #002323;
+}
+
+/* line 31, ../sass/partials/elements/_forms.scss */
+label {
+  display: block;
+  font-weight: bold;
+}
+
+/* line 36, ../sass/partials/elements/_forms.scss */
+.form-item {
+  margin-bottom: 10px;
+}
+
+/* line 40, ../sass/partials/elements/_forms.scss */
+.form-input {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 1px solid #007596;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8575em;
+  color: #002323;
+  margin: 2px 0 0 0;
+  padding: 5px;
+}
+
+/* line 50, ../sass/partials/elements/_forms.scss */
+.form-required {
+  color: #cc0000;
+}
+
+/* line 53, ../sass/partials/elements/_forms.scss */
+.description {
+  vertical-align: top;
+  margin-top: 7px;
+  line-height: 1em;
+}
+/* line 59, ../sass/partials/elements/_forms.scss */
+.description:before {
+  display: inline-block;
+  content: url("/sites/all/themes/r2r_zen/images/icons/tooltip.png");
+  margin-right: 5px;
+}
+
+/** Contact Form  **/
+/* line 68, ../sass/partials/elements/_forms.scss */
+.node-type-webform .submitted {
+  display: none;
+}
+/* line 70, ../sass/partials/elements/_forms.scss */
+.node-type-webform #edit-submitted-subject {
+  width: 60%;
+}
+/* line 72, ../sass/partials/elements/_forms.scss */
+.node-type-webform #edit-submitted-message {
+  width: 60%;
+  min-height: 210px;
+}
+@media only screen and (max-width: 650px) {
+  /* line 81, ../sass/partials/elements/_forms.scss */
+  .node-type-webform #edit-submitted-your-name,
+  .node-type-webform #edit-submitted-work-related-e-mail-address,
+  .node-type-webform #edit-submitted-work-related-phone-number,
+  .node-type-webform #edit-submitted-subject,
+  .node-type-webform #edit-submitted-message {
+    width: 100%;
+  }
+}
+
+/* line 94, ../sass/partials/elements/_forms.scss */
+.pane-node-comment-form .form-item-subject, .pane-node-comment-form #edit-author--4, .pane-node-comment-form .grippie {
+  display: none;
+}
+/* line 96, ../sass/partials/elements/_forms.scss */
+.pane-node-comment-form #edit-comment-body-und-0-format--3 {
+  margin-top: 1em;
+  border: 1px solid #b2c8cc;
+}
+/* line 101, ../sass/partials/elements/_forms.scss */
+.pane-node-comment-form #edit-actions--2 {
+  margin-top: 1em;
+}
+/* line 104, ../sass/partials/elements/_forms.scss */
+.pane-node-comment-form #edit-actions--2 input {
+  margin-right: 10px;
+}
+
+/* line 109, ../sass/partials/elements/_forms.scss */
+.pane-node-comments {
+  margin-top: 1em;
+}
+/* line 112, ../sass/partials/elements/_forms.scss */
+.pane-node-comments span {
+  font-weight: bold;
+}
+/* line 114, ../sass/partials/elements/_forms.scss */
+.pane-node-comments .comment {
+  margin-bottom: 1em;
+}
+/* line 119, ../sass/partials/elements/_forms.scss */
+.pane-node-comments .permalink {
+  display: none;
+}
+/* line 121, ../sass/partials/elements/_forms.scss */
+.pane-node-comments .links.inline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 126, ../sass/partials/elements/_forms.scss */
+.pane-node-comments .links.inline li {
+  display: inline-block;
+}
+
+/* line 6, ../sass/partials/elements/_tables.scss */
+table {
+  border-collapse: collapse;
+}
+/* line 10, ../sass/partials/elements/_tables.scss */
+table tr td {
+  padding: 7px 10px 7px 0;
+}
+
+/* line 18, ../sass/partials/elements/_tables.scss */
+.blue-header thead tr {
+  border-bottom: 3px solid #b2c8cc;
+  text-align: left;
+}
+
+/* Page Partials */
+/* line 6, ../sass/partials/page_partials/_header.scss */
+#header_top {
+  min-height: 40px;
+  background-color: white;
+}
+@media only screen and (max-width: 1020px) {
+  /* line 6, ../sass/partials/page_partials/_header.scss */
+  #header_top {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+/* line 14, ../sass/partials/page_partials/_header.scss */
+#header_top > div {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (max-width: 650px) {
+  /* line 16, ../sass/partials/page_partials/_header.scss */
+  #header_top .right, #header_top #block-system-user-menu {
+    display: none;
+  }
+}
+
+/* line 21, ../sass/partials/page_partials/_header.scss */
+#header {
+  padding-top: 10px;
+  background: url("../images/global/bground-header.jpg");
+}
+@media only screen and (max-width: 1020px) {
+  /* line 25, ../sass/partials/page_partials/_header.scss */
+  #header #logo {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  /* line 25, ../sass/partials/page_partials/_header.scss */
+  #header #logo {
+    width: 80%;
+  }
+}
+/* line 34, ../sass/partials/page_partials/_header.scss */
+#header #logo > img {
+  max-width: 100%;
+}
+@media only screen and (min-width: 651px) {
+  /* line 37, ../sass/partials/page_partials/_header.scss */
+  #header #block-search-form {
+    float: right;
+    margin-top: -8%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  /* line 37, ../sass/partials/page_partials/_header.scss */
+  #header #block-search-form {
+    display: none;
+  }
+}
+/* line 46, ../sass/partials/page_partials/_header.scss */
+#header .menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 9%;
+  margin-bottom: -4px;
+}
+/* line 52, ../sass/partials/page_partials/_header.scss */
+#header .menu li {
+  display: inline-block;
+}
+/* line 56, ../sass/partials/page_partials/_header.scss */
+#header .menu a {
+  font-size: 1.00625em;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: white;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+  background: #0386aa;
+  background: -moz-linear-gradient(top, #0386aa 0%, #015577 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0386aa), color-stop(100%, #015577));
+  background: -webkit-linear-gradient(top, #0386aa 0%, #015577 100%);
+  background: -o-linear-gradient(top, #0386aa 0%, #015577 100%);
+  background: -ms-linear-gradient(top, #0386aa 0%, #015577 100%);
+  background: linear-gradient(top, #0386aa 0%, #015577 100%);
+}
+@media only screen and (max-width: 800px) {
+  /* line 56, ../sass/partials/page_partials/_header.scss */
+  #header .menu a {
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    border-top-right-radius: 0;
+    height: 25px;
+    font-size: 1.12em;
+    text-align: center;
+    padding-top: 15px;
+  }
+}
+/* line 72, ../sass/partials/page_partials/_header.scss */
+#header .menu a:hover {
+  background: #019cc6;
+  background: -moz-linear-gradient(top, #019cc6 0%, #007596 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #019cc6), color-stop(100%, #007596));
+  background: -webkit-linear-gradient(top, #019cc6 0%, #007596 100%);
+  background: -o-linear-gradient(top, #019cc6 0%, #007596 100%);
+  background: -ms-linear-gradient(top, #019cc6 0%, #007596 100%);
+  background: linear-gradient(top, #019cc6 0%, #007596 100%);
+}
+/* line 74, ../sass/partials/page_partials/_header.scss */
+#header .menu a.active {
+  background: white;
+  font-weight: 900;
+  color: #002323;
+}
+@media only screen and (max-width: 800px) {
+  /* line 74, ../sass/partials/page_partials/_header.scss */
+  #header .menu a.active {
+    background: #0386aa;
+    background: -moz-linear-gradient(top, #0386aa 0%, #015577 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0386aa), color-stop(100%, #015577));
+    background: -webkit-linear-gradient(top, #0386aa 0%, #015577 100%);
+    background: -o-linear-gradient(top, #0386aa 0%, #015577 100%);
+    background: -ms-linear-gradient(top, #0386aa 0%, #015577 100%);
+    background: linear-gradient(top, #0386aa 0%, #015577 100%);
+    font-weight: normal;
+    color: white;
+  }
+}
+/* line 86, ../sass/partials/page_partials/_header.scss */
+#header .menu a.active:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 800px) {
+  /* line 86, ../sass/partials/page_partials/_header.scss */
+  #header .menu a.active:hover {
+    text-decoration: none;
+    background: #019cc6;
+    background: -moz-linear-gradient(top, #019cc6 0%, #007596 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #019cc6), color-stop(100%, #007596));
+    background: -webkit-linear-gradient(top, #019cc6 0%, #007596 100%);
+    background: -o-linear-gradient(top, #019cc6 0%, #007596 100%);
+    background: -ms-linear-gradient(top, #019cc6 0%, #007596 100%);
+    background: linear-gradient(top, #019cc6 0%, #007596 100%);
+  }
+}
+
+/* line 99, ../sass/partials/page_partials/_header.scss */
+.responsive-menus.responsified .responsive-menus-simple {
+  background: none;
+  box-shadow: none;
+  width: 100%;
+}
+/* line 104, ../sass/partials/page_partials/_header.scss */
+.responsive-menus.responsified .responsive-menus-simple li a {
+  text-transform: none;
+  background: #0386aa;
+  background: -moz-linear-gradient(top, #0386aa 0%, #015577 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0386aa), color-stop(100%, #015577));
+  background: -webkit-linear-gradient(top, #0386aa 0%, #015577 100%);
+  background: -o-linear-gradient(top, #0386aa 0%, #015577 100%);
+  background: -ms-linear-gradient(top, #0386aa 0%, #015577 100%);
+  background: linear-gradient(top, #0386aa 0%, #015577 100%);
+}
+/* line 108, ../sass/partials/page_partials/_header.scss */
+.responsive-menus.responsified .responsive-menus-simple li a:hover {
+  background: #019cc6;
+  background: -moz-linear-gradient(top, #019cc6 0%, #007596 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #019cc6), color-stop(100%, #007596));
+  background: -webkit-linear-gradient(top, #019cc6 0%, #007596 100%);
+  background: -o-linear-gradient(top, #019cc6 0%, #007596 100%);
+  background: -ms-linear-gradient(top, #019cc6 0%, #007596 100%);
+  background: linear-gradient(top, #019cc6 0%, #007596 100%);
+}
+/* line 114, ../sass/partials/page_partials/_header.scss */
+.responsive-menus.responsified span.toggler {
+  background: none;
+  box-shadow: none;
+  float: right;
+  color: #007596;
+  font-size: 2.1875em;
+  padding-right: 10px;
+  border-bottom: none !important;
+}
+@media only screen and (min-width: 651px) and (max-width: 800px) {
+  /* line 114, ../sass/partials/page_partials/_header.scss */
+  .responsive-menus.responsified span.toggler {
+    margin-top: -55px;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 650px) {
+  /* line 114, ../sass/partials/page_partials/_header.scss */
+  .responsive-menus.responsified span.toggler {
+    margin-top: -45px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 114, ../sass/partials/page_partials/_header.scss */
+  .responsive-menus.responsified span.toggler {
+    margin-top: -40px;
+  }
+}
+/* line 135, ../sass/partials/page_partials/_header.scss */
+.responsive-menus.responsified span.toggler:hover {
+  color: #0386aa;
+}
+
+/* line 6, ../sass/partials/page_partials/_footer.scss */
+#footer {
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  border-bottom-right-radius: 8px;
+  background: url(../images/global/bground-footer.gif) no-repeat center center;
+  background-color: #007596;
+  box-shadow: 0 2px 1px #6988a3;
+}
+@media only screen and (max-width: 1020px) {
+  /* line 6, ../sass/partials/page_partials/_footer.scss */
+  #footer {
+    background-image: none;
+  }
+}
+/* line 14, ../sass/partials/page_partials/_footer.scss */
+#footer .footer-logo {
+  max-width: 23%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (min-width: 651px) and (max-width: 800px) {
+  /* line 14, ../sass/partials/page_partials/_footer.scss */
+  #footer .footer-logo {
+    max-width: 29%;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 650px) {
+  /* line 14, ../sass/partials/page_partials/_footer.scss */
+  #footer .footer-logo {
+    max-width: 40%;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 500px) {
+  /* line 14, ../sass/partials/page_partials/_footer.scss */
+  #footer .footer-logo {
+    max-width: 50%;
+  }
+}
+/* line 22, ../sass/partials/page_partials/_footer.scss */
+#footer .footer-logo li {
+  display: inline-block;
+}
+/* line 27, ../sass/partials/page_partials/_footer.scss */
+#footer .menu {
+  max-width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 16px;
+  text-align: center;
+  line-height: 17.6px;
+  font-size: 0.875em;
+}
+@media only screen and (min-width: 651px) and (max-width: 800px) {
+  /* line 27, ../sass/partials/page_partials/_footer.scss */
+  #footer .menu {
+    max-width: 85%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  /* line 27, ../sass/partials/page_partials/_footer.scss */
+  #footer .menu {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 500px) {
+  /* line 27, ../sass/partials/page_partials/_footer.scss */
+  #footer .menu {
+    padding: 0;
+  }
+}
+/* line 38, ../sass/partials/page_partials/_footer.scss */
+#footer .menu li {
+  display: inline-block;
+  border-right: 1px solid white;
+  padding: 0 5px;
+}
+@media only screen and (max-width: 650px) {
+  /* line 38, ../sass/partials/page_partials/_footer.scss */
+  #footer .menu li {
+    margin-bottom: 5px;
+  }
+}
+/* line 45, ../sass/partials/page_partials/_footer.scss */
+#footer .menu li.last {
+  border: none;
+}
+/* line 49, ../sass/partials/page_partials/_footer.scss */
+#footer a {
+  color: white;
+}
+
+/* Page */
+/* line 7, ../sass/partials/pages/_home.scss */
+.home-page .pane-title {
+  font-weight: 900;
+}
+/* line 12, ../sass/partials/pages/_home.scss */
+.home-page .quicktabs-tabs {
+  padding: 0;
+  margin: 15px 0 4px 0;
+}
+@media only screen and (max-width: 650px) {
+  /* line 12, ../sass/partials/pages/_home.scss */
+  .home-page .quicktabs-tabs {
+    margin-bottom: 0;
+  }
+}
+/* line 18, ../sass/partials/pages/_home.scss */
+.home-page .quicktabs-tabs li {
+  background-color: #007596;
+  padding: 8px 20px;
+  -webkit-border-top-left-radius: 9px;
+  -moz-border-radius-topleft: 9px;
+  border-top-left-radius: 9px;
+  -webkit-border-top-right-radius: 9px;
+  -moz-border-radius-topright: 9px;
+  border-top-right-radius: 9px;
+  border-bottom: none !important;
+}
+@media only screen and (max-width: 650px) {
+  /* line 18, ../sass/partials/pages/_home.scss */
+  .home-page .quicktabs-tabs li {
+    display: block;
+    border-bottom: 1px solid white !important;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    border-top-right-radius: 0;
+  }
+}
+/* line 30, ../sass/partials/pages/_home.scss */
+.home-page .quicktabs-tabs li:nth-child(1) {
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+}
+/* line 32, ../sass/partials/pages/_home.scss */
+.home-page .quicktabs-tabs li a {
+  color: white;
+  text-decoration: none;
+}
+/* line 36, ../sass/partials/pages/_home.scss */
+.home-page .quicktabs-tabs li a:hover {
+  text-decoration: underline;
+}
+/* line 40, ../sass/partials/pages/_home.scss */
+.home-page .quicktabs-tabs li.active {
+  background-color: white;
+  border: 1px solid #007596;
+  font-weight: 900;
+}
+/* line 45, ../sass/partials/pages/_home.scss */
+.home-page .quicktabs-tabs li.active a {
+  color: #002323;
+}
+/* line 49, ../sass/partials/pages/_home.scss */
+.home-page #quicktabs-container-homepage_tab_menu {
+  -webkit-border-top-right-radius: 9px;
+  -moz-border-radius-topright: 9px;
+  border-top-right-radius: 9px;
+  padding: 1em 1.5em;
+}
+@media only screen and (max-width: 650px) {
+  /* line 49, ../sass/partials/pages/_home.scss */
+  .home-page #quicktabs-container-homepage_tab_menu {
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    border-top-right-radius: 0;
+  }
+}
+/* line 58, ../sass/partials/pages/_home.scss */
+.home-page #quicktabs-container-homepage_tab_menu .views-row {
+  display: inline-block;
+  width: 28%;
+  vertical-align: top;
+  padding: 0px 20px;
+}
+@media only screen and (max-width: 800px) {
+  /* line 58, ../sass/partials/pages/_home.scss */
+  .home-page #quicktabs-container-homepage_tab_menu .views-row {
+    display: block;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+/* line 72, ../sass/partials/pages/_home.scss */
+.home-page #quicktabs-container-homepage_tab_menu .views-row-even {
+  border-right: 1px solid #007596;
+  border-left: 1px solid #007596;
+}
+@media only screen and (max-width: 800px) {
+  /* line 72, ../sass/partials/pages/_home.scss */
+  .home-page #quicktabs-container-homepage_tab_menu .views-row-even {
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #007596;
+    border-top: 1px solid #007596;
+  }
+}
+/* line 84, ../sass/partials/pages/_home.scss */
+.home-page #quicktabs-container-homepage_tab_menu .views-field-title {
+  font-weight: bold;
+}
+/* line 85, ../sass/partials/pages/_home.scss */
+.home-page #quicktabs-container-homepage_tab_menu .views-field-last-updated-1 {
+  font-style: italic;
+}
+/* line 89, ../sass/partials/pages/_home.scss */
+.home-page .top-row {
+  margin: 0.5em 0 1em 0;
+}
+/* line 94, ../sass/partials/pages/_home.scss */
+.home-page .top-row #homepage-blurb .home-login {
+  display: inline-block;
+  width: 25%;
+  padding-right: 15px;
+}
+@media only screen and (min-width: 501px) and (max-width: 650px) {
+  /* line 94, ../sass/partials/pages/_home.scss */
+  .home-page .top-row #homepage-blurb .home-login {
+    width: 45%;
+    vertical-align: top;
+    margin-top: 2em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 94, ../sass/partials/pages/_home.scss */
+  .home-page .top-row #homepage-blurb .home-login {
+    width: 100%;
+    padding: 0;
+  }
+}
+/* line 111, ../sass/partials/pages/_home.scss */
+.home-page .top-row #homepage-blurb .home-blerb {
+  display: inline-block;
+  width: 72%;
+}
+@media only screen and (min-width: 651px) and (max-width: 800px) {
+  /* line 111, ../sass/partials/pages/_home.scss */
+  .home-page .top-row #homepage-blurb .home-blerb {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 650px) {
+  /* line 111, ../sass/partials/pages/_home.scss */
+  .home-page .top-row #homepage-blurb .home-blerb {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 111, ../sass/partials/pages/_home.scss */
+  .home-page .top-row #homepage-blurb .home-blerb {
+    width: 100%;
+  }
+}
+/* line 126, ../sass/partials/pages/_home.scss */
+.home-page .top-row #homepage-blurb > p:first-child {
+  margin: 0;
+}
+/* line 128, ../sass/partials/pages/_home.scss */
+.home-page .top-row #homepage-blurb strong {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.75em;
+  letter-spacing: -1px;
+}
+/* line 134, ../sass/partials/pages/_home.scss */
+.home-page .top-row #homepage-blurb .btn.secondary, .home-page .top-row #homepage-blurb input.secondary[type="submit"], .home-page .top-row #homepage-blurb .node-type-webform .secondary.webform-submit, .node-type-webform .home-page .top-row #homepage-blurb .secondary.webform-submit, .home-page .top-row #homepage-blurb .user-login #edit-submit, .user-login .home-page .top-row #homepage-blurb #edit-submit, .home-page .top-row #homepage-blurb .node-type-discussion .secondary.edit-post, .node-type-discussion .home-page .top-row #homepage-blurb .secondary.edit-post,
+.home-page .top-row #homepage-blurb .node-type-lc-discussion .secondary.edit-post,
+.node-type-lc-discussion .home-page .top-row #homepage-blurb .secondary.edit-post,
+.home-page .top-row #homepage-blurb .node-type-cyber-seminar .secondary.edit-post,
+.node-type-cyber-seminar .home-page .top-row #homepage-blurb .secondary.edit-post {
+  font-size: 1.12em;
+  max-width: 45%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0.5em;
+  max-width: 80%;
+}
+/* line 141, ../sass/partials/pages/_home.scss */
+.home-page .top-row #homepage-blurb .small-font, .home-page .top-row #homepage-blurb .hello-user-profile, .home-page .top-row #homepage-blurb #block-system-user-menu, .home-page .top-row #homepage-blurb .description, .home-page .top-row #homepage-blurb .right-side #homepage-events #mini-panel-homepage_events .views-field-title, .home-page .right-side #homepage-events #mini-panel-homepage_events .top-row #homepage-blurb .views-field-title, .home-page .top-row #homepage-blurb .right-side #homepage-events #mini-panel-homepage_events .views-field-field-event-date, .home-page .right-side #homepage-events #mini-panel-homepage_events .top-row #homepage-blurb .views-field-field-event-date, .home-page .top-row #homepage-blurb .page-node.node-type-event .right-column .upcoming-events .views-field-field-event-date, .page-node.node-type-event .right-column .upcoming-events .home-page .top-row #homepage-blurb .views-field-field-event-date,
+.home-page .top-row #homepage-blurb .page-node.node-type-lc-event .right-column .upcoming-events .views-field-field-event-date,
+.page-node.node-type-lc-event .right-column .upcoming-events .home-page .top-row #homepage-blurb .views-field-field-event-date, .home-page .top-row #homepage-blurb .page-node.node-type-event .right-column .upcoming-events .view-footer, .page-node.node-type-event .right-column .upcoming-events .home-page .top-row #homepage-blurb .view-footer,
+.home-page .top-row #homepage-blurb .page-node.node-type-lc-event .right-column .upcoming-events .view-footer,
+.page-node.node-type-lc-event .right-column .upcoming-events .home-page .top-row #homepage-blurb .view-footer, .home-page .top-row #homepage-blurb .page-cyber-seminars #mini-panel-cyber_seminar_search p, .page-cyber-seminars #mini-panel-cyber_seminar_search .home-page .top-row #homepage-blurb p, .home-page .top-row #homepage-blurb .node-type-cyber-seminar #mini-panel-cyber_seminar_search p, .node-type-cyber-seminar #mini-panel-cyber_seminar_search .home-page .top-row #homepage-blurb p, .home-page .top-row #homepage-blurb .page-cyber-seminars #technical-requirements > div ul li, .page-cyber-seminars #technical-requirements > div ul .home-page .top-row #homepage-blurb li, .home-page .top-row #homepage-blurb .node-type-cyber-seminar #technical-requirements > div ul li, .node-type-cyber-seminar #technical-requirements > div ul .home-page .top-row #homepage-blurb li, .home-page .top-row #homepage-blurb .page-cyber-seminars #technical-requirements > div p, .page-cyber-seminars #technical-requirements > div .home-page .top-row #homepage-blurb p, .home-page .top-row #homepage-blurb .node-type-cyber-seminar #technical-requirements > div p, .node-type-cyber-seminar #technical-requirements > div .home-page .top-row #homepage-blurb p, .home-page .top-row #homepage-blurb .page-featured-partners #featured-r2r-partners .view-content, .page-featured-partners #featured-r2r-partners .home-page .top-row #homepage-blurb .view-content, .home-page .top-row #homepage-blurb .node-type-featured-r2r-partner #featured-r2r-partners .view-content, .node-type-featured-r2r-partner #featured-r2r-partners .home-page .top-row #homepage-blurb .view-content, .home-page .top-row #homepage-blurb .page-featured-partners #featured-r2r-partners .view-footer, .page-featured-partners #featured-r2r-partners .home-page .top-row #homepage-blurb .view-footer, .home-page .top-row #homepage-blurb .node-type-featured-r2r-partner #featured-r2r-partners .view-footer, .node-type-featured-r2r-partner #featured-r2r-partners .home-page .top-row #homepage-blurb .view-footer {
+  text-align: center;
+}
+/* line 145, ../sass/partials/pages/_home.scss */
+.home-page .top-row #homepage-featured {
+  background-image: url("../images/global/bground-index-callout.gif");
+  background-repeat: no-repeat;
+  line-height: 20px;
+  padding-left: 8em;
+  margin-bottom: 1em;
+}
+/* line 152, ../sass/partials/pages/_home.scss */
+.home-page .top-row #homepage-featured .views-field-created {
+  font-weight: 900;
+  font-size: 0.83125em;
+}
+/* line 157, ../sass/partials/pages/_home.scss */
+.home-page .top-row #homepage-featured .views-field-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.55em;
+  letter-spacing: -1px;
+  font-weight: 900;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+/* line 166, ../sass/partials/pages/_home.scss */
+.home-page .top-row #homepage-featured .views-field-field-featured-more-link {
+  font-size: 0.8575em;
+}
+/* line 175, ../sass/partials/pages/_home.scss */
+.home-page .left-side #learn-about-r2r .pane-title {
+  margin: 0;
+  border-bottom: 0;
+}
+/* line 181, ../sass/partials/pages/_home.scss */
+.home-page .left-side #learn-about-r2r p {
+  margin-top: 0;
+}
+/* line 183, ../sass/partials/pages/_home.scss */
+.home-page .left-side #learn-about-r2r iframe {
+  width: 100%;
+}
+/* line 190, ../sass/partials/pages/_home.scss */
+.home-page .right-side #homepage-events > .pane-title {
+  margin: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+/* line 201, ../sass/partials/pages/_home.scss */
+.home-page .right-side #homepage-events #mini-panel-homepage_events .pane-title {
+  margin: 5px 0;
+}
+/* line 206, ../sass/partials/pages/_home.scss */
+.home-page .right-side #homepage-events #mini-panel-homepage_events .views-row {
+  padding: 10px 0;
+}
+/* line 208, ../sass/partials/pages/_home.scss */
+.home-page .right-side #homepage-events #mini-panel-homepage_events .views-row-1 {
+  border-bottom: 1px solid #e6eef0;
+}
+/* line 216, ../sass/partials/pages/_home.scss */
+.home-page .right-side .btn.secondary, .home-page .right-side input.secondary[type="submit"], .home-page .right-side .node-type-webform .secondary.webform-submit, .node-type-webform .home-page .right-side .secondary.webform-submit, .home-page .right-side .user-login #edit-submit, .user-login .home-page .right-side #edit-submit, .home-page .right-side .node-type-discussion .secondary.edit-post, .node-type-discussion .home-page .right-side .secondary.edit-post,
+.home-page .right-side .node-type-lc-discussion .secondary.edit-post,
+.node-type-lc-discussion .home-page .right-side .secondary.edit-post,
+.home-page .right-side .node-type-cyber-seminar .secondary.edit-post,
+.node-type-cyber-seminar .home-page .right-side .secondary.edit-post {
+  margin-top: 1em;
+}
+/* line 221, ../sass/partials/pages/_home.scss */
+.home-page .middle #featured-r2r-partner {
+  background-image: url("../images/index/bground-featuredpartner.gif");
+  background-repeat: no-repeat;
+  background-position: 2em 0;
+  margin-bottom: 1em;
+}
+/* line 227, ../sass/partials/pages/_home.scss */
+.home-page .middle #featured-r2r-partner .views-field-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+/* line 232, ../sass/partials/pages/_home.scss */
+.home-page .middle #featured-r2r-partner .views-field-field-feat-memb-photo {
+  font-size: 0.8575em;
+}
+/* line 235, ../sass/partials/pages/_home.scss */
+.home-page .middle #featured-r2r-partner .views-field-field-feat-memb-photo p {
+  margin: 0;
+}
+/* line 239, ../sass/partials/pages/_home.scss */
+.home-page .middle #featured-r2r-partner .homepage-teaser > img {
+  float: right;
+  margin: 0 0 4px 5px;
+  width: 70px;
+  border: 1px solid #007596;
+}
+
+/* line 254, ../sass/partials/pages/_home.scss */
+.not-logged-in .home-page .quicktabs-tabs li:nth-child(1) {
+  display: none;
+}
+/* line 255, ../sass/partials/pages/_home.scss */
+.not-logged-in .home-page .quicktabs-tabs li:nth-child(2) {
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* line 7, ../sass/partials/pages/_about_page.scss */
+.page-about h2, .page-about .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-about .views-field-title, .page-about .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-about .views-field-title {
+  border-bottom: 1px solid #b2c8cc;
+  margin-bottom: 14px;
+  padding-bottom: 15px;
+}
+
+/* line 15, ../sass/partials/pages/_about_page.scss */
+.about-contact a {
+  font-weight: 900;
+  font-size: 1.12em;
+  text-align: center;
+  display: block;
+}
+
+/* line 23, ../sass/partials/pages/_about_page.scss */
+.team-member {
+  width: 50%;
+  float: left;
+}
+@media only screen and (max-width: 650px) {
+  /* line 23, ../sass/partials/pages/_about_page.scss */
+  .team-member {
+    width: 100%;
+  }
+}
+/* line 28, ../sass/partials/pages/_about_page.scss */
+.team-member img {
+  max-width: 80px;
+  border: 1px solid #007596;
+}
+
+/* line 35, ../sass/partials/pages/_about_page.scss */
+.viewing-files img {
+  height: 20px;
+  width: 20px;
+}
+
+/* line 8, ../sass/partials/pages/_discussion_page.scss */
+.discussion-menu .menu {
+  list-style: none;
+  margin: 15px 0 4px 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+/* line 15, ../sass/partials/pages/_discussion_page.scss */
+.discussion-menu .menu li {
+  display: inline-block;
+  margin-right: 2px;
+  padding: 0;
+}
+/* line 20, ../sass/partials/pages/_discussion_page.scss */
+.discussion-menu .menu li a {
+  color: white;
+  text-decoration: none;
+  background-color: #007596;
+  padding: 13px 20px 8px;
+  -webkit-border-top-left-radius: 9px;
+  -moz-border-radius-topleft: 9px;
+  border-top-left-radius: 9px;
+  -webkit-border-top-right-radius: 9px;
+  -moz-border-radius-topright: 9px;
+  border-top-right-radius: 9px;
+  border-bottom: none !important;
+  font-size: 14px;
+}
+/* line 29, ../sass/partials/pages/_discussion_page.scss */
+.discussion-menu .menu li a:hover {
+  text-decoration: underline;
+}
+/* line 32, ../sass/partials/pages/_discussion_page.scss */
+.discussion-menu .menu li .active {
+  background-color: white;
+  border: 1px solid #007596;
+  color: #002323;
+  font-weight: 900;
+}
+
+/* line 45, ../sass/partials/pages/_discussion_page.scss */
+.view-discussions,
+.view-lc-content {
+  margin-bottom: 1em;
+}
+/* line 48, ../sass/partials/pages/_discussion_page.scss */
+.view-discussions .view-empty,
+.view-lc-content .view-empty {
+  border: 1px solid #007596;
+  line-height: 20px;
+  padding: 10px 20px;
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  border-bottom-right-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+}
+/* line 56, ../sass/partials/pages/_discussion_page.scss */
+.view-discussions .views-row,
+.view-lc-content .views-row {
+  border-top: 1px solid #007596;
+  border-right: 1px solid #007596;
+  border-left: 1px solid #007596;
+  line-height: 20px;
+  padding: 10px 20px;
+}
+/* line 63, ../sass/partials/pages/_discussion_page.scss */
+.view-discussions .views-row .discussion-title,
+.view-lc-content .views-row .discussion-title {
+  font-weight: 900;
+}
+/* line 65, ../sass/partials/pages/_discussion_page.scss */
+.view-discussions .views-row .discussion-info,
+.view-lc-content .views-row .discussion-info {
+  font-size: 0.83125em;
+  font-style: italic;
+}
+/* line 69, ../sass/partials/pages/_discussion_page.scss */
+.view-discussions .views-row .discussion-posts, .view-discussions .views-row .discussion-started,
+.view-lc-content .views-row .discussion-posts,
+.view-lc-content .views-row .discussion-started {
+  margin-right: 15px;
+}
+/* line 71, ../sass/partials/pages/_discussion_page.scss */
+.view-discussions .views-row-first,
+.view-lc-content .views-row-first {
+  -webkit-border-top-right-radius: 9px;
+  -moz-border-radius-topright: 9px;
+  border-top-right-radius: 9px;
+}
+/* line 72, ../sass/partials/pages/_discussion_page.scss */
+.view-discussions .views-row-last,
+.view-lc-content .views-row-last {
+  -webkit-border-bottom-left-radius: 9px;
+  -moz-border-radius-bottomleft: 9px;
+  border-bottom-left-radius: 9px;
+  -webkit-border-bottom-right-radius: 9px;
+  -moz-border-radius-bottomright: 9px;
+  border-bottom-right-radius: 9px;
+  border-bottom: 1px solid #007596;
+}
+/* line 77, ../sass/partials/pages/_discussion_page.scss */
+.view-discussions .views-row-even,
+.view-lc-content .views-row-even {
+  background-color: #e5f1f4;
+}
+
+/* line 81, ../sass/partials/pages/_discussion_page.scss */
+.discussion-cat a {
+  color: #9a9a9a;
+  font-size: 0.65625em;
+}
+
+/* line 86, ../sass/partials/pages/_discussion_page.scss */
+.views-field.views-field-nid {
+  display: inline-block;
+  width: 84%;
+}
+@media only screen and (min-width: 321px) and (max-width: 500px) {
+  /* line 86, ../sass/partials/pages/_discussion_page.scss */
+  .views-field.views-field-nid {
+    width: 100%;
+  }
+}
+
+/* line 92, ../sass/partials/pages/_discussion_page.scss */
+.views-field.views-field-ops {
+  display: inline-block;
+  width: 15%;
+  vertical-align: top;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 321px) and (max-width: 500px) {
+  /* line 92, ../sass/partials/pages/_discussion_page.scss */
+  .views-field.views-field-ops {
+    width: 100%;
+  }
+}
+
+/* line 102, ../sass/partials/pages/_discussion_page.scss */
+.discussion-category-menu {
+  font-size: 0.83125em;
+}
+/* line 105, ../sass/partials/pages/_discussion_page.scss */
+.discussion-category-menu h2, .discussion-category-menu .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .discussion-category-menu .views-field-title, .discussion-category-menu .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .discussion-category-menu .views-field-title {
+  margin-bottom: 0;
+}
+/* line 107, ../sass/partials/pages/_discussion_page.scss */
+.discussion-category-menu .menu {
+  padding-left: 0;
+  margin-top: 0;
+}
+/* line 111, ../sass/partials/pages/_discussion_page.scss */
+.discussion-category-menu .menu li {
+  list-style-image: none;
+  list-style-type: none;
+  border-bottom: 1px solid #b2c8cc;
+  padding-top: 7px;
+}
+/* line 117, ../sass/partials/pages/_discussion_page.scss */
+.discussion-category-menu .menu li .active {
+  text-decoration: none;
+  color: #000000;
+}
+/* line 122, ../sass/partials/pages/_discussion_page.scss */
+.discussion-category-menu .menu .last {
+  border-bottom: none;
+}
+
+/* line 127, ../sass/partials/pages/_discussion_page.scss */
+.discussion-search {
+  border-bottom: 0;
+  margin-top: 1em;
+}
+/* line 131, ../sass/partials/pages/_discussion_page.scss */
+.discussion-search #edit-custom-search-blocks-form-1--2 {
+  width: 90%;
+}
+
+/* line 136, ../sass/partials/pages/_discussion_page.scss */
+.discussion-button {
+  margin-bottom: 1em;
+}
+/* line 139, ../sass/partials/pages/_discussion_page.scss */
+.discussion-button .btn.secondary, .discussion-button input.secondary[type="submit"], .discussion-button .node-type-webform .secondary.webform-submit, .node-type-webform .discussion-button .secondary.webform-submit, .discussion-button .user-login #edit-submit, .user-login .discussion-button #edit-submit, .discussion-button .node-type-discussion .secondary.edit-post, .node-type-discussion .discussion-button .secondary.edit-post,
+.discussion-button .node-type-lc-discussion .secondary.edit-post,
+.node-type-lc-discussion .discussion-button .secondary.edit-post,
+.discussion-button .node-type-cyber-seminar .secondary.edit-post,
+.node-type-cyber-seminar .discussion-button .secondary.edit-post {
+  padding: 1em;
+}
+/* line 140, ../sass/partials/pages/_discussion_page.scss */
+.discussion-button .btn.secondary a, .discussion-button input.secondary[type="submit"] a, .discussion-button .node-type-webform .secondary.webform-submit a, .node-type-webform .discussion-button .secondary.webform-submit a, .discussion-button .user-login #edit-submit a, .user-login .discussion-button #edit-submit a, .discussion-button .node-type-discussion .secondary.edit-post a, .node-type-discussion .discussion-button .secondary.edit-post a,
+.discussion-button .node-type-lc-discussion .secondary.edit-post a,
+.node-type-lc-discussion .discussion-button .secondary.edit-post a,
+.discussion-button .node-type-cyber-seminar .secondary.edit-post a,
+.node-type-cyber-seminar .discussion-button .secondary.edit-post a {
+  font-size: 14px;
+}
+
+/* line 148, ../sass/partials/pages/_discussion_page.scss */
+.signup-today {
+  color: white;
+  text-align: center;
+}
+/* line 152, ../sass/partials/pages/_discussion_page.scss */
+.signup-today a {
+  color: white;
+  font-weight: bold;
+}
+
+/* line 160, ../sass/partials/pages/_discussion_page.scss */
+.user-login .form-item {
+  margin: 0.5em 0;
+}
+/* line 164, ../sass/partials/pages/_discussion_page.scss */
+.user-login .item-list {
+  text-align: right;
+}
+/* line 167, ../sass/partials/pages/_discussion_page.scss */
+.user-login .item-list ul {
+  margin: 0.5em 0;
+}
+/* line 169, ../sass/partials/pages/_discussion_page.scss */
+.user-login .item-list li {
+  list-style: none;
+  font-size: 0.65625em;
+  padding: 0;
+  line-height: 1.5em;
+}
+/* line 177, ../sass/partials/pages/_discussion_page.scss */
+.user-login label {
+  font-size: 0.83125em;
+}
+/* line 181, ../sass/partials/pages/_discussion_page.scss */
+.user-login #edit-name, .user-login #edit-pass {
+  width: 90%;
+}
+
+/* line 190, ../sass/partials/pages/_discussion_page.scss */
+.no-discussion-menu #page-title {
+  margin-bottom: 15px;
+}
+/* line 192, ../sass/partials/pages/_discussion_page.scss */
+.no-discussion-menu .view-discussions .views-row-first, .no-discussion-menu .view-lc-content .views-row-first {
+  -webkit-border-top-left-radius: 9px;
+  -moz-border-radius-topleft: 9px;
+  border-top-left-radius: 9px;
+  -webkit-border-top-right-radius: 9px;
+  -moz-border-radius-topright: 9px;
+  border-top-right-radius: 9px;
+}
+
+/* line 200, ../sass/partials/pages/_discussion_page.scss */
+.page-discussions-your-discussions .discussion-menu .menu li:first-child a {
+  background-color: #007596;
+  color: white;
+}
+
+/* line 213, ../sass/partials/pages/_discussion_page.scss */
+.node-type-discussion,
+.node-type-lc-discussion,
+.node-type-cyber-seminar {
+  /*
+  .discussion-post-body::before {
+      border-color: transparent #007576;
+      border-style: solid;
+      border-width: 10px 22px 10px 0;
+      bottom: auto;
+      content: "";
+      display: block;
+      left: 83px;
+      position: absolute;
+      top: 19px;
+      width: 0;
+  }
+  .discussion-post-body::after {
+      border-color: transparent #fff;
+      border-style: solid;
+      border-width: 9px 20px 9px 0;
+      bottom: auto;
+      content: "";
+      display: block;
+      left: 85px;
+      position: absolute;
+      top: 20px;
+      width: 0;
+  }
+  */
+  	/*
+  	.pane-node-comments .comment header::before  {
+  		border-color: transparent #007576;
+  	    border-style: solid;
+  	    border-width: 10px 22px 10px 0;
+  	    bottom: auto;
+  	    content: "";
+  	    display: block;
+  	    left: 81px;
+  	    position: absolute;
+  	    width: 0;
+  	}
+  
+  	.pane-node-comments .comment header::after {
+  	    border-color: transparent #fff;
+  	    border-style: solid;
+  	    border-width: 9px 20px 9px 0;
+  	    bottom: auto;
+  	    content: "";
+  	    display: block;
+  	    left: 83px;
+  	    position: absolute;
+  	    width: 0;
+  	    margin-top: -35px;
+  	}
+  	*/
+}
+/* line 214, ../sass/partials/pages/_discussion_page.scss */
+.node-type-discussion .left-col,
+.node-type-lc-discussion .left-col,
+.node-type-cyber-seminar .left-col {
+  margin-bottom: 1em;
+}
+/* line 219, ../sass/partials/pages/_discussion_page.scss */
+.node-type-discussion .author-post img,
+.node-type-lc-discussion .author-post img,
+.node-type-cyber-seminar .author-post img {
+  width: 70px;
+  border: 1px solid #007596;
+}
+/* line 229, ../sass/partials/pages/_discussion_page.scss */
+.node-type-discussion .discussion-post-sidebar,
+.node-type-lc-discussion .discussion-post-sidebar,
+.node-type-cyber-seminar .discussion-post-sidebar {
+  margin-right: 25px;
+}
+/* line 233, ../sass/partials/pages/_discussion_page.scss */
+.node-type-discussion .discussion-post-body,
+.node-type-lc-discussion .discussion-post-body,
+.node-type-cyber-seminar .discussion-post-body {
+  width: 80%;
+  border: 1px solid #007596;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 1em;
+}
+@media only screen and (min-width: 801px) and (max-width: 1020px) {
+  /* line 233, ../sass/partials/pages/_discussion_page.scss */
+  .node-type-discussion .discussion-post-body,
+  .node-type-lc-discussion .discussion-post-body,
+  .node-type-cyber-seminar .discussion-post-body {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 651px) and (max-width: 800px) {
+  /* line 233, ../sass/partials/pages/_discussion_page.scss */
+  .node-type-discussion .discussion-post-body,
+  .node-type-lc-discussion .discussion-post-body,
+  .node-type-cyber-seminar .discussion-post-body {
+    width: 77%;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 650px) {
+  /* line 233, ../sass/partials/pages/_discussion_page.scss */
+  .node-type-discussion .discussion-post-body,
+  .node-type-lc-discussion .discussion-post-body,
+  .node-type-cyber-seminar .discussion-post-body {
+    width: 69%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 233, ../sass/partials/pages/_discussion_page.scss */
+  .node-type-discussion .discussion-post-body,
+  .node-type-lc-discussion .discussion-post-body,
+  .node-type-cyber-seminar .discussion-post-body {
+    width: 60%;
+  }
+}
+/* line 257, ../sass/partials/pages/_discussion_page.scss */
+.node-type-discussion .discussion-post-body .info-post,
+.node-type-lc-discussion .discussion-post-body .info-post,
+.node-type-cyber-seminar .discussion-post-body .info-post {
+  font-weight: 900;
+}
+/* line 287, ../sass/partials/pages/_discussion_page.scss */
+.node-type-discussion .discussion-post-sidebar, .node-type-discussion .discussion-post-body,
+.node-type-lc-discussion .discussion-post-sidebar,
+.node-type-lc-discussion .discussion-post-body,
+.node-type-cyber-seminar .discussion-post-sidebar,
+.node-type-cyber-seminar .discussion-post-body {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 292, ../sass/partials/pages/_discussion_page.scss */
+.node-type-discussion .pane-node-comments .comment,
+.node-type-lc-discussion .pane-node-comments .comment,
+.node-type-cyber-seminar .pane-node-comments .comment {
+  margin-left: 15%;
+}
+/* line 295, ../sass/partials/pages/_discussion_page.scss */
+.node-type-discussion .pane-node-comments .comment .user-picture img,
+.node-type-lc-discussion .pane-node-comments .comment .user-picture img,
+.node-type-cyber-seminar .pane-node-comments .comment .user-picture img {
+  position: absolute;
+  left: 0;
+  margin-top: -27px;
+  width: 70px;
+  border: 1px solid #007596;
+}
+
+/* line 332, ../sass/partials/pages/_discussion_page.scss */
+#total-subscription-subscribe-form input {
+  margin-bottom: 10px;
+}
+
+/* line 339, ../sass/partials/pages/_discussion_page.scss */
+.not-logged-in.node-type-discussion .edit-post {
+  display: none;
+}
+
+/* line 345, ../sass/partials/pages/_discussion_page.scss */
+.left-col-content {
+  position: relative;
+  left: 0;
+}
+
+/* line 7, ../sass/partials/pages/_events_page.scss */
+.view-event-calendar .btn.secondary.right, .view-event-calendar .btn.secondary#block-system-user-menu, .view-event-calendar input.secondary#block-system-user-menu[type="submit"], .view-event-calendar .node-type-webform .secondary#block-system-user-menu.webform-submit, .node-type-webform .view-event-calendar .secondary#block-system-user-menu.webform-submit, .view-event-calendar .node-type-discussion .secondary#block-system-user-menu.edit-post, .node-type-discussion .view-event-calendar .secondary#block-system-user-menu.edit-post,
+.view-event-calendar .node-type-lc-discussion .secondary#block-system-user-menu.edit-post,
+.node-type-lc-discussion .view-event-calendar .secondary#block-system-user-menu.edit-post,
+.view-event-calendar .node-type-cyber-seminar .secondary#block-system-user-menu.edit-post,
+.node-type-cyber-seminar .view-event-calendar .secondary#block-system-user-menu.edit-post, .view-event-calendar input.secondary.right[type="submit"], .view-event-calendar .node-type-webform .secondary.right.webform-submit, .node-type-webform .view-event-calendar .secondary.right.webform-submit, .view-event-calendar .user-login .right#edit-submit, .user-login .view-event-calendar .right#edit-submit, .view-event-calendar .node-type-discussion .secondary.right.edit-post, .node-type-discussion .view-event-calendar .secondary.right.edit-post,
+.view-event-calendar .node-type-lc-discussion .secondary.right.edit-post,
+.node-type-lc-discussion .view-event-calendar .secondary.right.edit-post,
+.view-event-calendar .node-type-cyber-seminar .secondary.right.edit-post,
+.node-type-cyber-seminar .view-event-calendar .secondary.right.edit-post, .view-lc-event-calendar .btn.secondary.right, .view-lc-event-calendar .btn.secondary#block-system-user-menu, .view-lc-event-calendar input.secondary#block-system-user-menu[type="submit"], .view-lc-event-calendar .node-type-webform .secondary#block-system-user-menu.webform-submit, .node-type-webform .view-lc-event-calendar .secondary#block-system-user-menu.webform-submit, .view-lc-event-calendar .node-type-discussion .secondary#block-system-user-menu.edit-post, .node-type-discussion .view-lc-event-calendar .secondary#block-system-user-menu.edit-post,
+.view-lc-event-calendar .node-type-lc-discussion .secondary#block-system-user-menu.edit-post,
+.node-type-lc-discussion .view-lc-event-calendar .secondary#block-system-user-menu.edit-post,
+.view-lc-event-calendar .node-type-cyber-seminar .secondary#block-system-user-menu.edit-post,
+.node-type-cyber-seminar .view-lc-event-calendar .secondary#block-system-user-menu.edit-post, .view-lc-event-calendar input.secondary.right[type="submit"], .view-lc-event-calendar .node-type-webform .secondary.right.webform-submit, .node-type-webform .view-lc-event-calendar .secondary.right.webform-submit, .view-lc-event-calendar .user-login .right#edit-submit, .user-login .view-lc-event-calendar .right#edit-submit, .view-lc-event-calendar .node-type-discussion .secondary.right.edit-post, .node-type-discussion .view-lc-event-calendar .secondary.right.edit-post,
+.view-lc-event-calendar .node-type-lc-discussion .secondary.right.edit-post,
+.node-type-lc-discussion .view-lc-event-calendar .secondary.right.edit-post,
+.view-lc-event-calendar .node-type-cyber-seminar .secondary.right.edit-post,
+.node-type-cyber-seminar .view-lc-event-calendar .secondary.right.edit-post {
+  padding: 5px 10px;
+  margin-top: -20px;
+}
+/* line 13, ../sass/partials/pages/_events_page.scss */
+.view-event-calendar .date-heading, .view-lc-event-calendar .date-heading {
+  background-color: #007596;
+  padding: 5px 0;
+  color: white;
+}
+/* line 18, ../sass/partials/pages/_events_page.scss */
+.view-event-calendar .date-heading h3, .view-event-calendar .date-heading .home-page .right-side #homepage-events #mini-panel-homepage_events .pane-title, .home-page .right-side #homepage-events #mini-panel-homepage_events .view-event-calendar .date-heading .pane-title, .view-lc-event-calendar .date-heading h3, .view-lc-event-calendar .date-heading .home-page .right-side #homepage-events #mini-panel-homepage_events .pane-title, .home-page .right-side #homepage-events #mini-panel-homepage_events .view-lc-event-calendar .date-heading .pane-title {
+  font-size: 1.12em !important;
+  font-weight: normal;
+}
+/* line 25, ../sass/partials/pages/_events_page.scss */
+.view-event-calendar .pager, .view-lc-event-calendar .pager {
+  margin: 0;
+  list-style: none;
+  color: white;
+  width: 100%;
+}
+/* line 31, ../sass/partials/pages/_events_page.scss */
+.view-event-calendar .pager .date-prev, .view-lc-event-calendar .pager .date-prev {
+  left: 1em !important;
+  right: initial !important;
+}
+/* line 36, ../sass/partials/pages/_events_page.scss */
+.view-event-calendar .pager .date-next, .view-lc-event-calendar .pager .date-next {
+  right: 1em !important;
+}
+/* line 40, ../sass/partials/pages/_events_page.scss */
+.view-event-calendar .pager li, .view-lc-event-calendar .pager li {
+  background: none !important;
+  position: absolute !important;
+  top: 3px !important;
+}
+/* line 46, ../sass/partials/pages/_events_page.scss */
+.view-event-calendar .pager li a, .view-lc-event-calendar .pager li a {
+  font-weight: normal !important;
+}
+/* line 49, ../sass/partials/pages/_events_page.scss */
+.view-event-calendar .pager li a:hover, .view-lc-event-calendar .pager li a:hover {
+  text-decoration: underline;
+}
+/* line 54, ../sass/partials/pages/_events_page.scss */
+.view-event-calendar .date-nav.item-list, .view-lc-event-calendar .date-nav.item-list {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 65, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table th.days {
+  color: #002323;
+  background-color: #e5f1f4;
+  padding: 5px;
+  font-weight: normal;
+  border: 1px solid #007596;
+}
+/* line 73, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .single-day {
+  border-bottom: 1px solid #007596;
+  border-right: 1px solid #007596;
+  border-left: 1px solid #007596;
+}
+/* line 78, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .single-day .today {
+  border: none !important;
+}
+/* line 83, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .date-box {
+  border-top: 1px solid #007596;
+  border-right: 1px solid #007596;
+  border-left: 1px solid #007596;
+  padding: 0 !important;
+}
+/* line 89, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .date-box .day {
+  color: white !important;
+  background-color: #007596 !important;
+}
+/* line 93, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .date-box .day a {
+  color: white !important;
+  text-decoration: underline;
+}
+/* line 97, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .date-box .day a:hover {
+  text-decoration: none;
+}
+/* line 101, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .date-box .today {
+  border: none !important;
+}
+/* line 104, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .date-box .today .day {
+  background-color: #17ac38 !important;
+}
+/* line 107, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .date-box .empty > div {
+  display: none;
+}
+/* line 110, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .monthview {
+  background: none !important;
+  line-height: 1.2em;
+}
+/* line 114, ../sass/partials/pages/_events_page.scss */
+.calendar-calendar table .monthview .views-field-title a {
+  text-decoration: underline;
+  color: #444444;
+}
+
+/* line 125, ../sass/partials/pages/_events_page.scss */
+.page-events-view-all .btn.secondary.right, .page-events-view-all .btn.secondary#block-system-user-menu, .page-events-view-all input.secondary#block-system-user-menu[type="submit"], .page-events-view-all .node-type-webform .secondary#block-system-user-menu.webform-submit, .node-type-webform .page-events-view-all .secondary#block-system-user-menu.webform-submit, .page-events-view-all .node-type-discussion .secondary#block-system-user-menu.edit-post, .node-type-discussion .page-events-view-all .secondary#block-system-user-menu.edit-post,
+.page-events-view-all .node-type-lc-discussion .secondary#block-system-user-menu.edit-post,
+.node-type-lc-discussion .page-events-view-all .secondary#block-system-user-menu.edit-post,
+.page-events-view-all .node-type-cyber-seminar .secondary#block-system-user-menu.edit-post,
+.node-type-cyber-seminar .page-events-view-all .secondary#block-system-user-menu.edit-post, .page-events-view-all input.secondary.right[type="submit"], .page-events-view-all .node-type-webform .secondary.right.webform-submit, .node-type-webform .page-events-view-all .secondary.right.webform-submit, .page-events-view-all .user-login .right#edit-submit, .user-login .page-events-view-all .right#edit-submit, .page-events-view-all .node-type-discussion .secondary.right.edit-post, .node-type-discussion .page-events-view-all .secondary.right.edit-post,
+.page-events-view-all .node-type-lc-discussion .secondary.right.edit-post,
+.node-type-lc-discussion .page-events-view-all .secondary.right.edit-post,
+.page-events-view-all .node-type-cyber-seminar .secondary.right.edit-post,
+.node-type-cyber-seminar .page-events-view-all .secondary.right.edit-post,
+.page-lc-events-view-all .btn.secondary.right,
+.page-lc-events-view-all .btn.secondary#block-system-user-menu,
+.page-lc-events-view-all input.secondary#block-system-user-menu[type="submit"],
+.page-lc-events-view-all .node-type-webform .secondary#block-system-user-menu.webform-submit,
+.node-type-webform .page-lc-events-view-all .secondary#block-system-user-menu.webform-submit,
+.page-lc-events-view-all .node-type-discussion .secondary#block-system-user-menu.edit-post,
+.node-type-discussion .page-lc-events-view-all .secondary#block-system-user-menu.edit-post,
+.page-lc-events-view-all .node-type-lc-discussion .secondary#block-system-user-menu.edit-post,
+.node-type-lc-discussion .page-lc-events-view-all .secondary#block-system-user-menu.edit-post,
+.page-lc-events-view-all .node-type-cyber-seminar .secondary#block-system-user-menu.edit-post,
+.node-type-cyber-seminar .page-lc-events-view-all .secondary#block-system-user-menu.edit-post,
+.page-lc-events-view-all input.secondary.right[type="submit"],
+.page-lc-events-view-all .node-type-webform .secondary.right.webform-submit,
+.node-type-webform .page-lc-events-view-all .secondary.right.webform-submit,
+.page-lc-events-view-all .user-login .right#edit-submit,
+.user-login .page-lc-events-view-all .right#edit-submit,
+.page-lc-events-view-all .node-type-discussion .secondary.right.edit-post,
+.node-type-discussion .page-lc-events-view-all .secondary.right.edit-post,
+.page-lc-events-view-all .node-type-lc-discussion .secondary.right.edit-post,
+.node-type-lc-discussion .page-lc-events-view-all .secondary.right.edit-post,
+.page-lc-events-view-all .node-type-cyber-seminar .secondary.right.edit-post,
+.node-type-cyber-seminar .page-lc-events-view-all .secondary.right.edit-post {
+  padding: 5px 10px;
+}
+/* line 130, ../sass/partials/pages/_events_page.scss */
+.page-events-view-all .item-list,
+.page-lc-events-view-all .item-list {
+  border: 1px solid #007596;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  overflow-y: scroll;
+  height: 500px;
+  margin-top: 1.5em;
+}
+/* line 137, ../sass/partials/pages/_events_page.scss */
+.page-events-view-all .item-list ul,
+.page-lc-events-view-all .item-list ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 141, ../sass/partials/pages/_events_page.scss */
+.page-events-view-all .item-list ul li,
+.page-lc-events-view-all .item-list ul li {
+  list-style: none;
+}
+/* line 144, ../sass/partials/pages/_events_page.scss */
+.page-events-view-all .item-list .views-row,
+.page-lc-events-view-all .item-list .views-row {
+  padding: 1em 1.5em;
+  border-bottom: 1px solid #007596;
+}
+/* line 149, ../sass/partials/pages/_events_page.scss */
+.page-events-view-all .item-list .views-row-even,
+.page-lc-events-view-all .item-list .views-row-even {
+  background-color: #e5f1f4;
+}
+/* line 152, ../sass/partials/pages/_events_page.scss */
+.page-events-view-all .views-field-title,
+.page-lc-events-view-all .views-field-title {
+  font-weight: bold;
+}
+
+/* line 159, ../sass/partials/pages/_events_page.scss */
+.page-node.node-type-event .right-column .pane-title,
+.page-node.node-type-lc-event .right-column .pane-title {
+  margin: 0;
+  line-height: 20px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+/* line 171, ../sass/partials/pages/_events_page.scss */
+.page-node.node-type-event .right-column .upcoming-events .views-field-title,
+.page-node.node-type-lc-event .right-column .upcoming-events .views-field-title {
+  font-weight: bold;
+}
+/* line 173, ../sass/partials/pages/_events_page.scss */
+.page-node.node-type-event .right-column .upcoming-events .views-field-field-event-date,
+.page-node.node-type-lc-event .right-column .upcoming-events .views-field-field-event-date {
+  font-style: italic;
+}
+/* line 178, ../sass/partials/pages/_events_page.scss */
+.page-node.node-type-event .right-column .upcoming-events .views-row,
+.page-node.node-type-lc-event .right-column .upcoming-events .views-row {
+  padding: 10px 0;
+}
+/* line 182, ../sass/partials/pages/_events_page.scss */
+.page-node.node-type-event .right-column .upcoming-events .views-row-even,
+.page-node.node-type-lc-event .right-column .upcoming-events .views-row-even {
+  border-top: 1px solid #b2c8cc;
+  border-bottom: 1px solid #b2c8cc;
+}
+/* line 187, ../sass/partials/pages/_events_page.scss */
+.page-node.node-type-event .right-column .upcoming-events .view-footer,
+.page-node.node-type-lc-event .right-column .upcoming-events .view-footer {
+  border-top: 1px solid #b2c8cc;
+  text-align: right;
+}
+/* line 197, ../sass/partials/pages/_events_page.scss */
+.page-node.node-type-event .left-side h2, .page-node.node-type-event .left-side .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-node.node-type-event .left-side .views-field-title, .page-node.node-type-event .left-side .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-node.node-type-event .left-side .views-field-title,
+.page-node.node-type-lc-event .left-side h2,
+.page-node.node-type-lc-event .left-side .page-cyber-seminars #cyber-seminar-featured .views-field-title,
+.page-cyber-seminars #cyber-seminar-featured .page-node.node-type-lc-event .left-side .views-field-title,
+.page-node.node-type-lc-event .left-side .node-type-cyber-seminar #cyber-seminar-featured .views-field-title,
+.node-type-cyber-seminar #cyber-seminar-featured .page-node.node-type-lc-event .left-side .views-field-title {
+  border-bottom: 1px solid #b2c8cc;
+  padding-bottom: 15px;
+}
+/* line 203, ../sass/partials/pages/_events_page.scss */
+.page-node.node-type-event .left-side .field-content p,
+.page-node.node-type-lc-event .left-side .field-content p {
+  margin: 0;
+}
+
+/* line 8, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .left-side, .node-type-cyber-seminar .left-side {
+  margin-bottom: 1em;
+}
+/* line 14, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .pane-cyber-seminar-upcoming .views-field-title, .node-type-cyber-seminar .pane-cyber-seminar-upcoming .views-field-title {
+  font-weight: bold;
+}
+/* line 15, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .pane-cyber-seminar-upcoming .views-field-field-event-date, .node-type-cyber-seminar .pane-cyber-seminar-upcoming .views-field-field-event-date {
+  font-style: italic;
+}
+/* line 16, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .pane-cyber-seminar-upcoming .views-field-view-node, .node-type-cyber-seminar .pane-cyber-seminar-upcoming .views-field-view-node {
+  height: 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #b2c8cc;
+}
+/* line 21, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .pane-cyber-seminar-upcoming .views-field-view-node > .right, .page-cyber-seminars .pane-cyber-seminar-upcoming .views-field-view-node > #block-system-user-menu, .node-type-cyber-seminar .pane-cyber-seminar-upcoming .views-field-view-node > .right, .node-type-cyber-seminar .pane-cyber-seminar-upcoming .views-field-view-node > #block-system-user-menu {
+  clear: both;
+}
+/* line 25, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .pane-cyber-seminar-upcoming .item-list ul, .node-type-cyber-seminar .pane-cyber-seminar-upcoming .item-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 35, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #mini-panel-cyber_seminar_search p, .node-type-cyber-seminar #mini-panel-cyber_seminar_search p {
+  margin: 0;
+}
+/* line 42, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #cyber-seminar-search #edit-custom-search-blocks-form-2--2, .node-type-cyber-seminar #cyber-seminar-search #edit-custom-search-blocks-form-2--2 {
+  width: 90%;
+}
+/* line 46, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #technical-requirements, .node-type-cyber-seminar #technical-requirements {
+  margin-top: 1em;
+}
+/* line 49, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #technical-requirements .pane-title, .node-type-cyber-seminar #technical-requirements .pane-title {
+  margin: 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+/* line 60, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #technical-requirements > div h3, .page-cyber-seminars #technical-requirements > div .home-page .right-side #homepage-events #mini-panel-homepage_events .pane-title, .home-page .right-side #homepage-events #mini-panel-homepage_events .page-cyber-seminars #technical-requirements > div .pane-title, .node-type-cyber-seminar #technical-requirements > div h3, .node-type-cyber-seminar #technical-requirements > div .home-page .right-side #homepage-events #mini-panel-homepage_events .pane-title, .home-page .right-side #homepage-events #mini-panel-homepage_events .node-type-cyber-seminar #technical-requirements > div .pane-title {
+  margin-bottom: 5px;
+}
+/* line 62, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #technical-requirements > div ul, .node-type-cyber-seminar #technical-requirements > div ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+/* line 67, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #technical-requirements > div ul li, .node-type-cyber-seminar #technical-requirements > div ul li {
+  padding: 0;
+}
+/* line 78, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #cyber-seminar-featured, .node-type-cyber-seminar #cyber-seminar-featured {
+  margin: 0;
+  background-image: url("../images/global/bground-cyberseminar-feature.gif");
+  background-repeat: no-repeat;
+  background-position: 98% 8%;
+}
+/* line 86, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #cyber-seminar-featured .item-list ul, .node-type-cyber-seminar #cyber-seminar-featured .item-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 93, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .views-field-title {
+  margin: 0;
+}
+/* line 98, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #cyber-seminar-featured .featured-left, .node-type-cyber-seminar #cyber-seminar-featured .featured-left {
+  float: left;
+  width: 20%;
+  margin: 10px 2% 50px 0;
+}
+/* line 103, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #cyber-seminar-featured .featured-left .btn.secondary, .page-cyber-seminars #cyber-seminar-featured .featured-left input.secondary[type="submit"], .page-cyber-seminars #cyber-seminar-featured .featured-left .node-type-webform .secondary.webform-submit, .node-type-webform .page-cyber-seminars #cyber-seminar-featured .featured-left .secondary.webform-submit, .page-cyber-seminars #cyber-seminar-featured .featured-left .user-login #edit-submit, .user-login .page-cyber-seminars #cyber-seminar-featured .featured-left #edit-submit, .page-cyber-seminars #cyber-seminar-featured .featured-left .node-type-discussion .secondary.edit-post, .node-type-discussion .page-cyber-seminars #cyber-seminar-featured .featured-left .secondary.edit-post,
+.page-cyber-seminars #cyber-seminar-featured .featured-left .node-type-lc-discussion .secondary.edit-post,
+.node-type-lc-discussion .page-cyber-seminars #cyber-seminar-featured .featured-left .secondary.edit-post,
+.page-cyber-seminars #cyber-seminar-featured .featured-left .node-type-cyber-seminar .secondary.edit-post,
+.node-type-cyber-seminar .page-cyber-seminars #cyber-seminar-featured .featured-left .secondary.edit-post, .node-type-cyber-seminar #cyber-seminar-featured .featured-left .btn.secondary, .node-type-cyber-seminar #cyber-seminar-featured .featured-left input.secondary[type="submit"], .node-type-cyber-seminar #cyber-seminar-featured .featured-left .node-type-webform .secondary.webform-submit, .node-type-webform .node-type-cyber-seminar #cyber-seminar-featured .featured-left .secondary.webform-submit, .node-type-cyber-seminar #cyber-seminar-featured .featured-left .user-login #edit-submit, .user-login .node-type-cyber-seminar #cyber-seminar-featured .featured-left #edit-submit, .node-type-cyber-seminar #cyber-seminar-featured .featured-left .node-type-discussion .secondary.edit-post, .node-type-discussion .node-type-cyber-seminar #cyber-seminar-featured .featured-left .secondary.edit-post,
+.node-type-cyber-seminar #cyber-seminar-featured .featured-left .node-type-lc-discussion .secondary.edit-post,
+.node-type-lc-discussion .node-type-cyber-seminar #cyber-seminar-featured .featured-left .secondary.edit-post,
+.node-type-cyber-seminar #cyber-seminar-featured .featured-left .secondary.edit-post {
+  padding: 1em;
+}
+/* line 107, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars #cyber-seminar-featured .featured-right p, .node-type-cyber-seminar #cyber-seminar-featured .featured-right p {
+  margin-top: 10px;
+}
+/* line 113, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .view-cyber-seminar-inner-page .views-field-field-event-date, .node-type-cyber-seminar .view-cyber-seminar-inner-page .views-field-field-event-date {
+  font-style: italic;
+  font-size: 1.12em;
+  margin-bottom: 1em;
+}
+/* line 120, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .view-cyber-seminar-inner-page #cyber-seminar-related-content .item-list ul, .node-type-cyber-seminar .view-cyber-seminar-inner-page #cyber-seminar-related-content .item-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 125, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .view-cyber-seminar-inner-page #cyber-seminar-related-content .item-list ul li, .node-type-cyber-seminar .view-cyber-seminar-inner-page #cyber-seminar-related-content .item-list ul li {
+  padding: 0;
+}
+/* line 133, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .view-cyber-seminar-presenters .views-row, .node-type-cyber-seminar .view-cyber-seminar-presenters .views-row {
+  clear: both;
+  margin-top: 20px;
+}
+/* line 137, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .view-cyber-seminar-presenters .views-row img, .node-type-cyber-seminar .view-cyber-seminar-presenters .views-row img {
+  float: left;
+  width: 70px;
+  border: 1px solid #007596;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+/* line 145, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .view-cyber-seminar-presenters .views-row .pres-creds, .node-type-cyber-seminar .view-cyber-seminar-presenters .views-row .pres-creds {
+  display: block;
+  float: left;
+  width: 80%;
+}
+/* line 150, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .view-cyber-seminar-presenters .views-row .pres-creds p, .node-type-cyber-seminar .view-cyber-seminar-presenters .views-row .pres-creds p {
+  font-size: 12px;
+  line-height: 1;
+  margin-top: 6px;
+}
+/* line 156, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .view-cyber-seminar-presenters .views-row .pres-creds a, .node-type-cyber-seminar .view-cyber-seminar-presenters .views-row .pres-creds a {
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+/* line 165, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .pane-2, .node-type-cyber-seminar .pane-2 {
+  clear: left;
+}
+/* line 169, ../sass/partials/pages/_cyberseminar_page.scss */
+.page-cyber-seminars .join-btn, .node-type-cyber-seminar .join-btn {
+  margin-top: 10px;
+}
+
+/* line 7, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .left-side, .node-type-featured-r2r-partner .left-side {
+  margin-bottom: 1em;
+}
+/* line 12, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners #featured-r2r-partners .view-header, .node-type-featured-r2r-partner #featured-r2r-partners .view-header {
+  border-right: 0;
+  border-left: 0;
+  border-top: 0;
+}
+/* line 18, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners #featured-r2r-partners .view-header h2, .page-featured-partners #featured-r2r-partners .view-header .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-featured-partners #featured-r2r-partners .view-header .views-field-title, .page-featured-partners #featured-r2r-partners .view-header .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-featured-partners #featured-r2r-partners .view-header .views-field-title, .node-type-featured-r2r-partner #featured-r2r-partners .view-header h2, .node-type-featured-r2r-partner #featured-r2r-partners .view-header .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .node-type-featured-r2r-partner #featured-r2r-partners .view-header .views-field-title, .node-type-featured-r2r-partner #featured-r2r-partners .view-header .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .node-type-featured-r2r-partner #featured-r2r-partners .view-header .views-field-title {
+  line-height: 18px;
+}
+/* line 24, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners #featured-r2r-partners .view-content .views-row, .node-type-featured-r2r-partner #featured-r2r-partners .view-content .views-row {
+  padding: 15px 0;
+  border-bottom: 1px solid #b2c8cc;
+}
+/* line 30, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners #featured-r2r-partners .view-footer, .node-type-featured-r2r-partner #featured-r2r-partners .view-footer {
+  padding-top: 0;
+}
+/* line 36, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners, .node-type-featured-r2r-partner .view-featured-r2r-partners {
+  margin-bottom: 1em;
+}
+/* line 41, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .views-field-title h1, .node-type-featured-r2r-partner .view-featured-r2r-partners .views-field-title h1 {
+  margin: 0.5em 0 0.3em 0;
+}
+/* line 44, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .views-field-field-feat-memb-photo, .page-featured-partners .view-featured-r2r-partners .partner-photo, .node-type-featured-r2r-partner .view-featured-r2r-partners .views-field-field-feat-memb-photo, .node-type-featured-r2r-partner .view-featured-r2r-partners .partner-photo {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+  border: none;
+  width: 15%;
+}
+/* line 51, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .views-field-field-feat-memb-photo img, .page-featured-partners .view-featured-r2r-partners .partner-photo img, .node-type-featured-r2r-partner .view-featured-r2r-partners .views-field-field-feat-memb-photo img, .node-type-featured-r2r-partner .view-featured-r2r-partners .partner-photo img {
+  width: 100%;
+  border: 1px solid #007596;
+}
+/* line 54, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .views-field-body, .node-type-featured-r2r-partner .view-featured-r2r-partners .views-field-body {
+  display: inline-block;
+  width: 80%;
+}
+/* line 60, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .feat-partner-question, .node-type-featured-r2r-partner .view-featured-r2r-partners .feat-partner-question {
+  font-weight: bold;
+  clear: both;
+}
+/* line 65, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .feat-partner-answer, .node-type-featured-r2r-partner .view-featured-r2r-partners .feat-partner-answer {
+  margin-bottom: 1em;
+  padding-top: 1em;
+}
+/* line 69, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .feat-partner-answer .partner-answer, .node-type-featured-r2r-partner .view-featured-r2r-partners .feat-partner-answer .partner-answer {
+  width: 80%;
+  display: inline-block;
+}
+@media only screen and (max-width: 1020px) {
+  /* line 69, ../sass/partials/pages/_featpartner_page.scss */
+  .page-featured-partners .view-featured-r2r-partners .feat-partner-answer .partner-answer, .node-type-featured-r2r-partner .view-featured-r2r-partners .feat-partner-answer .partner-answer {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 69, ../sass/partials/pages/_featpartner_page.scss */
+  .page-featured-partners .view-featured-r2r-partners .feat-partner-answer .partner-answer, .node-type-featured-r2r-partner .view-featured-r2r-partners .feat-partner-answer .partner-answer {
+    width: 65%;
+  }
+}
+/* line 79, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .partner-photo, .node-type-featured-r2r-partner .view-featured-r2r-partners .partner-photo {
+  width: 10%;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+  border: none;
+}
+/* line 89, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners #related-discussion .btn, .page-featured-partners .view-featured-r2r-partners #related-discussion input[type="submit"], .page-featured-partners .view-featured-r2r-partners #related-discussion .node-type-webform .webform-submit, .node-type-webform .page-featured-partners .view-featured-r2r-partners #related-discussion .webform-submit, .page-featured-partners .view-featured-r2r-partners #related-discussion .node-type-discussion .edit-post, .node-type-discussion .page-featured-partners .view-featured-r2r-partners #related-discussion .edit-post,
+.page-featured-partners .view-featured-r2r-partners #related-discussion .node-type-lc-discussion .edit-post,
+.node-type-lc-discussion .page-featured-partners .view-featured-r2r-partners #related-discussion .edit-post,
+.page-featured-partners .view-featured-r2r-partners #related-discussion .node-type-cyber-seminar .edit-post,
+.node-type-cyber-seminar .page-featured-partners .view-featured-r2r-partners #related-discussion .edit-post, .node-type-featured-r2r-partner .view-featured-r2r-partners #related-discussion .btn, .node-type-featured-r2r-partner .view-featured-r2r-partners #related-discussion input[type="submit"], .node-type-featured-r2r-partner .view-featured-r2r-partners #related-discussion .node-type-webform .webform-submit, .node-type-webform .node-type-featured-r2r-partner .view-featured-r2r-partners #related-discussion .webform-submit, .node-type-featured-r2r-partner .view-featured-r2r-partners #related-discussion .node-type-discussion .edit-post, .node-type-discussion .node-type-featured-r2r-partner .view-featured-r2r-partners #related-discussion .edit-post,
+.node-type-featured-r2r-partner .view-featured-r2r-partners #related-discussion .node-type-lc-discussion .edit-post,
+.node-type-lc-discussion .node-type-featured-r2r-partner .view-featured-r2r-partners #related-discussion .edit-post,
+.node-type-featured-r2r-partner .view-featured-r2r-partners #related-discussion .node-type-cyber-seminar .edit-post,
+.node-type-cyber-seminar .node-type-featured-r2r-partner .view-featured-r2r-partners #related-discussion .edit-post {
+  margin-top: 1em;
+}
+/* line 93, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .partner-desc, .node-type-featured-r2r-partner .view-featured-r2r-partners .partner-desc {
+  width: 80%;
+  display: inline-block;
+}
+@media only screen and (max-width: 1020px) {
+  /* line 93, ../sass/partials/pages/_featpartner_page.scss */
+  .page-featured-partners .view-featured-r2r-partners .partner-desc, .node-type-featured-r2r-partner .view-featured-r2r-partners .partner-desc {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 93, ../sass/partials/pages/_featpartner_page.scss */
+  .page-featured-partners .view-featured-r2r-partners .partner-desc, .node-type-featured-r2r-partner .view-featured-r2r-partners .partner-desc {
+    width: 65%;
+  }
+}
+/* line 103, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .item-list ul, .node-type-featured-r2r-partner .view-featured-r2r-partners .item-list ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 108, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .item-list .views-field-title, .node-type-featured-r2r-partner .view-featured-r2r-partners .item-list .views-field-title {
+  font-weight: bold;
+}
+/* line 110, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .item-list .views-row, .node-type-featured-r2r-partner .view-featured-r2r-partners .item-list .views-row {
+  border-bottom: 1px solid #b2c8cc;
+  padding: 15px 0;
+}
+/* line 115, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners .item-list .views-field-view-node, .node-type-featured-r2r-partner .view-featured-r2r-partners .item-list .views-field-view-node {
+  text-align: right;
+}
+/* line 121, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .view-featured-r2r-partners.featured-partner-archives .views-field-body, .node-type-featured-r2r-partner .view-featured-r2r-partners.featured-partner-archives .views-field-body {
+  display: block;
+  width: 100%;
+}
+/* line 130, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners #featured-r2r-partner-promotion, .node-type-featured-r2r-partner #featured-r2r-partner-promotion {
+  background-image: url("../images/global/bground-callout.gif");
+  background-repeat: no-repeat;
+  background-position: 2% 7%;
+  padding: 18px 20px 18px 74px;
+}
+/* line 139, ../sass/partials/pages/_featpartner_page.scss */
+.page-featured-partners .currently-featured .views-field-field-feat-memb-photo, .page-featured-partners .featured-partner-sidebar .views-field-field-feat-memb-photo, .node-type-featured-r2r-partner .currently-featured .views-field-field-feat-memb-photo, .node-type-featured-r2r-partner .featured-partner-sidebar .views-field-field-feat-memb-photo {
+  width: 20%;
+  float: left;
+}
+
+/* line 8, ../sass/partials/pages/_user_page.scss */
+.page-user .tabs-primary.tabs.primary {
+  display: none;
+}
+/* line 10, ../sass/partials/pages/_user_page.scss */
+.page-user #edit-submit {
+  margin: 1em 0;
+}
+/* line 12, ../sass/partials/pages/_user_page.scss */
+.page-user .user-login-links a {
+  font-weight: bold;
+}
+
+/* line 17, ../sass/partials/pages/_user_page.scss */
+.page-user-register #edit-account {
+  border-bottom: 1px solid #b2c8cc;
+  margin-bottom: 10px;
+}
+/* line 21, ../sass/partials/pages/_user_page.scss */
+.page-user-register #edit-account > div {
+  margin: 1em 0;
+}
+/* line 24, ../sass/partials/pages/_user_page.scss */
+.page-user-register #edit-field-first-name, .page-user-register #edit-field-last-name {
+  display: inline-block;
+  width: 48%;
+  margin-right: 1em;
+}
+@media only screen and (max-width: 800px) {
+  /* line 24, ../sass/partials/pages/_user_page.scss */
+  .page-user-register #edit-field-first-name, .page-user-register #edit-field-last-name {
+    display: block;
+    width: 100%;
+  }
+}
+/* line 35, ../sass/partials/pages/_user_page.scss */
+.page-user-register #edit-field-professional-photo {
+  border-bottom: 1px solid #b2c8cc;
+}
+/* line 38, ../sass/partials/pages/_user_page.scss */
+.page-user-register #edit-field-professional-photo #edit-field-professional-photo-und-0-upload {
+  margin-right: 5px;
+}
+
+/* line 45, ../sass/partials/pages/_user_page.scss */
+#userprofile .edit-links {
+  margin-top: -47px;
+}
+/* line 49, ../sass/partials/pages/_user_page.scss */
+#userprofile .edit-links a#profile-edit {
+  background: #18ad39;
+  background: -moz-linear-gradient(top, #15c43b 0%, #068328 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #15c43b), color-stop(100%, #068328));
+  background: -webkit-linear-gradient(top, #15c43b 0%, #068328 100%);
+  background: -o-linear-gradient(top, #15c43b 0%, #068328 100%);
+  background: -ms-linear-gradient(top, #15c43b 0%, #068328 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#15C43B', endColorstr='#068328',GradientType=0 );
+  background: linear-gradient(top, #15c43b 0%, #068328 100%);
+  border: 1px solid #068328;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  color: #fff;
+  display: block;
+  font-size: 0.75em;
+  margin: 0;
+  padding: 4px 7px;
+  text-align: center;
+  text-decoration: none;
+  width: 86px;
+  margin-left: 350px;
+}
+/* line 72, ../sass/partials/pages/_user_page.scss */
+#userprofile .edit-links a#subs-edit {
+  background: #18ad39;
+  background: -moz-linear-gradient(top, #15c43b 0%, #068328 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #15c43b), color-stop(100%, #068328));
+  background: -webkit-linear-gradient(top, #15c43b 0%, #068328 100%);
+  background: -o-linear-gradient(top, #15c43b 0%, #068328 100%);
+  background: -ms-linear-gradient(top, #15c43b 0%, #068328 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#15C43B', endColorstr='#068328',GradientType=0 );
+  background: linear-gradient(top, #15c43b 0%, #068328 100%);
+  border: 1px solid #068328;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #fff;
+  display: block;
+  font-size: 0.75em;
+  margin: 0;
+  padding: 4px 7px;
+  text-align: center;
+  text-decoration: none;
+  width: 112px;
+  margin-left: 452px;
+  margin-top: -32px;
+}
+/* line 98, ../sass/partials/pages/_user_page.scss */
+#userprofile .views-field-field-professional-photo img {
+  border: 1px solid #007596;
+  margin: 20px 30px 20px 0;
+  float: left;
+}
+/* line 105, ../sass/partials/pages/_user_page.scss */
+#userprofile #user-profile-body {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+/* line 110, ../sass/partials/pages/_user_page.scss */
+#userprofile #user-profile-body h2, #userprofile #user-profile-body .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured #userprofile #user-profile-body .views-field-title, #userprofile #user-profile-body .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured #userprofile #user-profile-body .views-field-title {
+  border-bottom: 1px solid #b2c8cc;
+  margin-bottom: -5px;
+  padding-bottom: 15px;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* line 8, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .right-col .btn.secondary, .page-learning-communities .right-col input.secondary[type="submit"], .page-learning-communities .right-col .node-type-webform .secondary.webform-submit, .node-type-webform .page-learning-communities .right-col .secondary.webform-submit, .page-learning-communities .right-col .user-login #edit-submit, .user-login .page-learning-communities .right-col #edit-submit, .page-learning-communities .right-col .node-type-discussion .secondary.edit-post, .node-type-discussion .page-learning-communities .right-col .secondary.edit-post,
+.page-learning-communities .right-col .node-type-lc-discussion .secondary.edit-post,
+.node-type-lc-discussion .page-learning-communities .right-col .secondary.edit-post,
+.page-learning-communities .right-col .node-type-cyber-seminar .secondary.edit-post,
+.node-type-cyber-seminar .page-learning-communities .right-col .secondary.edit-post {
+  margin-bottom: 1em;
+}
+/* line 13, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .quicktabs-tabs {
+  padding: 0;
+  margin: 15px 0 4px 0;
+}
+@media only screen and (max-width: 650px) {
+  /* line 13, ../sass/partials/pages/_learning_communities.scss */
+  .page-learning-communities .quicktabs-tabs {
+    margin-bottom: 0;
+  }
+}
+/* line 19, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .quicktabs-tabs li {
+  background-color: #5F210D;
+  padding: 8px 20px;
+  -webkit-border-top-left-radius: 9px;
+  -moz-border-radius-topleft: 9px;
+  border-top-left-radius: 9px;
+  -webkit-border-top-right-radius: 9px;
+  -moz-border-radius-topright: 9px;
+  border-top-right-radius: 9px;
+  border-bottom: none !important;
+}
+@media only screen and (max-width: 650px) {
+  /* line 19, ../sass/partials/pages/_learning_communities.scss */
+  .page-learning-communities .quicktabs-tabs li {
+    display: block;
+    border-bottom: 1px solid white !important;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    border-top-right-radius: 0;
+  }
+}
+/* line 31, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .quicktabs-tabs li:nth-child(1) {
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+}
+/* line 33, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .quicktabs-tabs li a {
+  color: white;
+  text-decoration: none;
+}
+/* line 37, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .quicktabs-tabs li a:hover {
+  text-decoration: underline;
+}
+/* line 41, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .quicktabs-tabs li.active {
+  background-color: white;
+  border: 1px solid #5F210D;
+  font-weight: 900;
+}
+/* line 46, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .quicktabs-tabs li.active a {
+  color: #002323;
+}
+/* line 50, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #quicktabs-container-learning_community_recent {
+  -webkit-border-top-right-radius: 9px;
+  -moz-border-radius-topright: 9px;
+  border-top-right-radius: 9px;
+  border: 1px solid #5F210D;
+}
+@media only screen and (max-width: 650px) {
+  /* line 50, ../sass/partials/pages/_learning_communities.scss */
+  .page-learning-communities #quicktabs-container-learning_community_recent {
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    border-top-right-radius: 0;
+  }
+}
+/* line 60, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #quicktabs-container-learning_community_recent .view-lc-content {
+  margin-bottom: 0;
+}
+/* line 64, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #quicktabs-container-learning_community_recent .views-row {
+  display: inline-block;
+  width: 28%;
+  vertical-align: top;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2%;
+  border: none;
+}
+@media only screen and (max-width: 800px) {
+  /* line 64, ../sass/partials/pages/_learning_communities.scss */
+  .page-learning-communities #quicktabs-container-learning_community_recent .views-row {
+    display: block;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+/* line 81, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #quicktabs-container-learning_community_recent .views-row-even {
+  border-right: 1px solid #007596;
+  border-left: 1px solid #007596;
+  background-color: #FFD6AA;
+  padding-bottom: 6%;
+}
+@media only screen and (max-width: 800px) {
+  /* line 81, ../sass/partials/pages/_learning_communities.scss */
+  .page-learning-communities #quicktabs-container-learning_community_recent .views-row-even {
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #007596;
+    border-top: 1px solid #007596;
+  }
+}
+/* line 95, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #quicktabs-container-learning_community_recent .views-field-title {
+  font-weight: bold;
+}
+/* line 96, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #quicktabs-container-learning_community_recent .views-field-last-updated-1 {
+  font-style: italic;
+}
+/* line 100, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities ul.tabs-primary {
+  padding-left: 15px;
+}
+/* line 104, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .lc-workspace ul.tabs.primary {
+  padding-left: 30px;
+  border-bottom: 1px solid #5f210d;
+}
+/* line 109, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .tabs-primary {
+  border-bottom: 1px #5F210D solid;
+}
+/* line 112, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .tabs-primary .is-active {
+  background-color: #FFFFFF;
+  border: 1px solid #5F210D;
+  border-bottom: none;
+}
+/* line 119, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities li.tabs-primary__tab {
+  background: #5F210D;
+  color: #ffffff;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 0px;
+  position: relative;
+  top: 1px;
+  filter: none;
+}
+/* line 132, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities li.tabs-primary__tab .is-active {
+  font-weight: bold;
+  color: #5F210D;
+  border: none;
+}
+/* line 139, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities li.tabs-primary__tab a {
+  color: #ffffff;
+  font-size: 14px;
+}
+/* line 144, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .dashboard-section {
+  border: none;
+}
+/* line 149, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #lc-menu {
+  margin-bottom: 1em;
+}
+/* line 152, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #lc-menu h2, .page-learning-communities #lc-menu .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #lc-menu .views-field-title, .page-learning-communities #lc-menu .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #lc-menu .views-field-title {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-top: 0;
+}
+/* line 160, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #lc-menu ul {
+  list-style: none;
+  padding: 0 1.5em;
+}
+/* line 164, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #lc-menu ul li {
+  border-bottom: 1px solid #b2c8cc;
+  padding-top: 9px;
+}
+/* line 168, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #lc-menu ul li.last {
+  border-bottom: 0;
+}
+/* line 175, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #featured-r2r-partner {
+  border: 1px solid #5F210D;
+}
+/* line 181, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #about-r2r-lc h2, .page-learning-communities #about-r2r-lc .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #about-r2r-lc .views-field-title, .page-learning-communities #about-r2r-lc .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #about-r2r-lc .views-field-title {
+  margin: 0;
+  border-bottom: 0;
+}
+/* line 189, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .right-side .content #homepage-events {
+  border: 1px solid #5F210D;
+}
+/* line 191, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .right-side .content #homepage-events > h2, .page-learning-communities .right-side .content .page-cyber-seminars #cyber-seminar-featured #homepage-events > .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities .right-side .content #homepage-events > .views-field-title, .page-learning-communities .right-side .content .node-type-cyber-seminar #cyber-seminar-featured #homepage-events > .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities .right-side .content #homepage-events > .views-field-title {
+  background-color: #5F210D;
+  color: #FFFFFF;
+}
+/* line 199, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .view-lc-content .views-row {
+  border: 1px solid #5F210D;
+  border-bottom: none;
+}
+/* line 204, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .view-lc-content .views-row-last {
+  border-bottom: 1px solid #5F210D;
+}
+/* line 208, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities .view-lc-content .views-row-even {
+  background-color: #FFD6AA;
+}
+/* line 214, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #recent-stories {
+  margin: 1em 0;
+}
+/* line 217, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #recent-stories h2, .page-learning-communities #recent-stories .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-learning-communities #recent-stories .views-field-title, .page-learning-communities #recent-stories .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-learning-communities #recent-stories .views-field-title {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-top: 0;
+}
+/* line 225, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #recent-stories .views-field-title {
+  font-weight: bold;
+}
+/* line 227, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #recent-stories .views-field-created {
+  font-style: italic;
+}
+/* line 229, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #recent-stories .views-row {
+  border-bottom: 1px solid #007596;
+  padding: 10px 0;
+}
+/* line 233, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #recent-stories .views-row.views-row-last {
+  border-bottom: 0;
+}
+/* line 235, ../sass/partials/pages/_learning_communities.scss */
+.page-learning-communities #recent-stories .views-row.views-row-first {
+  padding-top: 0;
+}
+
+/* line 8, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .right-col .btn.secondary, .page-mentorship .right-col input.secondary[type="submit"], .page-mentorship .right-col .node-type-webform .secondary.webform-submit, .node-type-webform .page-mentorship .right-col .secondary.webform-submit, .page-mentorship .right-col .user-login #edit-submit, .user-login .page-mentorship .right-col #edit-submit, .page-mentorship .right-col .node-type-discussion .secondary.edit-post, .node-type-discussion .page-mentorship .right-col .secondary.edit-post,
+.page-mentorship .right-col .node-type-lc-discussion .secondary.edit-post,
+.node-type-lc-discussion .page-mentorship .right-col .secondary.edit-post,
+.page-mentorship .right-col .node-type-cyber-seminar .secondary.edit-post,
+.node-type-cyber-seminar .page-mentorship .right-col .secondary.edit-post {
+  margin-bottom: 1em;
+}
+/* line 13, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship #mentorship-menu {
+  margin-bottom: 1em;
+}
+/* line 16, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship #mentorship-menu h2, .page-mentorship #mentorship-menu .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-mentorship #mentorship-menu .views-field-title, .page-mentorship #mentorship-menu .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-mentorship #mentorship-menu .views-field-title {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-top: 0;
+}
+/* line 24, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship #mentorship-menu ul {
+  list-style: none;
+  padding: 0 1.5em;
+}
+/* line 28, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship #mentorship-menu ul li {
+  border-bottom: 1px solid #b2c8cc;
+  padding-top: 9px;
+}
+/* line 32, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship #mentorship-menu ul li.last {
+  border-bottom: 0;
+}
+/* line 38, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .pane-custom p {
+  font-size: 12px;
+}
+/* line 43, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .pane-mentorship {
+  margin-top: 10px;
+}
+/* line 45, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .pane-mentorship .view-display-id-page_2 {
+  background-color: #FEF4BD;
+  padding: 20px;
+  border: 1px solid #007596;
+  border-radius: 8px;
+}
+/* line 51, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .pane-mentorship .view-display-id-page_2 .views-view-grid h2, .page-mentorship .pane-mentorship .view-display-id-page_2 .views-view-grid .page-cyber-seminars #cyber-seminar-featured .views-field-title, .page-cyber-seminars #cyber-seminar-featured .page-mentorship .pane-mentorship .view-display-id-page_2 .views-view-grid .views-field-title, .page-mentorship .pane-mentorship .view-display-id-page_2 .views-view-grid .node-type-cyber-seminar #cyber-seminar-featured .views-field-title, .node-type-cyber-seminar #cyber-seminar-featured .page-mentorship .pane-mentorship .view-display-id-page_2 .views-view-grid .views-field-title {
+  font-size: 24px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+/* line 57, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .pane-mentorship .view-display-id-page_2 .views-view-grid .views-field-picture {
+  float: left;
+  margin-right: 3%;
+  margin-top: 5px;
+}
+/* line 69, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .view-display-id-page_1 .views-view-grid td {
+  border: 1px solid #b2c8cc;
+  border-radius: 8px;
+  box-shadow: 0 2px 3px #a7bbbf;
+  float: left;
+  width: 44%;
+  margin-right: 2%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+/* line 79, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .view-display-id-page_1 .views-view-grid td .views-field-title {
+  font-weight: bold;
+}
+/* line 83, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .view-display-id-page_1 .views-view-grid td .views-field-name {
+  font-size: 12px;
+}
+/* line 87, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .view-display-id-page_1 .views-view-grid td .views-field-picture {
+  float: left;
+  margin-right: 3%;
+  margin-top: 5px;
+}
+/* line 93, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .view-display-id-page_1 .views-view-grid td .views-field-body {
+  font-size: 12px;
+}
+/* line 100, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .view-display-id-page_1 .views-view-grid .row-3 .col-last {
+  display: none;
+}
+/* line 111, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .right-col .pane-mentorship, .page-mentorship .right-col .pane-custom {
+  border: 1px solid #b2c8cc;
+  border-radius: 8px;
+  margin-top: 0;
+}
+/* line 116, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .right-col .pane-mentorship .pane-title, .page-mentorship .right-col .pane-custom .pane-title {
+  background-color: #e6eef0;
+  border-bottom: 1px solid #b2c8cc;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 10px;
+  margin-top: 0;
+}
+/* line 125, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .right-col .pane-mentorship .views-field-title, .page-mentorship .right-col .pane-custom .views-field-title {
+  padding: 10px;
+}
+/* line 132, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .right-col .pane-custom {
+  margin-top: 10px;
+  border: 1px solid #b2c8cc;
+  border-radius: 8px;
+}
+/* line 137, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .right-col .pane-custom p {
+  padding: 10px;
+}
+/* line 144, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .node-about-the-pair .submitted, .page-mentorship .node-about-the-pair .field-name-field-field-mentorpair-bio, .page-mentorship .node-about-the-pair .field-name-og-group-ref {
+  display: none;
+}
+/* line 149, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .node-about-the-pair .about-pair-bios-container .about-pair-bio {
+  width: 50%;
+  clear: none;
+  display: inline-block;
+}
+/* line 154, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .node-about-the-pair .about-pair-bios-container .about-pair-bio img {
+  float: left;
+  margin-right: 10px;
+}
+/* line 159, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .node-about-the-pair .about-pair-bios-container .about-pair-bio p {
+  font-size: 12px;
+  line-height: 1;
+}
+/* line 164, ../sass/partials/pages/_mentorship_page.scss */
+.page-mentorship .node-about-the-pair .about-pair-bios-container .about-pair-bio h3, .page-mentorship .node-about-the-pair .about-pair-bios-container .about-pair-bio .home-page .right-side #homepage-events #mini-panel-homepage_events .pane-title, .home-page .right-side #homepage-events #mini-panel-homepage_events .page-mentorship .node-about-the-pair .about-pair-bios-container .about-pair-bio .pane-title {
+  font-weight: 900;
+}
+
+/* Browser Specific */
+@media screen\0 {
+  /* line 8, ../sass/partials/browser_specific/_ie.scss */
+  .btn, input[type="submit"], .node-type-webform .webform-submit, .node-type-discussion .edit-post,
+  .node-type-lc-discussion .edit-post,
+  .node-type-cyber-seminar .edit-post {
+    filter: none!important;
+  }
+}
+@media \0screen {
+  /* line 15, ../sass/partials/browser_specific/_ie.scss */
+  #block-search-form {
+    float: right !important;
+    margin-top: -7%;
+  }
+}

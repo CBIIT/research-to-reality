@@ -1,0 +1,145 @@
+// ---------------------------------------------------- 
+// Featured Partner 
+// @description Styles for Featured Partner
+// ----------------------------------------------------
+
+.page-featured-partners, .node-type-featured-r2r-partner {
+	.left-side {
+		margin-bottom: 1em; 
+	}
+
+	#featured-r2r-partners {
+		.view-header {
+			@extend .fill-grey, .box, .round-edge-top; 
+			border-right: 0; 
+			border-left: 0; 
+			border-top: 0;  
+
+			h2 { line-height: 18px; }
+		}
+
+		.view-content {
+			@extend .box, .small-font; 
+
+			.views-row {
+				padding: 15px 0; 
+				border-bottom: $feat-part-border; 
+			}
+		}
+
+		.view-footer {
+			@extend .box, .small-font; 
+			padding-top: 0; 
+		}
+	}
+
+	.view-featured-r2r-partners {
+		margin-bottom: 1em; 
+
+		// Main Content
+		.views-field-title {
+			h1 { margin: 0.5em 0 0.3em 0; }
+		}
+
+		.views-field-field-feat-memb-photo, .partner-photo {
+			display: inline-block; 
+			margin-right: 10px; 
+			vertical-align: top; 
+			border: none; 
+			width: 15%; 
+
+			img { width: 100%; border: $featured-part-border; }
+		}
+
+		.views-field-body {
+			display: inline-block; 
+			width: 80%; 
+		}
+
+		// Questions and Answers
+		.feat-partner-question {
+			font-weight: bold; 
+			clear: both; 
+		}
+
+		.feat-partner-answer {
+			margin-bottom: 1em; 
+			padding-top: 1em; 
+
+			.partner-answer {
+				@extend .box, .round-edge-all, .border-blue; 
+				width: 80%; 
+				display: inline-block; 
+			
+				@media #{$large-and-down} { width: 75%;  }
+				@media #{$x-small-and-down} { width: 65%; }
+			}
+		}
+
+		.partner-photo { 
+			width: 10%; 
+			display: inline-block; 
+			margin-right: 10px; 
+			vertical-align: top; 
+			border: none; 
+		}
+
+		// Related Discussion
+		#related-discussion {
+			.btn {
+				margin-top: 1em; 
+			}
+		}
+		.partner-desc {
+			width: 80%; 
+			display: inline-block; 
+		
+			@media #{$large-and-down} { width: 75%;  }
+			@media #{$x-small-and-down} { width: 65%; }
+		}
+		
+		// Archive
+		.item-list {
+			ul {
+				list-style: none; 
+				padding: 0; 
+			}
+
+			.views-field-title { font-weight: bold; }
+
+			.views-row { 
+				border-bottom: $feat-part-border; 
+				padding: 15px 0;
+			}
+
+			.views-field-view-node {
+				text-align: right; 
+			}
+		}
+		
+		&.featured-partner-archives {
+			.views-field-body {
+				display: block; 
+				width: 100%; 
+			}
+		}
+	
+		
+	}
+
+	#featured-r2r-partner-promotion {
+		background-image: url('../images/global/bground-callout.gif');
+		background-repeat: no-repeat;
+		background-position: 2% 7%;
+		padding: 18px 20px 18px 74px;
+	}
+
+	.currently-featured, .featured-partner-sidebar {
+
+		.views-field-field-feat-memb-photo {
+			width: 20%;
+			float: left;
+		}
+	}
+
+}

@@ -1,0 +1,208 @@
+// ---------------------------------------------------- 
+// Event Page
+// @description Styles for Event Page and its subpages 
+// ----------------------------------------------------
+
+.view-event-calendar, .view-lc-event-calendar {
+	.btn.secondary.right { 
+		padding: 5px 10px; 
+		margin-top: -20px; 
+	}
+
+	// Calendar Heading 
+	.date-heading {
+		background-color: $event-header-bg; 
+		padding: 5px 0; 
+		color: $event-font-color; 
+
+		h3 { 
+			font-size: $event-header-size !important; 
+			font-weight: normal; 
+		}
+	}
+	
+	// Calendar Next/Prev Links
+	.pager { 
+		margin: 0;
+		list-style: none; 
+		color: $event-font-color; 
+		width: 100%;
+		
+		.date-prev {
+			left: 1em !important;
+			right: initial !important;
+		}
+
+		.date-next {
+			right: 1em !important;
+		}
+
+		li {
+			background: none !important; 
+			position: absolute !important;
+			top: 3px !important;
+
+			
+			a {
+				font-weight: normal !important; 
+		
+				&:hover { text-decoration: underline; }
+			}
+		}
+	}
+
+	.date-nav.item-list { 
+		padding: 0;
+		margin: 0; 
+	}
+
+	
+}
+
+// Calendar cells 
+.calendar-calendar {
+	table {
+		th.days {
+			color: $event-cal-title;
+			background-color: $event-title-bg;
+			padding: 5px;
+			font-weight: normal;
+			border: $event-cell-border; 
+		}	
+		
+		.single-day {
+			border-bottom: $event-cell-border; 
+			border-right: $event-cell-border; 
+			border-left: $event-cell-border; 
+
+			.today {
+				border: none !important; 
+			}
+		}	
+	
+		.date-box {
+			border-top: $event-cell-border; 
+			border-right: $event-cell-border; 
+			border-left: $event-cell-border;
+			padding: 0 !important; 
+				
+			.day {
+				color: $event-day-color !important; 
+				background-color: $event-day-bg !important; 
+				
+				a { 
+					color: $event-day-color !important; 
+					text-decoration: underline; 
+
+					&:hover { text-decoration: none; }
+				}
+			}
+				
+			.today {
+				border: none !important; 
+
+				.day { background-color: $event-today-bg !important; }
+			}
+
+			.empty > div { display: none;}
+		}
+		
+		.monthview {
+			background: none !important; 
+			line-height: 1.2em; 
+
+			.views-field-title a { 
+				text-decoration: underline; 
+				color: $event-title-color;
+			}
+		}
+	}
+}
+
+// View All Events Page 
+.page-events-view-all,
+.page-lc-events-view-all {
+	.btn.secondary.right {
+		padding: 5px 10px; 
+		// margin-bottom: 1em; 
+	}
+
+	.item-list {
+		border: $event-cell-border; 
+		@include radius-all(9px);
+		overflow-y: scroll;
+		height: 500px; 
+		margin-top: 1.5em; 
+		
+		ul {
+			margin: 0; 
+			padding: 0; 
+
+			li { list-style: none; }
+		}
+		
+		.views-row { 
+			padding: 1em 1.5em; 
+			border-bottom: $event-cell-border;
+		}
+
+		.views-row-even { background-color: $event-bg; }
+	}
+
+	.views-field-title { font-weight: bold; } 
+}
+
+// Events Inner Page 
+.page-node.node-type-event,
+.page-node.node-type-lc-event {
+	.right-column {
+		.pane-title {
+			@extend .fill-grey, .box, .round-edge-top; 
+			margin: 0; 
+			line-height: 20px;
+			border-top: 0;
+			border-right: 0;
+ 			border-left: 0;
+		}
+
+		.upcoming-events {
+			@extend .box; 
+
+			.views-field-title { font-weight: bold; }
+
+			.views-field-field-event-date { 
+				font-style: italic; 
+				@extend .small-font; 
+			} 
+			
+			.views-row {
+				padding: 10px 0; 
+			}
+
+			.views-row-even {
+				border-top: $inner-event-border; 
+				border-bottom: $inner-event-border; 
+			}
+
+			.view-footer { 
+				@extend .small-font; 
+				border-top: $inner-event-border; 
+				text-align: right; 
+
+			}
+		}
+	}
+
+	.left-side {
+		h2 {
+			border-bottom: $inner-event-border; 
+			padding-bottom: 15px;
+		}
+
+		.field-content {
+			p { margin: 0; }
+		}
+	}
+}
+
+

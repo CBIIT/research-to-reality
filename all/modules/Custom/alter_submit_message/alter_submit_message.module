@@ -1,0 +1,64 @@
+<?php
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+
+function alter_submit_message_form_alter(&$form, $form_state, $form_id) {
+  switch ($form_id) {
+    case 'event_node_form' :
+      $form['buttons']['submit']['#submit'][0] = 'alter_submit_message_node_form_submit';
+      break;
+  }
+
+
+}
+
+function alter_submit_message_node_form_submit($form, &$form_state) {
+  global $user;
+  $node = node_form_submit_build_node($form, $form_state);
+  $insert = empty($node->nid);
+  node_save($node);
+  $node_link = l(t('view'), 'node/'. $node->nid);
+  $watchdog_args = array('@type' => $node->type, '%title' => $node->title);
+  $t_args = array('@type' => node_get_types('name', $node), '%title' => $node->title);
+
+  if ($insert) {
+    watchdog('content', '@type: added %title.', $watchdog_args, WATCHDOG_NOTICE, $node_link);
+
+    if ($node->type == 'event') {
+      $message = t('Your Event has been submitted to the Research To Reality Team for review. Thank You.');
+    }
+
+
+    drupal_set_message($message);
+  }
+  else {
+    watchdog('content', '@type: updated %title.', $watchdog_args, WATCHDOG_NOTICE, $node_link);
+
+    if ($node->type == 'event') {
+      $message = t('The @type %title has been saved.', $t_args);
+    }
+
+
+    drupal_set_message($message);
+  }
+  if ($node->nid) {
+    unset($form_state['rebuild']);
+    $form_state['nid'] = $node->nid;
+    $form_state['redirect'] = 'node/'. $node->nid;
+  }
+  else {
+    // In the unlikely case something went wrong on save, the node will be
+    // rebuilt and node form redisplayed the same way as in preview.
+    drupal_set_message(t('The post could not be saved.'), 'error');
+  }
+}
+
+
+
+
+
+?>

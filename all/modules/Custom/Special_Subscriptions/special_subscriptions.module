@@ -1,0 +1,541 @@
+<?php
+
+/* * ***
+ * Hooks into the flag functioning. Detects the flag by its name and then creates
+ * the proper subscription for it.
+ * 
+ * Added by Lauren for Release 2.2
+ * 
+ * Modified by Lauren for Release 2.3
+ *  Cleaned up the code SOME --- It's still pretty ugly and hard to understand
+ *  and a general mess. Changed send_interval to be a set value rather than a user default.
+ * *** */
+
+function special_subscriptions_flag($event, $flag, $content_id, $account) {
+
+	/*	 * *
+	 * Even after cleanup, code could still be more elegant.
+	 * 
+	 * These are the following types of content that Special Subscriptions controls:
+	 *      - Stories
+	 *      - Discussions
+	 *      - Workspaces
+	 *      - Seminars
+	 *      - Events
+	 *      - Featured Partners
+	 * 
+	 * These get grouped by notification type and their event type:
+	 *  - Type: 'grouptype'
+	 *      - Stories
+	 *      - Workspaces
+	 *  - Type: 'thread'
+	 *      - Discussions
+	 *  - Type: 'nodetype' aka Content Type
+	 *      - Seminars
+	 *      - Events
+	 *      - Featured Partners
+	 * * */
+
+
+	// All $subscription will have the following settings
+	$subscription['uid'] = $account->uid;
+	$subscription['event_type'] = 'node'; // (Everything is in reference to a node)
+	$subscription['send_method'] = 'phpmailer';
+	$subscription['send_interval'] = '604800';
+
+
+	// Subscription type is sorted by flag name
+	switch ($flag->name) {
+
+		// Users can subscribe to discussions individually, therefore, the notification
+		// type is considered to be a thread.
+		case 'subscribe_discussions':
+			// If the button is being flagged, create the subscription
+			if ($event == 'flag') {
+				$subscription['type'] = 'thread';
+				$subscription['fields'] = array('nid' => $content_id);
+				notifications_save_subscription($subscription);
+			}
+			// If the button is being unflagged, delete the subscription
+			elseif ($event == 'unflag') {
+				notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => thread), array('nid' => $content_id));
+			}
+			break;
+
+		// Users can subscribe to Cyber Seminars as a content type, which means they
+		// only get notified when a new seminar appears, not when any seminar is updated
+		case 'subscribe_content_seminar':
+			// If the button is being flagged, create the subscription
+			if ($event == 'flag') {
+				$subscription['type'] = 'nodetype';
+				$subscription['fields'] = array('type' => 'seminar');
+				notifications_save_subscription($subscription);
+			}
+			// If the button is being unflagged, delete the subscription
+			elseif ($event == 'unflag') {
+				notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => nodetype), array('type' => 'seminar'));
+			}
+			break;
+
+		// Users can subscribe to Featured R2R partners as a content type, which
+		// means they only get notified when a new partner is added, not when any
+		// partner may be updated
+		case 'subscribe_content_ftpartners':
+			// If the button is being flagged, create the subscription
+			if ($event == 'flag') {
+				$subscription['type'] = 'nodetype';
+				$subscription['fields'] = array('type' => 'featured_r2r_member');
+				notifications_save_subscription($subscription);
+			}
+			// If the button is being unflagged, delete the subscription
+			elseif ($event == 'unflag') {
+				notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => nodetype), array('type' => 'featured_r2r_member'));
+			}
+			break;
+
+		// Users can subscribe to Events as a content type, which means they only
+		// get notified when a new event is added, not when any events are updated
+		case 'subscribe_content_events':
+			// If the button is being flagged, create the subscription
+			if ($event == 'flag') {
+				$subscription['type'] = 'nodetype';
+				$subscription['fields'] = array('type' => 'event');
+				notifications_save_subscription($subscription);
+			}
+			// If the button is being unflagged, delete the subscription
+			elseif ($event == 'unflag') {
+				notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => nodetype), array('type' => 'event'));
+			}
+			break;
+
+		// Users can subscribe to a workspace's stories, even if they are not a
+		// mentor or a mentee. This subscription type appears on three types of pages:
+		// The pair's about page (the workspace's landing page for non-members) AND 
+		// on each individual story that the pair publishes out AND on the archive
+		// page for that pair's stories.
+		case 'subscribe_stories':
+			// If the button is being flagged, create the subscription
+			if ($event == 'flag') {
+				// A flag/toggle only passes in the node's identifying # and not any
+				// other attribute, so we must get its type.
+				$result1 = db_query("SELECT n.type FROM {node} n WHERE n.nid = $content_id");
+				$row1 = db_fetch_object($result1);
+
+				/*				 * *
+				 * The type matters for this flag because we must go and flag all of the other
+				 * toggles that are associated with the same subscription. For example,
+				 * if we toggle the subscription on in the archive page, it must also
+				 * toggle on on the other two pages!
+				 * * */
+
+				// If the subscription is original toggled on an Archive Node Page...
+				if ($row1->type == "mentorship_story_archive") {
+					// Get the node identifier of the workspace associated with that page
+					$result2 = db_query("SELECT n.group_nid FROM {og_ancestry} n WHERE n.nid = $content_id");
+					$row2 = db_fetch_object($result2);
+					// Create/save a notification of type story within that workspace
+					$subscription['type'] = 'grouptype';
+					$subscription['fields'] = array('group' => $row2->group_nid, 'type' => 'story');
+					notifications_save_subscription($subscription);
+					// Get all nodes associated with the correct workspace, so that we may toggle
+					// the story "on" for each page
+					$result3 = db_query("SELECT n.nid FROM {og_ancestry} n WHERE n.group_nid = $row2->group_nid");
+					while ($row3 = db_fetch_object($result3)) {
+						// Get the type of the extra page(s) we are toggling on
+						$result4 = db_query("SELECT n.type FROM {node} n WHERE n.nid = $row3->nid");
+						$row4 = db_fetch_object($result4);
+						// Call the flag for the nodes if the story is of the other 2 types
+						if ($row4->type == "about_the_pair") {
+							$flag->flag('flag', $row3->nid);
+						} elseif ($row4->type == "story") {
+							$flag->flag('flag', $row3->nid);
+						}
+					}
+				}
+				// Please see above logic
+				elseif ($row1->type == "about_the_pair" || $row1->type == "story") {
+					$result2 = db_query("SELECT n.group_nid FROM {og_ancestry} n WHERE n.nid = $content_id");
+					$row2 = db_fetch_object($result2);
+					$result3 = db_query("SELECT n.nid FROM {og_ancestry} n WHERE n.group_nid = $row2->group_nid");
+					while ($row3 = db_fetch_object($result3)) {
+						$result4 = db_query("SELECT n.type FROM {node} n WHERE n.nid = $row3->nid");
+						$row4 = db_fetch_object($result4);
+						if ($row4->type == "mentorship_story_archive") {
+							$flag->flag('flag', $row3->nid);
+						}
+					}
+				}
+			}
+			// Same logic as above for flag as for unflag (must also un-toggle all other pages)
+			elseif ($event == 'unflag') {
+				$result1 = db_query("SELECT n.type FROM {node} n WHERE n.nid = $content_id");
+				$row1 = db_fetch_object($result1);
+				if ($row1->type == "mentorship_story_archive") {
+					$result2 = db_query("SELECT n.group_nid FROM {og_ancestry} n WHERE n.nid = $content_id");
+					$row2 = db_fetch_object($result2);
+					notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => grouptype), array('group' => $row2->group_nid));
+					$result3 = db_query("SELECT n.nid FROM {og_ancestry} n WHERE n.group_nid = $row2->group_nid");
+					while ($row3 = db_fetch_object($result3)) {
+						$result4 = db_query("SELECT n.type FROM {node} n WHERE n.nid = $row3->nid");
+						$row4 = db_fetch_object($result4);
+						if ($row4->type == "about_the_pair") {
+							$flag->flag('unflag', $row3->nid);
+						} elseif ($row4->type == "story") {
+							$flag->flag('unflag', $row3->nid);
+						}
+					}
+				} elseif ($row1->type == "about_the_pair" || $row1->type == "story") {
+					$result2 = db_query("SELECT n.group_nid FROM {og_ancestry} n WHERE n.nid = $content_id");
+					$row2 = db_fetch_object($result2);
+					$result3 = db_query("SELECT n.nid FROM {og_ancestry} n WHERE n.group_nid = $row2->group_nid");
+					while ($row3 = db_fetch_object($result3)) {
+						$result4 = db_query("SELECT n.type FROM {node} n WHERE n.nid = $row3->nid");
+						$row4 = db_fetch_object($result4);
+						if ($row4->type == "mentorship_story_archive") {
+							$flag->flag('unflag', $row3->nid);
+						}
+					}
+				} /* elseif ($row1->type == "workspace") {
+				  $result3 = db_query("SELECT n.nid FROM {og_ancestry} n WHERE n.group_nid = $row2->group_nid");
+				  while ($row3 = db_fetch_object($result3)) {
+				  $result4 = db_query("SELECT n.type FROM {node} n WHERE n.nid = $row3->nid");
+				  $row4 = db_fetch_object($result4);
+				  if ($row4->type == "mentorship_story_archive") {
+				  $flag->flag('unflag', $row3->nid);
+				  } elseif ($row4->type == "story") {
+				  $flag->flag('unflag', $row3->nid);
+				  }
+				  }
+				  } */
+			}
+			break;
+
+		// Subscriptions to workspaces is another mess... they're broken out into several separate
+		// $subscription variables because there was errors in getting the notifications to save
+		// otherwise
+		case 'subscribe_workspaces':
+			$workspaceTypes = array('about_the_pair', 'group_discussion', 'group_document', 'group_event', 'group_events_task', 'mentorship_story_archive');
+			// For some reason, foreach looping does not work with _save/delete_subscription
+			// Only 6 types (12 insertions)... Story is operated seperately
+			if ($event == 'flag') {
+				$subscription['type'] = 'grouptype';
+				$subscription['fields'] = array('group' => $content_id, 'type' => 'about_the_pair');
+				notifications_save_subscription($subscription);
+
+				$subscription2['uid'] = $account->uid;
+				$subscription2['type'] = 'grouptype';
+				$subscription2['event_type'] = 'node';
+				$subscription2['fields'] = array('group' => $content_id, 'type' => 'group_discussion');
+				$subscription2['send_method'] = 'phpmailer';
+				$subscription2['send_interval'] = notifications_user_setting('send_interval', $account);
+				notifications_save_subscription($subscription2);
+
+				$subscription3['uid'] = $account->uid;
+				$subscription3['type'] = 'grouptype';
+				$subscription3['event_type'] = 'node';
+				$subscription3['send_method'] = 'phpmailer';
+				$subscription3['send_interval'] = notifications_user_setting('send_interval', $account);
+				$subscription3['fields'] = array('group' => $content_id, 'type' => 'group_document');
+				notifications_save_subscription($subscription3);
+
+				$subscription4['uid'] = $account->uid;
+				$subscription4['type'] = 'grouptype';
+				$subscription4['event_type'] = 'node';
+				$subscription4['send_method'] = 'phpmailer';
+				$subscription4['send_interval'] = notifications_user_setting('send_interval', $account);
+				$subscription4['fields'] = array('group' => $content_id, 'type' => 'group_event');
+				notifications_save_subscription($subscription4);
+
+				$subscription5['uid'] = $account->uid;
+				$subscription5['type'] = 'grouptype';
+				$subscription5['event_type'] = 'node';
+				$subscription5['send_method'] = 'phpmailer';
+				$subscription5['send_interval'] = notifications_user_setting('send_interval', $account);
+				$subscription5['fields'] = array('group' => $content_id, 'type' => 'group_events_task');
+				notifications_save_subscription($subscription5);
+
+				$subscription6['uid'] = $account->uid;
+				$subscription6['type'] = 'grouptype';
+				$subscription6['event_type'] = 'node';
+				$subscription6['send_method'] = 'phpmailer';
+				$subscription6['send_interval'] = notifications_user_setting('send_interval', $account);
+				$subscription6['fields'] = array('group' => $content_id, 'type' => 'mentorship_story_archive');
+				notifications_save_subscription($subscription6);
+			} elseif ($event == 'unflag') {
+				/*
+				 * For some reason, a loop does not work here.
+				 * 
+				 * foreach ($type as $workspaceTypes) {
+				  notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => grouptype), array('group' => $content_id, 'type'=>'$type'));
+				  } */
+
+				notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => grouptype), array('group' => $content_id, 'type' => 'about_the_pair'));
+				notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => grouptype), array('group' => $content_id, 'type' => 'group_discussion'));
+				notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => grouptype), array('group' => $content_id, 'type' => 'group_document'));
+				notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => grouptype), array('group' => $content_id, 'type' => 'group_event'));
+				notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => grouptype), array('group' => $content_id, 'type' => 'group_events_task'));
+				notifications_delete_subscriptions(array('uid' => $account->uid, 'type' => grouptype), array('group' => $content_id, 'type' => 'mentorship_story_archive'));
+			}
+			break;
+	}
+}
+
+/* * ***
+ * Hooks into every time cron is run to control the weekly send out date.
+ * 
+ * Added by Lauren For Release 2.2.1
+ * *** */
+
+function special_subscriptions_cron() {
+
+	// 604800 represents Weekly, 86400 represents Daily
+	$controlledIntervals = array(604800, 86400);
+
+	// For both daily and weekly (the only controlled subscriptions we offer)
+	foreach ($controlledIntervals as $interval) {
+
+		// Initially set send time to 0, as in it should go out right now
+		$sendTime = 0;
+
+		// For a weekly subscription...
+		if ($interval == 604800) {
+
+			// Get the UNIX timestamp of "Last Wednesday", which is always the Wednesday before, so if it is Wednesday, it's a week ago.
+			// However, this becomes a problem if it's Wednesday after 5, it will get set to the previous Wednesday, but then anything
+			// after 5 will not get sent out correctly because it will be marked too late
+			$sendTime = strtotime("last wednesday", time());
+
+			// If today is currently Wednesday (Wednesday == 3; Monday == 1; etc)
+			if (date('N', time()) == 3) {
+
+				// If the current time is after 5pm
+				if (date('G', time()) >= (12 + 5)) {
+
+					// Get all weekly interval subscriptions
+					$testQuery = db_query("SELECT s.sent FROM {notifications_sent} s WHERE s.send_interval='604800'");
+					while ($testResult = db_fetch_object($testQuery)) {
+
+						// If cron has already been run, set the time to today (assuming cron gets run after 5)
+						if ($testResult->sent > (time() - 604800)) {
+							$sendTime = strtotime("today", time());
+							break;
+						}
+					}
+				}
+			}
+			$sendTime += ( (12 + 5) * 60 * 60) + (0 * 60); //After 5pm
+		}
+
+
+		// For a daily subscription...
+		elseif ($interval == 86400) {
+
+			// Get the UNIX timestamp for yesterday
+			$sendTime = strtotime("yesterday", time());
+
+			// If it's after 5 pm, we must mark the notifications differently or else they won't get sent out
+			// properly after the cron run.
+			if (date('G', time()) >= (12 + 5)) { //If after 5pm
+				// Get all the daily interval subscriptions
+				$testQuery = db_query("SELECT s.sent FROM {notifications_sent} s WHERE s.send_interval='86400'");
+				while ($testResult = db_fetch_object($testQuery)) {
+
+					// If cron has already been run (after 5), set the time to today so it can go out tomorrow still and not get lost
+					if ($testResult->sent > (time() - 86400)) {
+						$sendTime = strtotime("today", time());
+						break;
+					}
+				}
+			}
+			$sendTime += ( (12 + 5) * 60 * 60) + (0 * 60); //After 5pm
+		}
+
+		// After we have the correct send out time (as a UNIX timestamp) for this daily or weekly subscription
+		// (we're still in the loop), we need to change this in the database so cron sends it out.
+		// So let's set a Drupal message so the admin knows we're doing this with the time that it's going out
+		drupal_set_message(t('Special Subscriptions Cron Hook For %lastwed ', array('%lastwed' => $sendTime)));
+
+		// We change the last time a user received something, because notifications actually get sent according
+		// to the following formula:
+		//   current time for subscription update< when a user last received a subscription + that subscription's interval send out
+		// Thus, we want to change a user's last send out so even if something new comes, it doesn't get sent out of turn,
+		// which is possible if a user's last subscription received is from weeks ago
+		$queryUsers = db_query("SELECT u.uid FROM {notifications} u WHERE u.send_interval='%d'", $interval);
+		while ($user = db_fetch_object($queryUsers)) {
+			db_query("UPDATE {notifications_sent} SET sent='%s' WHERE send_interval='%d' AND uid='%s'", $sendTime, $interval, $user->uid);
+			if (!db_affected_rows()) {
+				db_query("INSERT INTO {notifications_sent} (uid, send_interval, send_method, sent) VALUES(%d, '%d', '%s', %d)", $user->uid, (string) $interval, 'phpmailer', $sendTime);
+			}
+		}
+	}
+}
+
+/* * ***
+ * Hooks into a node change, then certifies that node is being updated, then
+ * ensures that node is of type "seminar", then adds a notification if that seminar
+ * has been archived (even if node updating notitifications are turned off).
+ * 
+ * Added by Lauren for Release 2.2.2
+ * 
+ * Modified by Lauren for Release 2.3: 
+ *  Notification should only go out when updated state changes from not archived
+ *  to archived.
+ * *** */
+
+function special_subscriptions_nodeapi(&$node, $op, $arg = 0) {
+
+	// Make sure the node is being updated
+	if ($op == 'update') {
+		// Keep track of which nodes we're updating so we don't send the same one twice
+		static $done;
+
+		// Make sure we know everything about this node, copied from _nodeapi
+		if (!isset($done[$node->nid]) && $node->status && empty($node->notifications_content_disable)
+				&& notifications_content_type_enabled($node->type)) {
+			$done[$node->nid] = TRUE;
+			$event = array(
+				'module' => 'node',
+				'oid' => $node->nid,
+				'type' => 'node',
+				'action' => $op,
+				'node' => $node,
+				'params' => array('nid' => $node->nid),
+			);
+
+			// if this node has a public field and it is set
+			if (isset($node->field_public_story[0]['value']) &&
+					$node->field_public_story[0]['value'] == 1) {
+				_special_subscriptions_notify_public($node, $event);
+			}
+			// Make sure this is a seminar type node
+			if ($node->type == 'seminar') {
+
+				// This string matches the taxonomy for the seminar when it becomes archived
+				$archiveString = "Archived Seminar";
+
+				// If the potential update value is equaled to the string (it's going to be archived), then..
+				if ($archiveString == $node->field_seminar_state[0]['value']) {
+
+					// First let's figure out the old note and what it used to be
+					$oldnode = node_load($node->nid);
+
+					// Make sure the node was not already in Archived State. This ensures that an update will only
+					// get sent out if the node is going from not being archived to being archived. Otherwise,
+					// a notification will get sent out any time a node is archived at all.
+					// The notification gets sent out by creating a special custom event that is added and triggered.
+					if ($archiveString != $oldnode->field_seminar_state[0]['value']) {
+
+						// Let the admin know there is going to be a Notification Event created (users signed up
+						// will receive news that the update has occurred).
+						drupal_set_message(t('Notification Created: Seminar moved from un-archived state to Archived state.'));
+
+						// Nodes sent immediately should be loaded
+						if (variable_get('notifications_send_immediate', 0)) {
+							node_load(0, NULL, TRUE);
+						}
+
+						//notifications_event($event);
+
+						global $user;
+						// Fill in event with default values
+						$event += array(
+							'uid' => $user->uid,
+							'load_args' => '',
+							'created' => time(),
+							'module' => 'notifications', // Module that triggered the event
+							'type' => '', // Object/event type
+							'action' => '', // Action that happened to the object
+							'params' => array(), // Object parameters
+						);
+
+						// Check whether we have to save and queue this event, defaults to yes if not set
+						// If not enabled, do not store nor queue this event, can be changed by plug-in modules
+						$enabled = 1;
+						$event += array(
+							'save' => $enabled,
+							'queue' => $enabled,
+						);
+
+						$event = (object) $event;
+
+						// Notify other modules we are about to trigger some subscriptions event
+						// Modules can do cleanup operations or modify event properties
+						notifications_module_invoke('event trigger', $event);
+
+						// Store event, unles marked not to be saved 
+						if ($event->save) {
+							drupal_write_record('notifications_event', $event);
+						}
+						// Send event to queue for subscriptions, unless marked not to
+						if ($event->queue) {
+							notifications_queue($event);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+function _special_subscriptions_notify_public(&$node, $event) {
+
+	// First let's figure out the old note and what it used to be
+	$oldnode = node_load($node->nid);
+
+	// if the old node was not public, then we'll need to fire an update event
+	if (!$oldnode->field_public_story[0]['value']) {
+
+		// Let the admin know there is going to be a Notification Event created (users signed up
+		// will receive news that the update has occurred).
+		drupal_set_message(t('Notification Created: Story moved to public state.'));
+
+		// Nodes sent immediately should be loaded
+		if (variable_get('notifications_send_immediate', 0)) {
+			node_load(0, NULL, TRUE);
+		}
+
+		global $user;
+		// Fill in event with default values
+		$event += array(
+			'uid' => $user->uid,
+			'load_args' => '',
+			'created' => time(),
+			'module' => 'notifications', // Module that triggered the event
+			'type' => '', // Object/event type
+			'action' => '', // Action that happened to the object
+			'params' => array(), // Object parameters
+		);
+
+		// Check whether we have to save and queue this event, defaults to yes if not set
+		// If not enabled, do not store nor queue this event, can be changed by plug-in modules
+		$enabled = 1;
+		$event += array(
+			'save' => $enabled,
+			'queue' => $enabled,
+		);
+
+		$event = (object) $event;
+
+		// Notify other modules we are about to trigger some subscriptions event
+		// Modules can do cleanup operations or modify event properties
+		notifications_module_invoke('event trigger', $event);
+
+		// Store event, unles marked not to be saved 
+		if ($event->save) {
+			drupal_write_record('notifications_event', $event);
+		}
+		// Send event to queue for subscriptions, unless marked not to
+		if ($event->queue) {
+			notifications_queue($event);
+		}
+	}
+}
+
+function special_subscriptions_create_link($type, $cid) {
+	if (!user_is_logged_in()) {
+		$flag = flag_get_flag($type);
+		return $flag->theme('flag');
+	} else {
+		return flag_create_link($type, $cid);
+	}
+}

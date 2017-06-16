@@ -1,0 +1,348 @@
+// ---------------------------------------------------- 
+// Discussion Page
+// @description Styles for Discussion Page and its subpages 
+// ----------------------------------------------------
+
+// Discussion Tabbed Menu
+.discussion-menu {
+	.menu {
+		list-style: none;
+		margin: 15px 0 4px 0;
+		padding: 0;
+		position: relative; 
+		z-index: 2;
+
+		li {
+			display: inline-block;
+			margin-right: 2px;
+			padding: 0;
+
+			a {
+				color: $disc-menu-link-color;
+				text-decoration: none;
+				background-color: $disc-menu-bg;
+				padding: 13px 20px 8px;
+				@include radius-top(9px); 
+				border-bottom: none !important;
+				font-size: 14px;
+				
+				&:hover { text-decoration: underline; }
+			}
+
+			.active {
+				background-color: $disc-menu-bg-active;
+				border: $disc-border;
+				color: $disc-menu-link-active;
+				font-weight: 900;
+			}
+
+		}
+	}
+}
+
+// Main Content
+.view-discussions,
+.view-lc-content {
+	margin-bottom: 1em; 
+
+	.view-empty {
+		border: $disc-border;
+		line-height: 20px;
+		padding: 10px 20px; 
+		@include radius-bottom(8px); 
+		@include radius-top-rt(8px);  
+	} 
+
+	.views-row {
+		border-top: $disc-border;
+		border-right: $disc-border;
+		border-left: $disc-border;
+		line-height: 20px;
+		padding: 10px 20px;
+		
+		.discussion-title { font-weight: 900; }
+
+		.discussion-info {
+			font-size: $disc-info-font; 
+			font-style: italic; 
+		}
+		.discussion-posts, .discussion-started { margin-right: 15px; } 
+	}
+	.views-row-first { @include radius-top-rt(9px); }	
+	.views-row-last { 
+		@include radius-bottom(9px);
+		border-bottom: $disc-border;  
+	}
+
+	.views-row-even { background-color: $disc-row-even-bg; }
+}
+
+.discussion-cat { 
+	a {
+		color: $disc-cat-link; 
+		font-size: $disc-cat-link-size; 
+	}
+}
+.views-field.views-field-nid {
+	display: inline-block; 
+	width: 84%; 
+
+	@media #{$x-small-only} { width: 100%; }
+}
+.views-field.views-field-ops {
+	display: inline-block; 
+	width: 15%; 
+	vertical-align: top;
+	margin-top: 10px;
+
+	@media #{$x-small-only} { width: 100%; }
+}
+
+// Category Menu 
+.discussion-category-menu {
+	font-size: $cat-menu-font-size; 
+
+	h2 { margin-bottom: 0; }
+
+	.menu { 
+		padding-left: 0; 
+		margin-top: 0;
+		
+		li {
+			list-style-image: none;
+			list-style-type: none;
+			border-bottom: $grey-box-border;
+			padding-top: 7px;
+
+			.active {
+				text-decoration: none;
+				color: #000000;
+			}
+		}
+		.last { border-bottom: none; }
+	}
+}
+
+// Search Box
+.discussion-search {
+	border-bottom: 0; 
+	margin-top: 1em; 
+
+	#edit-custom-search-blocks-form-1--2 { width: 90%; }
+}
+
+	
+// Discussion Button
+.discussion-button { 
+	margin-bottom: 1em; 
+
+	.btn.secondary { padding: 1em;
+		a {
+			font-size: 14px;
+		}
+	
+	 }
+} 
+
+// Join the Discussion Block
+.signup-today {
+	color: $white; 
+	text-align: center; 
+
+	a { 
+		color: $white;
+		font-weight: bold;  
+	}
+}
+
+// User login
+.user-login {
+	.form-item {
+		margin: 0.5em 0; 
+	}
+
+	.item-list {
+		text-align: right;
+		
+		ul { margin: 0.5em 0; }	
+
+		li {
+			  list-style: none;
+			  font-size: $disc-login-font;
+			  padding: 0;
+			  line-height: 1.5em;
+		}
+	}
+
+	label {
+		font-size: $disc-login-btn-font; 
+	}
+
+	#edit-name, #edit-pass  {
+		width: 90%; 
+	}
+
+	#edit-submit { @extend .btn.secondary; }
+}
+
+
+.no-discussion-menu {
+	#page-title { margin-bottom: 15px; }
+
+	.view-discussions .views-row-first, .view-lc-content .views-row-first { @include radius-top(9px); }
+}
+
+// Your Discussion Page Only 
+.page-discussions-your-discussions {
+	.discussion-menu {
+		.menu {
+			li:first-child { 
+				a { 
+					background-color: $disc-menu-bg; 
+					color: $disc-menu-link-color;
+				}
+			}	
+		}
+	}
+}
+
+
+// Discussion Inner Pages
+.node-type-discussion,
+.node-type-lc-discussion,
+.node-type-cyber-seminar {
+	.left-col {
+		margin-bottom: 1em; 
+	}
+
+	.author-post {
+		img {
+			width: 70px; 
+			border: $author-img-border;  
+		}
+	}
+
+	.edit-post {
+		@extend .btn; 
+	}
+
+	.discussion-post-sidebar {
+		margin-right: 25px; 	
+	}
+	
+	.discussion-post-body {
+		width: 80%; 
+		border: $disc-border;
+		@include radius-all(8px); 
+		padding: 1em; 
+		// position: relative; 
+		// z-index: 999; 
+
+		@media #{$large-only} {
+			width: 75%; 
+		}
+
+		@media #{$medium-only} {
+			width: 77%; 
+		}
+
+		@media #{$small-only} {
+			width: 69%; 
+		}
+
+		@media #{$x-small-and-down} {
+			width: 60%; 
+		}
+		
+		.info-post { font-weight: 900; }
+	}
+
+		/*
+		.discussion-post-body::before {
+		    border-color: transparent #007576;
+		    border-style: solid;
+		    border-width: 10px 22px 10px 0;
+		    bottom: auto;
+		    content: "";
+		    display: block;
+		    left: 83px;
+		    position: absolute;
+		    top: 19px;
+		    width: 0;
+		}
+		.discussion-post-body::after {
+		    border-color: transparent #fff;
+		    border-style: solid;
+		    border-width: 9px 20px 9px 0;
+		    bottom: auto;
+		    content: "";
+		    display: block;
+		    left: 85px;
+		    position: absolute;
+		    top: 20px;
+		    width: 0;
+		}
+		*/
+
+	.discussion-post-sidebar, .discussion-post-body {
+		display: inline-block; 
+		vertical-align: top; 
+	}
+
+	.pane-node-comments .comment {
+		margin-left: 15%;
+
+		.user-picture img {
+		position: absolute;
+		left: 0;
+		margin-top: -27px;
+		width: 70px;
+		border: 1px solid #007596;
+		}
+	}
+	
+	/*
+	.pane-node-comments .comment header::before  {
+		border-color: transparent #007576;
+	    border-style: solid;
+	    border-width: 10px 22px 10px 0;
+	    bottom: auto;
+	    content: "";
+	    display: block;
+	    left: 81px;
+	    position: absolute;
+	    width: 0;
+	}
+
+	.pane-node-comments .comment header::after {
+	    border-color: transparent #fff;
+	    border-style: solid;
+	    border-width: 9px 20px 9px 0;
+	    bottom: auto;
+	    content: "";
+	    display: block;
+	    left: 83px;
+	    position: absolute;
+	    width: 0;
+	    margin-top: -35px;
+	}
+	*/
+}
+
+#total-subscription-subscribe-form input {
+	margin-bottom: 10px;
+}
+
+// Logged-out Only 
+.not-logged-in {
+	&.node-type-discussion {
+		.edit-post { 
+			display: none; 
+		}
+	}
+}
+
+.left-col-content {
+	position: relative;
+	left: 0;
+}

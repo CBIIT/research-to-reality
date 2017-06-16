@@ -1,0 +1,131 @@
+// ------------------------------- 
+// Forms
+// @description Forms Styles
+// -------------------------------
+
+input {
+	border: 1px solid $input-border-bg;
+	color: $input-font-color;
+	font-size: $input-font-size; 
+	font-family: $input-font; 
+	@include radius-all(8px); 
+	padding: 7px;
+	max-width: 100%; 
+}
+
+input[type="submit"] { 
+	font-family: $submit-btn-font; 
+	@extend .btn; 
+
+	&:hover { @extend .btn:hover; }
+}
+
+textarea {
+	font-size: $input-font-size; 
+	font-family: $input-font; 
+	border: 1px solid $input-border-bg;
+	@include radius-all(8px); 
+	color: $input-font-color;
+}
+
+label {
+	display: block; 
+	font-weight: bold; 
+}
+
+.form-item {
+	margin-bottom: 10px; 
+}
+
+.form-input {
+	@include radius-all(8px); 
+	border: $form-border;
+	font-family: $form-font-family; 
+	font-size: $small-font-size;  
+	color: $form-color; 
+	margin: 2px 0 0 0;
+	padding: 5px;
+}
+
+.form-required {
+	color: $required-color; 
+}
+.description {
+	@extend .small-font;
+	vertical-align: top; 
+	margin-top: 7px;
+	line-height: 1em;  
+
+	&:before {
+		display: inline-block; 
+		content: url('/sites/all/themes/r2r_zen/images/icons/tooltip.png'); 
+		margin-right: 5px; 
+	}
+}
+
+/** Contact Form  **/
+.node-type-webform {
+	.submitted { display: none; }
+
+	#edit-submitted-subject { width: 60%; }
+
+	#edit-submitted-message { 
+		width: 60%; 
+		min-height: 210px;
+	}
+
+	#edit-submitted-your-name, 
+	#edit-submitted-work-related-e-mail-address, 
+	#edit-submitted-work-related-phone-number,
+	#edit-submitted-subject, 
+	#edit-submitted-message {
+		@media #{$small-and-down} { width: 100%; }
+	}
+
+	.webform-submit {
+		@extend .btn; 
+
+		&:hover { @extend .btn:hover; }
+	}
+}
+
+// Comment Form
+.pane-node-comment-form {
+	.form-item-subject, #edit-author--4, .grippie { display: none; }
+	
+	#edit-comment-body-und-0-format--3 {
+		margin-top: 1em; 
+		border: $comment-form-border; 
+	}
+
+	#edit-actions--2 {
+		margin-top: 1em; 
+
+		input { margin-right: 10px; }
+	}
+}
+
+// Comment Thread
+.pane-node-comments {
+	margin-top: 1em; 
+	
+	span { font-weight: bold; }
+
+	.comment {
+		@extend .box, .border-blue, .round-edge-all; 
+		margin-bottom: 1em; 
+	}
+
+	.permalink { display: none; }
+
+	.links.inline {
+		list-style: none; 
+		padding: 0; 
+		margin: 0; 
+
+		li {
+			display: inline-block; 
+			@extend .btn.tertiary; 
+		}
+	}
+}

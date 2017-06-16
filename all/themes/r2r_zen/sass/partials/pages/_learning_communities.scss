@@ -1,0 +1,243 @@
+// ------------------------------------------------------------------- 
+// Learning Communities Page
+// @description Styles for Learning Communities Page and its subpages 
+// -------------------------------------------------------------------
+
+.page-learning-communities {
+	.right-col {
+		.btn.secondary { margin-bottom: 1em; }
+
+	}
+
+	// Tabbed Menu 
+	.quicktabs-tabs {
+		padding: 0; 
+		margin: 15px 0 4px 0;
+		
+		@media #{$small-and-down} { margin-bottom: 0; }
+
+		li {
+			background-color: #5F210D;
+			padding: 8px 20px;
+			@include radius-top(9px); 
+			border-bottom: none !important;
+			
+			@media #{$small-and-down} {
+				display: block; 
+				border-bottom: 1px solid white !important;
+				@include radius-top(0); 
+			}
+
+			&:nth-child(1) { @include radius-top(8px); }
+
+			a {
+				color: $disc-menu-link-color;
+				text-decoration: none;
+				
+				&:hover { text-decoration: underline; }
+			}
+		}
+
+		li.active {
+			background-color: $disc-menu-bg-active;
+			border: 1px solid #5F210D;
+			font-weight: 900;
+
+			a { color: $disc-menu-link-active; }
+		}
+	}
+
+	#quicktabs-container-learning_community_recent {
+		@extend .round-edge-bottom; 
+		@include radius-top-rt(9px);
+
+		border: 1px solid #5F210D;
+
+		@media #{$small-and-down} {
+			@include radius-top-rt(0);
+		}
+		
+		.view-lc-content {
+			margin-bottom: 0;
+		}
+
+		.views-row {
+		    display: inline-block;
+			width: 28%;
+			vertical-align: top;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 2%;
+			border: none;
+
+			@media #{$medium-and-down} {
+				display: block; 
+				width: auto; 
+				padding-top: 20px; 
+				padding-bottom: 20px; 
+			}
+		}
+
+		.views-row-even {
+			border-right: $tab-menu-border;
+			border-left: $tab-menu-border;
+			background-color: #FFD6AA;
+			padding-bottom: 6%;
+
+			@media #{$medium-and-down} { 
+				border-right: none; 
+				border-left: none; 
+				border-bottom: $tab-menu-border; 
+				border-top: $tab-menu-border; 
+			}
+		}
+
+		.views-field-title { font-weight: bold; }
+		.views-field-last-updated-1 { font-style: italic; } 
+	}
+
+	// LC Tabs
+	ul.tabs-primary {
+		padding-left:15px;
+	}
+
+	.lc-workspace ul.tabs.primary {
+		padding-left: 30px;
+		border-bottom: 1px solid #5f210d;
+	}
+
+	.tabs-primary {
+		border-bottom: 1px #5F210D solid;
+
+		.is-active {
+			background-color: #FFFFFF;
+			border: 1px solid #5F210D;
+			border-bottom: none;
+		}
+	}
+
+	li.tabs-primary__tab {
+		background: #5F210D;
+		color: #ffffff;
+		border-top-left-radius: 9px;
+    	border-top-right-radius: 9px;
+    	border-bottom-right-radius: 0;
+    	border-bottom-left-radius: 0;
+		border:0px;
+		position: relative;
+		top: 1px;
+		filter: none;
+	}
+
+	li.tabs-primary__tab .is-active{
+		font-weight: bold;
+		color: #5F210D;
+		border: none;
+	}
+
+
+	li.tabs-primary__tab a {
+		color: #ffffff;
+		font-size: 14px;
+	}
+	
+	.dashboard-section {
+		border:none;
+	}
+
+	// LC Menu 
+	#lc-menu {
+		margin-bottom: 1em; 
+
+		h2 {
+			@extend .box, .fill-grey, .round-edge-top; 
+			border-top: 0; 
+			border-left: 0; 
+			border-right: 0; 
+			margin-top: 0; 
+		}
+
+		ul {
+			list-style: none; 
+			padding: 0 1.5em; 	
+
+			li { 
+				border-bottom: $lc-menu-border; 
+				padding-top: 9px; 
+
+				&.last { border-bottom: 0; }
+			}
+
+		}
+	}
+	
+	// Workspace Members
+	#featured-r2r-partner {
+		border: 1px solid #5F210D;
+	}
+
+	// About Block
+	#about-r2r-lc {
+		h2 {
+			@extend .box, .fill-grey, .round-edge-top; 
+			margin: 0; 
+			border-bottom: 0; 
+		}
+	}
+
+	// Events Box
+	.right-side .content #homepage-events {
+		border: 1px solid #5F210D;
+		> h2 {
+			background-color: #5F210D;
+			color: #FFFFFF;
+		}
+	}
+
+	// Borders and Backgrounds for All Tabs Besides Dashboard
+	.view-lc-content {
+		.views-row {
+			border: 1px solid #5F210D;
+			border-bottom: none;
+		}
+
+		.views-row-last {
+			border-bottom: 1px solid #5F210D;
+		}
+
+		.views-row-even {
+			background-color: #FFD6AA;
+		}
+	}
+	
+	// Recent Stories 
+	#recent-stories {
+		margin: 1em 0; 
+
+		h2 { 
+			@extend .box, .fill-blue, .round-edge-top; 
+			border-top: 0; 
+			border-left: 0; 
+			border-right: 0; 
+			margin-top: 0; 
+		}
+		
+		.views-field-title { font-weight: bold; }
+
+		.views-field-created { font-style: italic; } 
+		
+		.views-row { 
+			border-bottom: $recent-story-border; 
+			padding: 10px 0; 
+
+			&.views-row-last { border-bottom: 0; }
+
+			&.views-row-first { padding-top: 0; }
+		}
+
+		.view-content {
+			@extend .box; 
+		}
+	}
+
+}

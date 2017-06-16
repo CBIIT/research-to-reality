@@ -1,0 +1,39 @@
+// ---------------------------------------------------- 
+// About Page
+// @description Styles for About Page and its subpages 
+// ----------------------------------------------------
+
+.page-about {
+	h2 {
+		border-bottom: 1px solid $header-border-color;
+		margin-bottom: 14px;
+		padding-bottom: 15px;
+	}	
+}
+
+.about-contact { 
+	a {
+		font-weight: 900; 
+		font-size: $contact-font-size; 
+		text-align: center; 
+		display: block;
+	}
+}
+
+.team-member {
+	width: 50%;
+	float: left;
+	@media #{$small-and-down} { width: 100%; }
+
+	img { 
+		max-width: 80px;  
+		border: 1px solid $img-border-color;
+	}
+}
+
+.viewing-files {
+	img {
+		height: 20px;
+		width: 20px;
+	}
+}		

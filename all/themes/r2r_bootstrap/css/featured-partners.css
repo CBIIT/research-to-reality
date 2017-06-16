@@ -1,0 +1,45 @@
+/* ------------------------------ Featured Partners ------------------------------ */
+.fp-vertical-center {
+	display:table;	
+}
+.view-featured-r2r-partners .fp-vertical-center {
+	margin-bottom:10px;	
+}
+.sidebar-box .fp-vertical-center {
+	margin-bottom:15px;
+}
+.featured-partner-picture {
+	display:table-cell;
+	width:70px;
+	height:70px;
+}
+.featured-partner-name {
+	display:table-cell;
+	vertical-align:middle;
+	padding-left:10px;
+}
+.featured-partner-name h2 {
+	margin:0;	
+}
+h3.faq-title {
+	margin-top:40px;	
+}
+.feat-partner-question {
+	background-color:#ebfbff;
+	margin:0px 0px 20px 0px;
+	padding: 12px;
+	border-left: 1px solid #c3dfe5;
+	border-right: 1px solid #c3dfe5;
+	border-bottom: 2px solid #c3dfe5;
+	border-top: 1px solid #c3dfe5;
+	font-weight:600;	
+}
+.feat-partner-answer {
+	padding-bottom:20px;
+	margin-bottom:20px;	
+}
+.view-all-fp {
+	font-size: 20px;
+	margin-bottom: 10px;
+	width: 100%;
+}

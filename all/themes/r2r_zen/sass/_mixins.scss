@@ -1,0 +1,95 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+/** Custom Mixins **/
+@mixin center($width) {
+  max-width: $width; 
+  margin-right: auto; 
+  margin-left: auto;
+}
+
+@mixin gradient($color1, $color2) {
+  background: $color1;
+  background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%, $color1),color-stop(100%, $color2));
+  background: -webkit-linear-gradient(top, $color1 0%, $color2 100%);
+  background: -o-linear-gradient(top, $color1 0%, $color2 100%);
+  background: -ms-linear-gradient(top, $color1 0%, $color2 100%);
+  background: linear-gradient(top, $color1 0%, $color2 100%);
+}
+
+@mixin radius-all($pixels) {
+  border-radius: $pixels;
+  -moz-border-radius: $pixels;
+  -webkit-border-radius: $pixels;
+}
+
+@mixin radius-top($pixels) {
+  -webkit-border-top-left-radius: $pixels;
+  -moz-border-radius-topleft: $pixels;
+  border-top-left-radius: $pixels;
+  -webkit-border-top-right-radius: $pixels;
+  -moz-border-radius-topright: $pixels;
+  border-top-right-radius: $pixels;
+}
+
+@mixin radius-top-rt($pixels) {
+  -webkit-border-top-right-radius: $pixels;
+  -moz-border-radius-topright: $pixels;
+  border-top-right-radius: $pixels;
+}
+
+@mixin radius-bottom($pixels) {
+  -webkit-border-bottom-left-radius: $pixels;
+  -moz-border-radius-bottomleft: $pixels;
+  border-bottom-left-radius: $pixels;
+  -webkit-border-bottom-right-radius: $pixels;
+  -moz-border-radius-bottomright: $pixels;
+  border-bottom-right-radius: $pixels;
+}
+
+@mixin horizontal-padding($pixels) {
+  padding-right: $pixels; 
+  padding-left: $pixels;
+}
+
+@mixin bx-shadow($a, $b, $c, $color) {
+  box-shadow: $a $b $c $color;
+  -moz-box-shadow: $a $b $c $color;
+  -webkit-box-shadow: $a $b $c $color;
+}

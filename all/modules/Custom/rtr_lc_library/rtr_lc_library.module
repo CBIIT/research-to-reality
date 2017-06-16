@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTR LC Library feature.
+ */
+
+include_once 'rtr_lc_library.features.inc';

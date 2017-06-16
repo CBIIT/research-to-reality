@@ -1,0 +1,34 @@
+<?php
+
+/* @file
+ * custom function
+ * Implementrs hook form alter
+ */
+//
+function ufa_form_alter(&$form, &$form_state, $form_id){
+ if ($form_id == 'simplenews_subscriptions_page_form'){
+$newletters = array(13);
+$newletters[25] =1920;
+$newletters[19] =1641;
+$newletters[23] =1642;
+$newletters[24] =3;
+$newletters[26] =2007;
+
+
+$myGroup = og_get_groups_by_user();
+$myGroup = $myGroup['node'];
+
+          foreach($form['subscriptions']['newsletters']['#options'] as $key=>$value){
+    if(array_key_exists($key, $newletters)){
+        if(!array_key_exists($newletters[$key], $myGroup)){
+           
+                unset($form['subscriptions']['newsletters']['#options'][$key]);
+
+        }
+    
+    }
+  
+     $form['subscriptions']['#description'] = "Check the updates you want to subscribe to. Uncheck the ones you want to unsubscribe from";
+ }
+}
+}

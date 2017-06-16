@@ -1,0 +1,6 @@
+; $Id:$
+name = Alter Submit Message
+description = Alters the form submit messages throughout the site.
+package = Research to Reality
+core = 7.x
+version = 7.x-1.0

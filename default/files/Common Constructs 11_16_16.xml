@@ -1,0 +1,2725 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Kyle, Tonja</Author>
+  <LastAuthor>Anna Gaysynsky</LastAuthor>
+  <Created>2016-10-11T14:37:30Z</Created>
+  <LastSaved>2016-11-16T20:16:42Z</LastSaved>
+  <Company>ICFI</Company>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <ContentTypeId dt:dt="string">0x010100F0A7C9AF350DE84FB510EE8C7FB94088</ContentTypeId>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>10320</WindowHeight>
+  <WindowWidth>24000</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ActiveSheet>12</ActiveSheet>
+  <FirstVisibleSheet>8</FirstVisibleSheet>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s16">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s17">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+  </Style>
+  <Style ss:ID="s18">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s19">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s20">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s21">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior ss:Color="#DDEBF7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s22">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior ss:Color="#DDEBF7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s24">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#DDEBF7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s25">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior ss:Color="#DDEBF7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s26">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior ss:Color="#DDEBF7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s27">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#DDEBF7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s28">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s29">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior ss:Color="#DDEBF7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s31">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s32">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s33">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s34">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s35">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s36">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s37">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s38">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s39">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s40">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s41">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="9" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s44">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+   <Interior/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="National and Local Surveys">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:AutoFitWidth="0" ss:Width="99.6"/>
+   <Column ss:AutoFitWidth="0" ss:Width="303"/>
+   <Column ss:Index="7" ss:AutoFitWidth="0" ss:Width="324"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="4" ss:StyleID="s22"><Data ss:Type="String">Instrument</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">HINTS</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">NHIS</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">BRFSS</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">NHANES</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Other</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">TerMM; Project IMPACT; Project CLEAR; Project WITS; Click to Connect; DHS</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Grantee developed questions</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Grantee developed questions</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">HRSA AHRF; ACS</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">PARTNER; DEDUCE; Cancer Registry</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s20"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s34"><Data ss:Type="String">AHIMSA acculturation scale </Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Grantee developed questions</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">SEPa HHS, SCCBS</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Texas Cancer Plan, UT Population Health Strategic Plan, grantee developed questions</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">RPCI'S (DBBR)</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">SF-12, Attitudes Towards Genetic Research and Testing; Likelihood of Participation Scale; BANKS</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Study Mode &amp; Sampling">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:Width="88.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="264.59999999999997"/>
+   <Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="73.8"/>
+   <Column ss:Index="6" ss:AutoFitWidth="0" ss:Width="65.400000000000006"/>
+   <Column ss:AutoFitWidth="0" ss:Width="175.8"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="72"/>
+   <Column ss:StyleID="s17" ss:AutoFitWidth="0" ss:Width="87"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="4" ss:StyleID="s22"><Data ss:Type="String">Study Mode</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="s25"><Data ss:Type="String">Sampling </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Phone</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Mail/Paper</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Web</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">In-Person</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Other/Notes</Data></Cell>
+    <Cell ss:StyleID="s25"><Data ss:Type="String">Probability </Data></Cell>
+    <Cell ss:StyleID="s25"><Data ss:Type="String">Non-probability </Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s20"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">TBD - Either paper/tablet based OR web/email survey</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s20"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s20"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s20"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Web Panel</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="36.75">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s41"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Size="11"
+       html:Color="#000000">X</Font><Font html:Color="#000000">  &#10;</Font><Font
+       html:Size="8" html:Color="#000000">(if requested)</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Web Panel</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Study Subpopulations">
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:Width="88.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="213"/>
+   <Column ss:AutoFitWidth="0" ss:Width="73.199999999999989"/>
+   <Column ss:AutoFitWidth="0" ss:Width="70.8" ss:Span="1"/>
+   <Column ss:Index="6" ss:AutoFitWidth="0" ss:Width="89.4"/>
+   <Column ss:AutoFitWidth="0" ss:Width="70.2" ss:Span="1"/>
+   <Column ss:Index="9" ss:AutoFitWidth="0" ss:Width="69.599999999999994"/>
+   <Column ss:AutoFitWidth="0" ss:Width="222"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="7" ss:StyleID="s22"><Data ss:Type="String">SubPopulations</Data></Cell>
+   </Row>
+   <Row ss:Height="43.199999999999996">
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Rural/Urban</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Appalachian</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Homeless</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Low English Profiency/Non-English Speaking</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Low Income</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Hispanic </Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Black </Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Other</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="49.5">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Blue collar workers</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Foreign-born </Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="49.5">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="String">Low Health Literacy </Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s20"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Asain</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="47.25">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Native Hawwaiians; recent migrant Marhallese and Chuukese populations in HI, Chaamorro in Guam</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Residents of counties with high cancer mortality </Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Somali immigrants; Amish</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Low SES status</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">We will stratify sample by income;  Surveys will be available in Spanish and English</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Foreign-born and Refugees; Native Americans </Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s35"><Data ss:Type="String">Live in medically underserved area; low literacy;  low income; uninsured or subsidized health insurance</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Disparity Domains">
+  <Table ss:ExpandedColumnCount="12" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:AutoFitWidth="0" ss:Width="84.600000000000009"/>
+   <Column ss:AutoFitWidth="0" ss:Width="217.79999999999998"/>
+   <Column ss:AutoFitWidth="0" ss:Width="67.8"/>
+   <Column ss:AutoFitWidth="0" ss:Width="79.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="62.400000000000006"/>
+   <Column ss:AutoFitWidth="0" ss:Width="63"/>
+   <Column ss:AutoFitWidth="0" ss:Width="62.400000000000006"/>
+   <Column ss:AutoFitWidth="0" ss:Width="81.599999999999994"/>
+   <Column ss:AutoFitWidth="0" ss:Width="77.399999999999991"/>
+   <Column ss:Index="11" ss:Width="75"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="8" ss:StyleID="s22"><Data ss:Type="String">Health Disparity Domains</Data></Cell>
+    <Cell ss:StyleID="s16"/>
+   </Row>
+   <Row ss:Height="28.8" ss:StyleID="s31">
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Racial/Ethnic</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Socioeconomic Status</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">Geographic </Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">Urban/Rural</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">Sex/Gender</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Sexual Orientation </Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Communication Inequality </Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">Disability </Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">Other-Specify </Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s36"><Data ss:Type="String">Acculturation</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">Comorbid &#10;Illness</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Health Communication">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:AutoFitWidth="0" ss:Width="105.6"/>
+   <Column ss:AutoFitWidth="0" ss:Width="296.39999999999998"/>
+   <Column ss:AutoFitWidth="0" ss:Width="99.6"/>
+   <Column ss:AutoFitWidth="0" ss:Width="97.2" ss:Span="1"/>
+   <Column ss:Index="6" ss:AutoFitWidth="0" ss:Width="103.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="81" ss:Span="1"/>
+   <Column ss:Index="9" ss:AutoFitWidth="0" ss:Width="84"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="6" ss:StyleID="s22"><Data ss:Type="String">Health Communication </Data></Cell>
+   </Row>
+   <Row ss:Height="57.6">
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Info Exposure</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Info Seeking</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Info Avoidance</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Media Exposure</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Health Information Communication Preferences</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Health Information Access</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Patient/Provider Interaction</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">Maybe</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">Maybe</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">Maybe</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">Maybe</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">Maybe</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">Maybe</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">Maybe</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Screening">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:AutoFitWidth="0" ss:Width="104.39999999999999"/>
+   <Column ss:AutoFitWidth="0" ss:Width="296.39999999999998"/>
+   <Column ss:AutoFitWidth="0" ss:Width="99"/>
+   <Column ss:AutoFitWidth="0" ss:Width="113.39999999999999"/>
+   <Column ss:AutoFitWidth="0" ss:Width="84"/>
+   <Column ss:AutoFitWidth="0" ss:Width="81"/>
+   <Column ss:AutoFitWidth="0" ss:Width="69.599999999999994" ss:Span="1"/>
+   <Column ss:Index="9" ss:AutoFitWidth="0" ss:Width="67.2"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="6" ss:StyleID="s22"><Data ss:Type="String">Cancer Screening </Data></Cell>
+   </Row>
+   <Row ss:Height="57.6">
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Prostate Cancer Screening</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Colorectal Cancer Screening</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Lung Cancer Screening</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Cervical Cancer Screening</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Breast Cancer Screening</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Skin Cancer Screening</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Knowledge of Cancer Screening Guidelines</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Immunizations">
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:Width="88.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="296.39999999999998"/>
+   <Column ss:AutoFitWidth="0" ss:Width="99" ss:Span="1"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:StyleID="s22"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">HPV Vaccination</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Other Vaccines</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Health Behaviors&amp;Comorbidities">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s16" ss:DefaultColumnWidth="49.2"
+   ss:DefaultRowHeight="14.4">
+   <Column ss:StyleID="s16" ss:AutoFitWidth="0" ss:Width="100.19999999999999"/>
+   <Column ss:StyleID="s16" ss:AutoFitWidth="0" ss:Width="230.4"/>
+   <Column ss:StyleID="s16" ss:AutoFitWidth="0" ss:Width="81" ss:Span="1"/>
+   <Column ss:Index="5" ss:StyleID="s16" ss:AutoFitWidth="0" ss:Width="92.4"/>
+   <Column ss:StyleID="s16" ss:AutoFitWidth="0" ss:Width="96.6"/>
+   <Column ss:StyleID="s16" ss:AutoFitWidth="0" ss:Width="102"/>
+   <Column ss:StyleID="s16" ss:AutoFitWidth="0" ss:Width="103.2"/>
+   <Column ss:StyleID="s16" ss:AutoFitWidth="0" ss:Width="95.399999999999991"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="6" ss:StyleID="s22"><Data ss:Type="String">Health Behaviors and Comorbidities</Data></Cell>
+   </Row>
+   <Row ss:Height="28.8">
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Tobacco</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Alcohol</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Diet &amp; Nutrition</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Physical Activity/Exercise</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Mental Health/Depression</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Pain/Fatigue</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Oral Health</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="44.25">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Human Subjects_Ethics">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:AutoFitWidth="0" ss:Width="94.8"/>
+   <Column ss:AutoFitWidth="0" ss:Width="296.39999999999998"/>
+   <Column ss:AutoFitWidth="0" ss:Width="115.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="95.399999999999991"/>
+   <Column ss:AutoFitWidth="0" ss:Width="117"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="s22"><Data ss:Type="String">Research </Data></Cell>
+   </Row>
+   <Row ss:Height="28.8">
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Clinical Trial/Medical Research Enrollment</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Genetic Testing</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Biobanking Research</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Health Literacy">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:AutoFitWidth="0" ss:Width="90"/>
+   <Column ss:AutoFitWidth="0" ss:Width="296.39999999999998"/>
+   <Column ss:AutoFitWidth="0" ss:Width="81"/>
+   <Column ss:AutoFitWidth="0" ss:Width="92.4"/>
+   <Column ss:AutoFitWidth="0" ss:Width="76.2"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="s22"><Data ss:Type="String">Health Literacy </Data></Cell>
+   </Row>
+   <Row ss:Height="57.6">
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Knowledge of Cancer Screening Guidelines</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Personal/ Family History of Cancer</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Awareness of Cancer Risk</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Cancer Knowledge &amp; Beliefs">
+  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:Width="88.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="296.39999999999998"/>
+   <Column ss:AutoFitWidth="0" ss:Width="92.4" ss:Span="1"/>
+   <Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="76.2" ss:Span="1"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s22"><Data ss:Type="String">Cancer Knowledge and Beliefs </Data></Cell>
+   </Row>
+   <Row ss:Height="43.199999999999996">
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">Cancer Related Beliefs/Attitudes/Behaviors </Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Knowledge of Cancer Screening Guidelines</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Personal/ Family History of Cancer</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Awareness of Cancer Risk</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s40"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:Height="28.8">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s40"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:Height="43.199999999999996">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:Height="28.8">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s40"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s40"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:Height="28.8">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Zoom>115</Zoom>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R17C1</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Healthcare Access &amp; Use">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:Width="88.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="296.39999999999998"/>
+   <Column ss:AutoFitWidth="0" ss:Width="97.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="72"/>
+   <Column ss:AutoFitWidth="0" ss:Width="85.8"/>
+   <Column ss:AutoFitWidth="0" ss:Width="88.800000000000011"/>
+   <Column ss:AutoFitWidth="0" ss:Width="97.2"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="4" ss:StyleID="s22"><Data ss:Type="String">Healthcare Access and Use </Data></Cell>
+   </Row>
+   <Row ss:Height="28.8">
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Health Education</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Healthcare Access</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Health Insurance Status</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Source of Healthcare</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Barriers</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>24</ActiveRow>
+     <ActiveCol>6</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Health Techology &amp; Internet">
+  <Table ss:ExpandedColumnCount="8" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.4">
+   <Column ss:AutoFitWidth="0" ss:Width="111.60000000000001"/>
+   <Column ss:AutoFitWidth="0" ss:Width="296.39999999999998"/>
+   <Column ss:AutoFitWidth="0" ss:Width="99"/>
+   <Column ss:AutoFitWidth="0" ss:Width="113.39999999999999"/>
+   <Column ss:AutoFitWidth="0" ss:Width="115.2"/>
+   <Column ss:AutoFitWidth="0" ss:Width="94.8"/>
+   <Column ss:AutoFitWidth="0" ss:Width="73.8"/>
+   <Column ss:AutoFitWidth="0" ss:Width="102"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Project Leader</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Grantee</Data></Cell>
+    <Cell ss:MergeAcross="5" ss:StyleID="s22"><Data ss:Type="String">Health Technology and Internet</Data></Cell>
+   </Row>
+   <Row ss:Height="43.199999999999996">
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Internet Behaviors/Barriers</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Cell Phone Usage</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Mobile Health Technology</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Social Media</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Health Information Technology</Data></Cell>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Influence of Media</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">K. Vish Viswanath</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Dana-Farber Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Joseph Osborne</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Memorial Sloan Kettering Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robert Hiatt</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of California, San Francisco – Helen Diller Family Comprehensive Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Robin Vanderpool/Bin Huang</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Kentucky – Markey Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s19"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nadine Barrett</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Duke Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Tracy Onega</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Dartmouth-Hitchcock Norris Cotton Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s44"><Data ss:Type="String">Kevin Cassel/           Hye-ryeon Lee</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Hawaii Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">David Haggstrom</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Indiana University Melvin and Bren Simon Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Jian-Min Yuan</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pittsburgh Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Electra Paskett</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Ohio State University Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Karen Glanz</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">University of Pennsylvania Abramson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Sanjay Shete</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">University of Texas MD Anderson Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Bruce Rapkin</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Albert Einstein College of Medicine</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Elizabeth Bouchard</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Roswell Park Cancer Institute</Data></Cell>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s39"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+    <Cell ss:StyleID="s33"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30">
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Nestor Esnaola</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">Temple University Fox Chase Cancer Center</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">X</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

@@ -1,0 +1,60 @@
+diff --git a/calendar.module b/calendar.module
+index 5bb9ff7..dec9808 100644
+--- a/calendar.module
++++ b/calendar.module
+@@ -356,6 +356,12 @@ function calendar_week_header($view) {
+   $len = isset($view->date_info->style_name_size) ? $view->date_info->style_name_size : (!empty($view->date_info->mini) ? 1 : 3);
+   $with_week = !empty($view->date_info->style_with_weekno);
+ 
++  //Get the relevant info from the url (week and year).
++  $period = $view->style_options['calendar_type'];
++  $dateurl = explode('-W', $view->args[0]);
++
++  //If there is no week or year specified in the url, get the current date.
++
+   // create week header
+   $untranslated_days = calendar_untranslated_days();
+   $full_translated_days = date_week_days_ordered(date_week_days(TRUE));
+@@ -370,7 +376,41 @@ function calendar_week_header($view) {
+   }
+   foreach ($untranslated_days as $delta => $day) {
+     $label = $len < 3 ? drupal_substr($translated_days[$delta], 0 , $len) : $translated_days[$delta];
+-    $row[] = array('header' => TRUE, 'class' => "days " . $day, 'data' => $label, 'header_id' => $full_translated_days[$delta]);
++    if ($period == 'week') {
++      //Get the date from the weekday.
++      switch ($day) {
++        case 'mon':
++          $weekdate = date( "d", strtotime($dateurl[0]."W".$dateurl[1]."1") );
++          break;
++
++         case 'tue':
++          $weekdate = date( "d", strtotime($dateurl[0]."W".$dateurl[1]."2") );
++          break;
++
++         case 'wed':
++          $weekdate = date( "d", strtotime($dateurl[0]."W".$dateurl[1]."3") );
++          break;
++
++        case 'thu':
++          $weekdate = date( "d", strtotime($dateurl[0]."W".$dateurl[1]."4") );
++          break;
++
++         case 'fri':
++          $weekdate = date( "d", strtotime($dateurl[0]."W".$dateurl[1]."5") );
++          break;
++
++         case 'sat':
++          $weekdate = date( "d", strtotime($dateurl[0]."W".$dateurl[1]."6") );
++          break;
++        
++        case 'sun':
++          $weekdate = date( "d", strtotime($dateurl[0]."W".$dateurl[1]."7") );
++          break;
++      }
++      $row[] = array('header' => TRUE, 'class' => "days " . $day, 'data' => $label . " " . $weekdate, 'header_id' => $full_translated_days[$delta]);
++    } else {
++      $row[] = array('header' => TRUE, 'class' => "days " . $day, 'data' => $label, 'header_id' => $full_translated_days[$delta]);
++    }
+   }
+   return $row;
+ }

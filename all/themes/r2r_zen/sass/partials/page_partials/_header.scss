@@ -1,0 +1,140 @@
+// ------------------------------- 
+// Header
+// @description Header Styles
+// -------------------------------
+
+#header_top {
+	min-height: 40px; 
+	background-color: $header-top-bg;
+	
+	@media #{$large-and-down} { 
+		@include horizontal-padding(10px); 
+	}
+
+	> div { @include center(960px); }
+
+	.right { 
+		@media #{$small-and-down} { display: none; } 
+	}
+}
+
+#header {
+	padding-top: 10px;  
+	background: url("../images/global/bground-header.jpg");
+
+	#logo { 
+		@media #{$large-and-down} { 
+			@include horizontal-padding(10px); 
+		}
+		
+		@media #{$small-and-down} { 
+			width: 80%; 
+		}
+
+		> img { max-width: 100%; } 
+	}
+
+	#block-search-form {
+		@media #{$medium-and-up} {
+			float: right; 
+			margin-top: -8%; 
+		}
+
+		@media #{$medium-and-down} { display: none; }
+	}
+	
+	.menu {
+		list-style: none; 
+		padding: 0; 
+		margin-top: 9%;
+ 		margin-bottom: -4px;
+		
+		li {
+			display: inline-block; 
+		}
+
+		a {
+			font-size: $nav-font-size; 
+			padding: 8px 10px; 
+			text-decoration: $nav-decoration; 
+			color: $nav-font-color-1; 
+			@include radius-top(8px); 
+			@include gradient($nav-color-1, $nav-color-2); 
+
+			@media #{$medium-and-down} { 
+				@include radius-top(0); 
+				height: 25px; 
+				font-size: $mobile-font-size; 
+				text-align: center;
+				padding-top: 15px;
+			}
+
+			&:hover { @include gradient($nav-hover-color-1, $nav-hover-color-2); }
+
+			&.active { 
+				background: $white; 
+				font-weight: $nav-active-weight; 
+				color: $nav-font-color-2; 
+				
+				@media #{$medium-and-down} { 
+					@include gradient($nav-color-1, $nav-color-2); 
+					font-weight: normal; 
+					color: $nav-font-color-1; 
+				}
+			}
+
+			&.active:hover { 
+				text-decoration: $nav-hover-decoration; 
+				
+				@media #{$medium-and-down} { 
+					text-decoration: none; 
+					@include gradient($nav-hover-color-1, $nav-hover-color-2);
+				}
+			} 
+		}
+	}
+}
+
+.responsive-menus.responsified {
+	.responsive-menus-simple {
+		background: none;
+		box-shadow: none; 
+		width: 100%; 
+
+		li a { 
+			text-transform: none; 
+			@include gradient($nav-color-1, $nav-color-2); 
+
+			&:hover { @include gradient($nav-hover-color-1, $nav-hover-color-2); }
+		}
+
+
+	}
+
+	span.toggler {
+		background: none;
+		box-shadow: none;  
+		float: right;
+		color: $mobile-nav-color;
+		font-size: $mobile-nav-size;	
+		padding-right: 10px;
+		border-bottom: none !important;
+
+		@media #{$medium-only} {
+			margin-top: -55px;
+		}
+		
+		@media #{$small-only} { 
+			margin-top: -45px;
+		}
+
+		@media #{$x-small-and-down} { 
+			margin-top: -40px;
+		}
+
+		&:hover { 
+			color: $mobile-span-hover; 
+		}
+	}
+}
+

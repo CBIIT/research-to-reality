@@ -1,0 +1,64 @@
+// ------------------------------- 
+// Buttons
+// @description Button Styles
+// -------------------------------
+
+.btn {
+	@include gradient($btn-bg-color-1, $btn-bg-color-2); 
+	@include radius-all(8px); 
+	color: $btn-color;
+	border: $btn-border;
+	font-size: $btn-font-size; 
+	font-family: $btn-font;
+	text-align: center;  
+	padding: 0.5em 1em; 
+
+	* {
+		color: $btn-color;
+		text-decoration: none; 
+	}
+
+	&:hover {
+		@include gradient($btn-hover-color-1, $btn-hover-color-2); 
+
+		* {
+			color: $btn-color;
+		}
+	}
+}
+
+.btn.secondary {
+	@include gradient($btn-sec-bg-1, $btn-sec-bg-2); 
+	@include radius-all(8px); 
+	font-size: $btn-font-size; 
+	font-family: $btn-font;
+	color: $btn-color;
+	border: $btn-sec-border; 
+
+	&:hover {
+		@include gradient($btn-sec-hover-color-1, $btn-sec-hover-color-2); 
+	}
+}
+
+// .btn.tertiary {
+
+// }
+
+.btn.tertiary {
+	@include gradient($btn-ter-bg-2, $btn-ter-bg-1); 
+	@include radius-all(8px); 
+	font-size: $btn-font-size; 
+	font-family: $btn-font;
+	color: $btn-font-color;
+	border: $btn-ter-border; 
+	padding: 3px 10px;
+
+	* {
+		color: $btn-font-color;
+		text-decoration: none; 
+	}
+
+	&:hover {
+		@include gradient($btn-ter-hover-color-1, $btn-ter-hover-color-2); 
+	}
+}
