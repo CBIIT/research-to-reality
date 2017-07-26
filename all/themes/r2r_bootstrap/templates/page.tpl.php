@@ -50,7 +50,7 @@
 <section class="navigation-band-container" id="r2r-nav-fixed">
 	<div class="navigation-band">
 	<div class="container">
-		<div class="row">	
+		<div class="row">
 			<div id="r2r-nav">
 				<div class="navbar-header">
 					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-responsive" aria-controls="navbar-responsive" aria-expanded="false">
@@ -75,15 +75,15 @@
 						<?php print render($page['navigation']); ?>
 				  	<?php endif; ?>
 					<div class="searchField form-group hidden-sm hidden-md">
-            			<?php $search_form = drupal_get_form('search_block_form') ?>
-            			<?php print render($search_form); ?>
+            			<?php //$search_form = drupal_get_form('search_block_form') ?>
+            			<?php //print render($search_form); ?>
           			</div>
 				</nav>
 				<?php endif; ?>
 				<div class="searchField searchField-Tablet form-group visible-sm visible-md">
           			<?php print render($search_form); ?>
         		</div>
-				
+
 			</div> <!-- close r2r-nav -->
 		</div> <!-- close row -->
 	</div> <!-- close container -->
@@ -95,7 +95,8 @@
 		<div class="row">
 			<div class="col-lg-12">
                 <div class="container-box">
-                    <?php if (!empty($tabs)): ?>
+                    <?php $query = $page['content']['system_main']['contextual_links']['#links'][0]['query']['destination']; ?>
+                    <?php if ((!empty($tabs)) && !(strpos($query, 'learning-communities') == 0 && strpos($query,'dashboard') > 0)): ?>
                     <?php print render($tabs); ?>
                     <?php endif; ?>
                     <?php if ($title): ?>
@@ -111,7 +112,7 @@
 </div> <!-- close wrapper -->
 
 <footer>
-	<div class="container">	
+	<div class="container">
 		<div class="row">
 			<div class="col-md-3">
 				<div class="footer-logo">
@@ -129,9 +130,9 @@
 			</div> <!-- close col-md-9 -->
 		</div> <!-- close row -->
 		<hr>
-		<div class="row">	
+		<div class="row">
 			<div class="col-md-4">
-				<div class="footer-follow-us">	
+				<div class="footer-follow-us">
 					<?php if (!empty($page['footer_socialmedia'])): ?>
           				<?php print render($page['footer_socialmedia']); ?>
         			<?php endif; ?>
@@ -170,29 +171,29 @@
 	</div> <!-- close bottom-band -->
 </footer>
 <?php
-	drupal_add_js("sites/all/themes/r2r_bootstrap/js/jquery.counterup.min.js", 
+	drupal_add_js("sites/all/themes/r2r_bootstrap/js/jquery.counterup.min.js",
 	array(
-	'type' => 'file', 
-	'scope' => 'footer', 
+	'type' => 'file',
+	'scope' => 'footer',
 	'weight' => 1));
-	drupal_add_js("sites/all/themes/r2r_bootstrap/js/jquery.waypoints.min.js", 
+	drupal_add_js("sites/all/themes/r2r_bootstrap/js/jquery.waypoints.min.js",
 	array(
-	'type' => 'file', 
-	'scope' => 'footer', 
+	'type' => 'file',
+	'scope' => 'footer',
 	'weight' => 2));
-	drupal_add_js("sites/all/themes/r2r_bootstrap/js/jquery-ui-1.10.4.custom.min.js", 
+	drupal_add_js("sites/all/themes/r2r_bootstrap/js/jquery-ui-1.10.4.custom.min.js",
 	array(
-	'type' => 'file', 
-	'scope' => 'footer', 
+	'type' => 'file',
+	'scope' => 'footer',
 	'weight' => 3));
-	drupal_add_js("sites/all/themes/r2r_bootstrap/js/scripts.js", 
+	drupal_add_js("sites/all/themes/r2r_bootstrap/js/scripts.js",
 	array(
-	'type' => 'file', 
-	'scope' => 'footer', 
+	'type' => 'file',
+	'scope' => 'footer',
 	'weight' => 4));
-	drupal_add_js("sites/all/themes/r2r_bootstrap/js/autocomplete.js", 
+	drupal_add_js("sites/all/themes/r2r_bootstrap/js/autocomplete.js",
 	array(
-	'type' => 'file', 
-	'scope' => 'footer', 
+	'type' => 'file',
+	'scope' => 'footer',
 	'weight' => 5));
 ?>

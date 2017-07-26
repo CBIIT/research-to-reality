@@ -107,7 +107,7 @@ function custom_search_form_alter(&$form, &$form_state, $form_id) {
 
       if (isset($form['module']) && $form['module']['#value'] == 'node') {
 
-        if (isset($form['advanced'])) {
+        if (isset($form['advanced']) && variable_get('custom_search_results_advanced_search', TRUE)) {
 
           // Reprocess the key value for later uses.
           $search_args = array(

@@ -44,7 +44,7 @@ or a special module search, is checked),
 The module integrates well with Internationalization (i18n_string).
 
 This module is inspired by some modules that implements some of these options
-(search_config, search_type, custom_seach_box).
+(search_config, search_type, custom_search_box).
 
 Author
 ------

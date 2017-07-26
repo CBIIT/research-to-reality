@@ -11,9 +11,29 @@
   	$("a[href^='http']").attr('target','_blank');
   	// Navbar menu items with children; remove Bootstrap click action to expand.
   	$('ul.navbar-nav li.dropdown a').each(function() {
-  		$(this).removeAttr('class').removeAttr('data-toggle');
+  		$(this).removeAttr('class').removeAttr('data-tcd oggle');
   		$(this).parent().find('ul').removeClass('dropdown-menu');
 	});
+  	// Change <ol> starting number on views pager.
+	var getUrlParameter = function getUrlParameter(sParam) {
+		var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+			sURLVariables = sPageURL.split('&'),
+			sParameterName,
+			i;
+
+		for (i = 0; i < sURLVariables.length; i++) {
+		  sParameterName = sURLVariables[i].split('=');
+
+		  if (sParameterName[0] === sParam) {
+			return sParameterName[1] === undefined ? true : sParameterName[1];
+		  }
+		}
+	};
+	var page = getUrlParameter('page');
+	if (page !== 'undefined' && $('body').hasClass('page-search')) {
+		var start = (page * 10) + 1;
+		$('ol.search-results').attr('start', start);
+	}
 
 // add ID to Views Filter div so it can be expand/collapse	
 	$('#discussions-filter .view-filters').attr('id', 'filter-box');
