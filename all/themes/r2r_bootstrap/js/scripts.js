@@ -11,7 +11,7 @@
   	$("a[href^='http']").attr('target','_blank');
   	// Navbar menu items with children; remove Bootstrap click action to expand.
   	$('ul.navbar-nav li.dropdown a').each(function() {
-  		$(this).removeAttr('class').removeAttr('data-tcd oggle');
+  		$(this).removeAttr('class').removeAttr('data-toggle');
   		$(this).parent().find('ul').removeClass('dropdown-menu');
 	});
   	// Change <ol> starting number on views pager.
