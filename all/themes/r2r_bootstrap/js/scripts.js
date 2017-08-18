@@ -1,6 +1,16 @@
 (function ($) {
 	'use strict';
 
+	// Make user accept terms before logging in.
+  	if ($('body').hasClass('page-user-login')) {
+  		$('#block-system-main').hide();
+		$('<a class="btn" id="login-terms-agree">I AGREE</a>').appendTo('#block-block-41');
+		$('#login-terms-agree').click(function() {
+			$('#block-block-41').hide();
+			$('#block-system-main').show();
+		});
+	}
+
   	// Keep referring URL for redirection when user clicks login link.
   	$('a').each(function() {
   		if ($(this).attr('href') == '/user-login' || $(this).attr('href') == '/user') {
